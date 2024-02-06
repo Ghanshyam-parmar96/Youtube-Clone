@@ -1,3 +1,5 @@
+import { ElementType, ReactNode } from "react";
+
 export type CategoryPillProps = {
   categories: string[];
   selectedCategory: string;
@@ -18,4 +20,25 @@ export type VideoGridItemProps = {
   duration: number;
   thumbnailUrl: string;
   videoUrl: string;
+};
+
+
+export type SmallSidebarItemProps = {
+  url: string;
+  title: string;
+  Icon : ElementType
+};
+
+
+export type LargeSidebarItemProps = {
+  IconOrImgUrl : ElementType | string;
+  title: string;
+  url: string;
+  isActive?: boolean;
+};
+
+export type LargeSidebarSectionProps ={
+  children: ReactNode;
+  title?: string;
+  visibleItemCount?: number;
 };
