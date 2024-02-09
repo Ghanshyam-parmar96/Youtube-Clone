@@ -7,16 +7,19 @@ import { FaRegCircleUser } from "react-icons/fa6";
 import { IoSearchOutline } from "react-icons/io5";
 import Button from "../components/Button";
 import { useState } from "react";
+import { useAppDispatch } from "../data/hooks";
+import { toggleSidebar } from "../data/sidebarSlice";
 
 const PageHeader = () => {
     const [showFullWidthSearch, setShowFullWidthSearch] = useState(false);
+    const dispatch = useAppDispatch();
 
     return (
-        <div className="flex gap-10 lg:gap-20 justify-between px-4 h-14 max-w-screen-2xl mx-auto sticky top-2 left-0 mt-2">
+        <div className="flex gap-10 lg:gap-20 justify-between px-4 h-14 sticky top-2 left-0 mt-2">
 
             {/* Logo Section */}
             <div className={`items-center gap-4 flex-shrink-0 ${showFullWidthSearch ? "hidden" : "flex"}`}>
-                <Button variant="ghost" size="icon">
+                <Button variant="ghost" size="icon" onClick={()=>dispatch(toggleSidebar())}>
                     <RxHamburgerMenu className="text-2xl" />
                 </Button>
                 <Link to="/">
@@ -55,13 +58,13 @@ const PageHeader = () => {
                 <Button onClick={() => setShowFullWidthSearch(true)} variant="ghost" size="icon" className="md:hidden">
                     <IoSearchOutline />
                 </Button>
-                <Button variant="ghost" size="icon" className="md:hidden">
+                <Button variant="ghost" size="icon" className="hidden sm:block md:hidden">
                     <IoMdMic />
                 </Button>
-                <Button variant="ghost" size="icon">
+                <Button variant="ghost" size="icon" className="hidden sm:block"> 
                     <RiVideoAddLine />
                 </Button>
-                <Button variant="ghost" size="icon" className="relative">
+                <Button variant="ghost" size="icon" className="relative hidden sm:block">
                     <IoMdNotificationsOutline />
                     <span className="bg-red-600 h-4 grid place-content-center rounded-full p-1 aspect-square absolute top-1 left-5 text-[10px] text-white font-bold">
                         9+

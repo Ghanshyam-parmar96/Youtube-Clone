@@ -15,7 +15,7 @@ const VideoGridItem = ({ id, channel, duration, postedAt, thumbnailUrl, title, v
         if (isVideoPlaying) {
             videoRef.current.currentTime = 0;
             videoRef.current.play();
-        }else{
+        } else {
             videoRef.current.pause();
         }
     }, [isVideoPlaying])
@@ -26,13 +26,13 @@ const VideoGridItem = ({ id, channel, duration, postedAt, thumbnailUrl, title, v
             onMouseLeave={() => setIsVideoPlaying(false)}
         >
             <Link to={`/watch?v=${id}`} className="relative aspect-video" >
-                <img src={thumbnailUrl} className={`block w-full h-full object-cover transition-[border-radius] duration-200 ${isVideoPlaying ? "rounded-none" : "rounded-xl"}`} alt="" />
+                <img src={thumbnailUrl} className={`block w-full h-full object-cover transition-[border-radius] duration-200 ${isVideoPlaying ? "rounded-none" : "sm:rounded-xl"}`} alt="" />
 
                 <div className="absolute bottom-1 right-1 bg-secondary-dark text-secondary text-sm px-1 rounded">
                     {formatDuration(duration)}
                 </div>
 
-                <video 
+                <video
                     className={`block h-full object-cover absolute inset-0 transition-opacity duration-200 ${isVideoPlaying ? "opacity-100 delay-200" : "opacity-0"}`}
                     src={videoUrl}
                     ref={videoRef}
@@ -62,5 +62,19 @@ const VideoGridItem = ({ id, channel, duration, postedAt, thumbnailUrl, title, v
         </div>
     )
 }
+
+
+VideoGridItem.isLoading = <div className="flex flex-col gap-2">
+    <div className="w-full h-full object-cover aspect-video bg-gray-300 rounded-md animate-pulse"></div>
+    <div className="flex gap-2">
+        <div className="h-10 w-10 bg-gray-300 rounded-full animate-pulse"></div>
+        <div className="flex flex-col gap-2 flex-grow">
+            <div className="h-3 w-full bg-gray-300 rounded-md animate-pulse"></div>
+            <div className="h-3 w-full bg-gray-300 rounded-md animate-pulse"></div>
+            <div className="h-3 w-1/2 bg-gray-300 rounded-md animate-pulse"></div>
+            <div className="h-3 w-3/4 bg-gray-300 rounded-md animate-pulse"></div>
+        </div>
+    </div>
+</div>;
 
 export default VideoGridItem
