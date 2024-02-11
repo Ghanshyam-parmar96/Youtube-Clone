@@ -18,3 +18,10 @@
 .scrollbar-hidden:hover::-webkit-scrollbar-thumb{
     @apply bg-secondary-border;
 }
+
+.lineClamp2 {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2; /* Adjust this to the number of lines you want to display */
+    -webkit-box-orient: vertical;
+}

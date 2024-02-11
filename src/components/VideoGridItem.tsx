@@ -1,60 +1,32 @@
 import { Link } from "react-router-dom"
-import { VideoGridItemProps } from "../Types"
-import formatDuration from "../utils/formatDuration"
-import { VIEW_FORMATTER, formatTimeAgo } from "../utils/formatTimeAgo"
-import { useEffect, useRef, useState } from "react"
+import { NewVideoDataList } from "../Types"
 
-const VideoGridItem = ({ id, channel, duration, postedAt, thumbnailUrl, title, videoUrl, views }: VideoGridItemProps) => {
-
-    const [isVideoPlaying, setIsVideoPlaying] = useState(false);
-    const videoRef = useRef<HTMLVideoElement>(null);
-
-    useEffect(() => {
-        if (videoRef.current == null) return;
-
-        if (isVideoPlaying) {
-            videoRef.current.currentTime = 0;
-            videoRef.current.play();
-        } else {
-            videoRef.current.pause();
-        }
-    }, [isVideoPlaying])
+const VideoGridItem = ({ videoId, categoryId, channelCustomUrl, channelIcon, channelId, channelTitle, duration, postedAt, thumbnailUrl, url, videoTitle, views }: NewVideoDataList) => {
 
     return (
-        <div className="flex flex-col gap-2"
-            onMouseEnter={() => setIsVideoPlaying(true)}
-            onMouseLeave={() => setIsVideoPlaying(false)}
-        >
-            <Link to={`/watch?v=${id}`} className="relative aspect-video" >
-                <img src={thumbnailUrl} className={`block w-full h-full object-cover transition-[border-radius] duration-200 ${isVideoPlaying ? "rounded-none" : "sm:rounded-xl"}`} alt="" />
+        <div className="flex flex-col gap-2">
+            <Link to={`/watch?v=${videoId}`} className="relative aspect-video" >
+                <img src={thumbnailUrl} className={`block w-full h-full object-cover transition-[border-radius] duration-200 sm:rounded-xl`} alt="" />
 
-                <div className="absolute bottom-1 right-1 bg-secondary-dark text-secondary text-sm px-1 rounded">
-                    {formatDuration(duration)}
+                <div className="absolute bottom-1 right-1 bg-secondary-dark text-secondary text-sm px-1 pb-0.5 rounded">
+                    {duration}
                 </div>
-
-                <video
-                    className={`block h-full object-cover absolute inset-0 transition-opacity duration-200 ${isVideoPlaying ? "opacity-100 delay-200" : "opacity-0"}`}
-                    src={videoUrl}
-                    ref={videoRef}
-                    muted
-                    playsInline
-                />
             </Link>
 
             <div className="flex gap-2">
-                <Link to={`/@${channel.id}`} className="flex flex-shrink-0">
-                    <img src={channel.profileUrl} className="w-10 h-10 rounded-full" alt="" />
+                <Link to={`/@${channelId}`} className="flex flex-shrink-0">
+                    <img src={channelIcon} className="w-10 h-10 rounded-full" alt="" />
                 </Link>
                 <div className="flex flex-col">
-                    <Link to={`/watch?v=${id}`} className="font-bold">
-                        {title}
+                    <Link to={`/watch?v=${videoId}`} className="font-bold lineClamp2">
+                        {videoTitle}
                     </Link>
-                    <Link to={`/@${channel.id}`} className="text-secondary-text text-sm">
-                        {channel.name}
+                    <Link to={`/@${channelId}`} className="text-secondary-text text-sm">
+                        {channelTitle}
                     </Link>
 
                     <div className="text-secondary-text text-sm ">
-                        {VIEW_FORMATTER.format(views)} Views • {formatTimeAgo(postedAt)}
+                        {views} Views • {postedAt}
                     </div>
                 </div>
             </div>
@@ -64,8 +36,8 @@ const VideoGridItem = ({ id, channel, duration, postedAt, thumbnailUrl, title, v
 }
 
 
-VideoGridItem.isLoading = <div className="flex flex-col gap-2">
-    <div className="w-full h-full object-cover aspect-video bg-gray-300 rounded-md animate-pulse"></div>
+VideoGridItem.isLoading = <div className="flex flex-col gap-2 flex-shrink-0 flex-grow">
+    <div className="sm:w-full w-screen h-full aspect-video bg-gray-300 rounded-md animate-pulse"></div>
     <div className="flex gap-2">
         <div className="h-10 w-10 bg-gray-300 rounded-full animate-pulse"></div>
         <div className="flex flex-col gap-2 flex-grow">

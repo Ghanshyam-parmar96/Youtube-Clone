@@ -52,13 +52,13 @@ const CategoryPills = ({ categories, onSelect, selectedCategory }: CategoryPillP
     return (
         <div ref={containerRef} className="overflow-x-hidden relative">
             <div className="flex whitespace-nowrap gap-3 transition-transform w-[max-content]" style={{ transform: `translateX(-${translate}px)` }}>
-                {categories.map((category) => (
+                {categories?.map((category) => (
                     <Button
-                        key={category}
-                        onClick={() => onSelect(category)}
-                        variant={selectedCategory === category ? "dark" : "default"}
+                        key={category.categoryId}
+                        onClick={() => onSelect(category.categoryName)}
+                        variant={selectedCategory === category.categoryName ? "dark" : "default"}
                         className="py-1 text-xs px-3 rounded-lg whitespace-nowrap">
-                        {category}
+                        {category.categoryName}
                     </Button>
                 ))}
             </div>
