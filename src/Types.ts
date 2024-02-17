@@ -2,21 +2,21 @@ import { ElementType, ReactNode } from "react";
 
 export type CategoryPillProps = {
   categories: {
-    categoryId : string,
-    categoryName : string
+    categoryId: string,
+    categoryName: string
   }[] | undefined;
   selectedCategory: string;
   onSelect: (category: string) => void;
 };
 
 export interface HomePageCategoryPills {
-  kind : string;
-  etag : string;
-  id : string;
-  snippet : {
-    assignable : boolean; 
-    title : string;
-    channelId : string;
+  kind: string;
+  etag: string;
+  id: string;
+  snippet: {
+    assignable: boolean;
+    title: string;
+    channelId: string;
   };
 }
 
@@ -55,7 +55,7 @@ export interface ParseVideoList {
     title: string;
     description: string;
     thumbnails: {
-      default: Thumbnails ,
+      default: Thumbnails,
       medium: Thumbnails;
       high: Thumbnails;
       standard: Thumbnails;
@@ -80,7 +80,7 @@ export interface ParseVideoList {
     licensedContent: boolean;
     regionRestriction?: {
       allowed?: string[];
-      blocked?: string[]; 
+      blocked?: string[];
     },
 
     contentRating?: {};
@@ -99,12 +99,12 @@ export interface ParseVideoList {
 export interface ParsedAllData {
   kind: string;
   etag: string;
-  items : ParseVideoList[];
-  nextPageToken : string;
-  prevPageToken? : string;
-  pageInfo : {
-    totalResults : number;
-    resultsPerPage : number;
+  items: ParseVideoList[];
+  nextPageToken?: string;
+  prevPageToken?: string;
+  pageInfo: {
+    totalResults: number;
+    resultsPerPage: number;
   };
 }
 
@@ -124,14 +124,114 @@ export interface NewVideoDataList {
   channelCustomUrl: string;
 }
 
-export interface FetchPageData {
+export interface FetchPageData extends Omit<ParsedAllData, "items"> {
+  items: NewVideoDataList[];
+}
+
+interface CommentSnippet {
+  channelId: string;
+  videoId: string;
+  textDisplay: string;
+  textOriginal: string;
+  parentId?: string;
+  authorDisplayName: string;
+  authorProfileImageUrl: string;
+  authorChannelUrl: string;
+  authorChannelId: {
+    value: string;
+  };
+  canRate: boolean;
+  viewerRating: string;
+  likeCount: number;
+  publishedAt: string;
+  updatedAt: string;
+};
+
+interface FetchedCommentItems {
   kind: string;
   etag: string;
-  items: NewVideoDataList[];
-  nextPageToken: string;
-  prevPageToken?: string;
-  pageInfo: {
-      totalResults: number;
-      resultsPerPage: number;
+  id: string;
+  snippet: {
+    channelId: string;
+    videoId: string;
+    topLevelComment: {
+      kind: string;
+      etag: string;
+      id: string;
+      snippet: CommentSnippet;
+    };
+    canReply: boolean;
+    totalReplyCount: number;
+    isPublic: boolean;
   };
+  replies?: {
+    comments: {
+      kind: string;
+      etag: string;
+      id: string;
+      snippet: CommentSnippet;
+    }[];
+  };
+}
+
+export interface FetchedComments extends Omit<ParsedAllData, "items"> {
+  items: FetchedCommentItems[];
+}
+
+export interface Comments {
+  totalReplyCount: number;
+  authorChannelId: string;
+  authorDisplayName: string;
+  authorChannelUrl: string;
+  authorProfileImageUrl: string;
+  likeCount: number;
+  textOriginal: string;
+  publishedAt: string;
+  replies: {
+    comments?: {
+      textOriginal: string;
+      authorDisplayName: string;
+      authorProfileImageUrl: string;
+      authorChannelUrl: string;
+      authorChannelId: string;
+      likeCount: number;
+      publishedAt: string;
+    }[];
+  };
+}
+
+
+export interface WatchPageVideoData extends Omit<NewVideoDataList, "url"> {
+  videoDescription: string;
+  postedAtDateFormate: string;
+  videoCommentCount: string;
+  videoLikeCount: string;
+  channelSubscriberCount: string;
+};
+
+
+export interface SuggestedVideoDataListItem {
+  kind: string;
+  id: {
+    kind: string;
+    videoId?: string;
+    playlistId?: string;
+  }
+  snippet: {
+    publishedAt: string;
+    channelId: string;
+    title: string;
+    description?: string | undefined | null;
+    thumbnails: {
+      default: Thumbnails;
+      medium: Thumbnails;
+      high: Thumbnails;
+    };
+    channelTitle: string;
+    liveBroadcastContent: string;
+    publishTime: string;
+  }
+}
+export interface SuggestedVideoDataList extends Omit<ParsedAllData, "etag" | "items"> {
+  items : SuggestedVideoDataListItem[]
 }

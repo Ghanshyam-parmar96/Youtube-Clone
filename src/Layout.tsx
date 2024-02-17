@@ -5,9 +5,9 @@ import Sidebar from './layouts/Sidebar'
 
 const Layout = () => {
   return (
-    <div className="max-w-screen-2xl mx-auto relative max-h-screen">
+    <div className="max-w-screen-2xl mx-auto relative max-h-screen scrollbarHide font-Roboto">
       <PageHeader />
-      <div className="grid grid-cols-[auto,1fr] flex-grow-1 overflow-auto h-[calc(100vh_-_64px)]">
+      <div className="grid grid-cols-[auto,1fr] flex-grow-1 overflow-auto h-[calc(100vh_-_64px)] scrollbarHide">
         <Sidebar/>
         <Outlet />
       </div>

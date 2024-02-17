@@ -3,11 +3,13 @@ import { Route, RouterProvider, createBrowserRouter, createRoutesFromElements } 
 import './App.css'
 import Layout from './Layout';
 import Home from './pages/home/Home';
+import WatchVideo from './pages/watchVideo/WatchVideo';
 
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<Layout />}>
       <Route path="/" element={<Home/>} />
+      <Route path="/watch" element={<WatchVideo/>} />
     </Route>
   )
 );

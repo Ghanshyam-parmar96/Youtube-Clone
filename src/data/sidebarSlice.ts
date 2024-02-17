@@ -1,4 +1,4 @@
-import { createSlice } from '@reduxjs/toolkit';
+import { PayloadAction, createSlice } from '@reduxjs/toolkit';
 
 // Define a type for the slice state
 interface SidebarState {
@@ -8,8 +8,8 @@ interface SidebarState {
 
 // Define the initial state using that type
 const initialState: SidebarState = {
-  isExpanded: window.innerWidth > 1024,
-  closePannal: window.innerWidth < 1024,
+  isExpanded: false,
+  closePannal: window.innerWidth < 1535,
 }
 
 export const sidebarSlice = createSlice({
@@ -19,9 +19,12 @@ export const sidebarSlice = createSlice({
     toggleSidebar: (state) => {
       state.isExpanded = !state.isExpanded;
     },
+    resizeBy: (state, action: PayloadAction<number>) => {
+      state.closePannal = action.payload < 1535;
+    },
   },
 })
 
-export const { toggleSidebar } = sidebarSlice.actions
+export const { toggleSidebar,resizeBy } = sidebarSlice.actions
 
 export default sidebarSlice.reducer

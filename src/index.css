@@ -11,6 +11,10 @@
     @apply bg-secondary-dark rounded-full
 }
 
+.scrollbarHide::-webkit-scrollbar-thumb{
+    @apply bg-transparent;
+}
+
 .scrollbar-hidden::-webkit-scrollbar-thumb{
     @apply bg-transparent;
 }
@@ -23,5 +27,12 @@
     overflow: hidden;
     display: -webkit-box;
     -webkit-line-clamp: 2; /* Adjust this to the number of lines you want to display */
+    -webkit-box-orient: vertical;
+}
+
+.lineClamp4 {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 4; /* Adjust this to the number of lines you want to display */
     -webkit-box-orient: vertical;
 }
