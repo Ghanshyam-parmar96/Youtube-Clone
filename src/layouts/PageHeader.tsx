@@ -1,5 +1,5 @@
 import { RxHamburgerMenu } from "react-icons/rx";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import youtubeLogo from "../assets/black-youtube-logo.png";
 import { RiVideoAddLine } from "react-icons/ri";
 import { IoMdArrowBack, IoMdMic, IoMdNotificationsOutline } from "react-icons/io";
@@ -12,14 +12,22 @@ import { toggleSidebar } from "../data/sidebarSlice";
 
 const PageHeader = () => {
     const [showFullWidthSearch, setShowFullWidthSearch] = useState(false);
+    const [search, setSearch] = useState("");
     const dispatch = useAppDispatch();
+    const navigate = useNavigate();
+
+    const submitHandler = () => {
+        if (search.length < 3) return;
+        navigate(`/search?query=${search}`);
+    };
+
 
     return (
         <div className="flex gap-10 lg:gap-20 justify-between px-4 h-14 sticky top-2 left-0 mt-2">
 
             {/* Logo Section */}
             <div className={`items-center gap-4 flex-shrink-0 ${showFullWidthSearch ? "hidden" : "flex"}`}>
-                <Button variant="ghost" size="icon" onClick={()=>dispatch(toggleSidebar())}>
+                <Button variant="ghost" size="icon" onClick={() => dispatch(toggleSidebar())}>
                     <RxHamburgerMenu className="text-2xl" />
                 </Button>
                 <Link to="/">
@@ -28,7 +36,7 @@ const PageHeader = () => {
             </div>
 
             {/* Search Section */}
-            <form className={`gap-4 justify-center items-center flex-grow ${!showFullWidthSearch ? "hidden md:flex" : "flex"}`}>
+            <div className={`gap-4 justify-center items-center flex-grow ${!showFullWidthSearch ? "hidden md:flex" : "flex"}`}>
 
                 {showFullWidthSearch && (<Button onClick={() => setShowFullWidthSearch(false)} variant="ghost" size="icon" className="text-xl" >
                     <IoMdArrowBack />
@@ -38,20 +46,22 @@ const PageHeader = () => {
                     <input
                         type="search"
                         name="search"
+                        onChange={(e: React.ChangeEvent<HTMLInputElement>) => setSearch(e.target.value)}
+                        onKeyDown={(e: React.KeyboardEvent<HTMLInputElement>) => e.key === 'Enter' && submitHandler()}
                         id="search"
                         placeholder="Search"
                         autoComplete="off"
                         className="w-full border focus:border-sky-600 border-gray-500/50 outline-none py-1 px-5 rounded-l-full"
                     />
 
-                    <button className="text-2xl rounded-r-full border border-gray-500/50 px-5 py-1 border-l-transparent bg-gray-200/40 ">
+                    <button onClick={submitHandler} className="text-2xl rounded-r-full border border-gray-500/50 px-5 py-1 border-l-transparent bg-gray-200/40 ">
                         <IoSearchOutline />
                     </button>
                 </div>
                 <Button size="icon" className="text-xl">
                     <IoMdMic />
                 </Button>
-            </form>
+            </div>
 
             {/* Last icons Section */}
             <div className={`flex-shrink-0 gap-3 text-2xl items-center ${showFullWidthSearch ? "hidden" : "flex"}`}>
@@ -61,7 +71,7 @@ const PageHeader = () => {
                 <Button variant="ghost" size="icon" className="hidden sm:block md:hidden">
                     <IoMdMic />
                 </Button>
-                <Button variant="ghost" size="icon" className="hidden sm:block"> 
+                <Button variant="ghost" size="icon" className="hidden sm:block">
                     <RiVideoAddLine />
                 </Button>
                 <Button variant="ghost" size="icon" className="relative hidden sm:block">

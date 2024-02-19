@@ -31,7 +31,7 @@ const Search = () => {
   };
 
   const { data, isLoading, hasNextPage, fetchNextPage } = useInfiniteQuery({
-    queryKey: ['searchVideos'],
+    queryKey: ['searchVideos', query],
     queryFn: ({ pageParam }) => searchVideoFn(pageParam),
     initialPageParam: "",
     getNextPageParam: (lastPage) => {
