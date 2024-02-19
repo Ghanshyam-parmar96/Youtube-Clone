@@ -235,3 +235,16 @@ export interface SuggestedVideoDataListItem {
 export interface SuggestedVideoDataList extends Omit<ParsedAllData, "etag" | "items"> {
   items : SuggestedVideoDataListItem[]
 }
+
+export interface SearchVideoItems {
+  kind: string;
+  id : {
+    kind: string;
+    videoId: string;
+  }
+}
+
+export interface SearchVideoFnProps extends Omit<ParsedAllData, "items"> {
+  items : SearchVideoItems[];
+  regionCode? : string;
+}
