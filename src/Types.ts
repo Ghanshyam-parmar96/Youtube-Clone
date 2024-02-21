@@ -233,18 +233,84 @@ export interface SuggestedVideoDataListItem {
   }
 }
 export interface SuggestedVideoDataList extends Omit<ParsedAllData, "etag" | "items"> {
-  items : SuggestedVideoDataListItem[]
+  items: SuggestedVideoDataListItem[]
 }
 
 export interface SearchVideoItems {
   kind: string;
-  id : {
+  id: {
     kind: string;
     videoId: string;
   }
 }
 
 export interface SearchVideoFnProps extends Omit<ParsedAllData, "items"> {
-  items : SearchVideoItems[];
-  regionCode? : string;
+  items: SearchVideoItems[];
+  regionCode?: string;
+}
+
+
+export interface ChannelPostData {
+  kind: string;
+  etag: string;
+  id: string;
+  snippet: {
+    title: string;
+    description: string;
+    customUrl: string;
+    publishedAt: string;
+    thumbnails: {
+      default: Thumbnails;
+      medium: Thumbnails;
+      high: Thumbnails;
+    };
+    localized: {
+      title: string;
+      description: string;
+    };
+    country?: string;
+  };
+}
+
+export interface ChannelDetails extends ChannelPostData {
+  statistics: {
+    hiddenSubscriberCount : boolean;
+    subscriberCount : string;
+    videoCount : string;
+    viewCount : string;
+  }
+};
+
+export interface ChannelProps extends Omit<ParsedAllData, "items"> {
+  items: ChannelDetails[];
+}
+
+
+export interface ChannelPlayListData extends Omit<ParsedAllData, "items"> {
+  items: {
+    kind: string;
+    etag: string;
+    id: string;
+    snippet: {
+      publishedAt: string;
+      channelId: string;
+      title: string;
+      description: string;
+      thumbnails: {
+        default: Thumbnails;
+        medium: Thumbnails;
+        high: Thumbnails;
+        standard: Thumbnails;
+        maxres?: Thumbnails;
+      };
+      channelTitle: string;
+      localized: {
+        title: string;
+        description: string;
+      };
+    };
+    contentDetails: {
+      itemCount : number;  
+    },
+  }[];
 }

@@ -1,30 +1,8 @@
 import axios from "axios";
-import { FetchPageData, NewVideoDataList, ParseVideoList, ParsedAllData, Thumbnails } from "../Types";
+import { ChannelPostData, FetchPageData, NewVideoDataList, ParseVideoList, ParsedAllData } from "../Types";
 import convertDurationToTime from "./convertDurationToTime";
 import { VIEW_FORMATTER, formatTimeAgo } from "./formatTimeAgo";
-import { API_KEY } from "./constants";
-
-interface ChannelPostData {
-    kind: string;
-    etag: string;
-    id: string;
-    snippet: {
-        title: string;
-        description: string;
-        customUrl: string;
-        publishedAt: string;
-        thumbnails: {
-            default: Thumbnails;
-            medium: Thumbnails;
-            high: Thumbnails;
-        };
-        localized: {
-            title: string;
-            description: string;
-        };
-        country?: string;
-    };
-}
+import { API_KEY, BASE_URL } from "./constants";
 
 
 const parseData = async (data: ParsedAllData): Promise<FetchPageData> => {
@@ -32,7 +10,7 @@ const parseData = async (data: ParsedAllData): Promise<FetchPageData> => {
 
     const channelIds: string = items.map(item => item.snippet.channelId).join('%2C');
 
-    const channelPost: ChannelPostData[] = await axios.get(`https://youtube.googleapis.com/youtube/v3/channels?part=snippet&id=${channelIds}&maxResults=50&key=${API_KEY}`).then((response) => response.data.items);
+    const channelPost: ChannelPostData[] = await axios.get(`${BASE_URL}/channels?part=snippet&id=${channelIds}&maxResults=50&key=${API_KEY}`).then((response) => response.data.items);
 
     const results : NewVideoDataList[] = items.map((item) => {
         const channelData = channelPost.find((element) => item.snippet.channelId === element.id);
