@@ -39,7 +39,8 @@ const ChannelHome = () => {
     queries: ids.map((id) => ({
       queryKey: ['channelHome', id],
       queryFn: () => fetchChannelVideos(id),
-      staleTime: Infinity
+      staleTime: 1000 * 30,
+      enabled: !!channelId,
     }))
   })
 

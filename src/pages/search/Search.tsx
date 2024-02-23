@@ -37,8 +37,8 @@ const Search = () => {
     getNextPageParam: (lastPage) => {
       return lastPage?.nextPageToken;
     },
-
-    staleTime: Infinity,
+    enabled: !!query,
+    staleTime: 1000 * 30,
   });
 
 
@@ -58,7 +58,7 @@ const Search = () => {
 
       <InfiniteScroll
         className="h-full w-full flex gap-5 flex-col"
-        dataLength={data?.pages.length || 0}
+        dataLength={data?.pages.length || 1}
         hasMore={hasNextPage}
         next={fetchNextPage}
         scrollableTarget="searchScrollableDiv"
@@ -90,7 +90,7 @@ const Search = () => {
             </Link>
 
             <div className="flex gap-2 py-1 px-3 w-full">
-              <Link to={`/@${item.channelCustomUrl}`} className="flex flex-shrink-0 sm:hidden">
+              <Link to={`/channel/${item.channelId}`} className="flex flex-shrink-0 sm:hidden">
                 <img src={item.channelIcon} className="w-12 h-12 rounded-full" alt="" />
               </Link>
 
@@ -99,11 +99,11 @@ const Search = () => {
                   {item.videoTitle}
                 </Link>
                 <div className="flex items-center gap-4 sm:order-3">
-                  <Link to={`/@${item.channelCustomUrl}`} className="sm:flex flex-shrink-0 hidden">
+                  <Link to={`/channel/${item.channelId}`} className="sm:flex flex-shrink-0 hidden">
                     <img src={item.channelIcon} className="w-10 h-10 rounded-full" alt="" />
                   </Link>
 
-                  <Link to={`/@${item.channelIcon}`} className="text-secondary-text text-sm sm:text-base">
+                  <Link to={`/channel/${item.channelId}`} className="text-secondary-text text-sm sm:text-base">
                     {item.channelTitle}
                   </Link>
                 </div>

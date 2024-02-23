@@ -15,7 +15,7 @@ const HorizontalVideo = ({ data, IconShow = false }: { data: NewVideoDataList[],
                     </Link>
 
                     <div className="flex gap-2 sm:w-3/5 sm:h-full ">
-                        {IconShow && (<Link to={`/@${video.videoId}`} className="flex flex-shrink-0">
+                        {IconShow && (<Link to={`/channel/${video.channelId}`} className="flex flex-shrink-0">
                             <img src={video.channelIcon} className="w-10 h-10 rounded-full" alt="" />
                         </Link>)}
 
@@ -23,7 +23,7 @@ const HorizontalVideo = ({ data, IconShow = false }: { data: NewVideoDataList[],
                             <Link to={`/watch?v=${video.videoId}`} className="font-bold lineClamp2">
                                 {video.videoTitle}
                             </Link>
-                            <Link to={`/@${video.channelId}`} className="text-secondary-text text-sm">
+                            <Link to={`/channel/${video.channelId}`} className="text-secondary-text text-sm">
                                 {video.channelTitle}
                             </Link>
 

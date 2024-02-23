@@ -85,13 +85,13 @@ const VideosSlider = ({ videos = [] }: {videos : VideosSliderProps[]}) => {
                 ))}
             </div>
 
-            {isLeftVisible && (<div className="absolute left-0 top-1/2 -translate-y-1/2 bg-white rounded-full shadow-lg w-12 h-12 hidden sm:block">
+            {isLeftVisible && (<div className="absolute left-0 top-1/3 -translate-y-1/2 bg-white rounded-full shadow-lg w-12 h-12 hidden sm:block">
                 <Button variant="ghost" size="icon" className="h-full text-base aspect-square w-auto p-1.5" onClick={moveToLeft} >
                     <IoIosArrowBack />
                 </Button>
             </div>)}
 
-            {isRightVisible && (<div className="absolute right-0 top-1/2 -translate-y-1/2 bg-white rounded-full shadow-lg w-12 h-12 justify-end flex-shrink-0 hidden sm:flex" onClick={moveToRight} >
+            {isRightVisible && (<div className="absolute right-0 top-1/3 -translate-y-1/2 bg-white rounded-full shadow-lg w-12 h-12 justify-end flex-shrink-0 hidden sm:flex" onClick={moveToRight} >
                 <Button variant="ghost" size="icon" className="h-full aspect-square w-auto p-1">
                     <IoIosArrowForward />
                 </Button>

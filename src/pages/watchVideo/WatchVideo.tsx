@@ -1,24 +1,30 @@
 import Button from "../../components/Button";
 import { IoMdShareAlt } from "react-icons/io";
 import { BiDislike, BiLike } from "react-icons/bi";
-import { TfiMoreAlt } from "react-icons/tfi";
+import { TfiLoop, TfiMoreAlt } from "react-icons/tfi";
 import { useState } from "react";
-import { Comments, FetchPageData, NewVideoDataList, SuggestedVideoDataList, SuggestedVideoDataListItem, WatchPageVideoData } from "../../Types";
+import { ChannelPlayListData, Comments, FetchPageData, NewVideoDataList, SuggestedVideoDataList, SuggestedVideoDataListItem, WatchPageVideoData } from "../../Types";
 import commentParser from "../../utils/commentParser";
 import Comment from "./Comment";
 import HorizontalVideo from "../../components/HorizontalVideo";
-import { useSearchParams } from "react-router-dom";
+import { Link, useSearchParams } from "react-router-dom";
 import { useQuery } from "@tanstack/react-query";
 import axios from "axios";
 import { API_KEY, BASE_URL, RAPIDAPI_BASE_URL, options } from "../../utils/constants";
 import parseData from "../../utils/parseData";
 import WatchDataParser from "./WatchDataParser";
+import { RxCross2 } from "react-icons/rx";
+import { IoShuffle } from "react-icons/io5";
+import { SlOptionsVertical } from "react-icons/sl";
+import WatchPlaylistItems from "./WatchPlaylistItems";
+import { MdKeyboardArrowDown } from "react-icons/md";
 
 const WatchVideo = () => {
     const [clampDescription, setClampDescription] = useState(true);
+    const [togglePlaylist, setTogglePlaylist] = useState(true);
     const [searchParams] = useSearchParams();
     let videoId = searchParams.get('v');
-
+    let playlistId = searchParams.get('list') || "";
 
     const suggestedVideoFn = async (data: SuggestedVideoDataList): Promise<NewVideoDataList[]> => {
         let moreData;
@@ -41,22 +47,32 @@ const WatchVideo = () => {
         queryKey: ['WatchVideoData', videoId],
         queryFn: () => axios.get(`${BASE_URL}/videos?part=snippet%2CcontentDetails%2Cstatistics&id=${videoId}&hl=en&regionCode=IN&key=${API_KEY}`)
             .then((response) => WatchDataParser(response.data.items[0])),
-        staleTime: Infinity,
+        enabled: !!videoId,
+        staleTime: 1000 * 30,
     });
 
     const { data: commentsData = [], isLoading: commentsDataLoading } = useQuery<Comments[]>({
         queryKey: ['WatchVideoCommentData', videoId],
         queryFn: () => axios.get(`${BASE_URL}/commentThreads?part=snippet%2Creplies&maxResults=100&order=relevance&videoId=${videoId}&key=${API_KEY}`)
             .then((response) => commentParser(response.data)),
-        staleTime: Infinity,
+        staleTime: 1000 * 30,
+        enabled: !!videoId,
     });
 
     const { data: suggestedVideos = [], isLoading: suggestedVideoLoading } = useQuery<NewVideoDataList[]>({
         queryKey: ['WatchSuggestedVideos', videoId],
         queryFn: () => axios.get(`${RAPIDAPI_BASE_URL}/search?relatedToVideoId=${videoId}&hl=en&regionCode=IN&part=id&type=video&maxResults=50`, options)
             .then((response) => suggestedVideoFn(response.data)),
-        staleTime: Infinity,
+        staleTime: 1000 * 30,
+        enabled: !!videoId,
     });
+
+    const { data: playlistDetail } = useQuery<ChannelPlayListData>({
+        queryKey: ['watchPlaylist', playlistId],
+        queryFn: () => axios.get(`${BASE_URL}/playlists?part=snippet%2CcontentDetails&id=${playlistId}&maxResults=25&key=${API_KEY}`).then(response => response.data),
+        enabled: !!playlistId,
+        staleTime: 1000 * 30,
+    })
 
 
     if (!videoId) {
@@ -86,7 +102,7 @@ const WatchVideo = () => {
                     <div className="flex items-center gap-4">
                         <img className="h-12 w-12 rounded-full" src={videoData?.channelIcon} alt="" />
                         <div>
-                            <p className="font-semibold text-base truncate w-40">{videoData?.channelTitle}</p>
+                            <p className="font-semibold text-base truncate w-40"><Link to={`/channel/${videoData?.channelId}`}>{videoData?.channelTitle}</Link></p>
                             <span className="text-sm text-gray-500 truncate w-40">{videoData?.channelSubscriberCount} subscriber</span>
                         </div>
                         <Button variant="ghost" size="icon" className="border border-gray-400 h-8 w-14 text-sm rounded-2xl hidden sm:flex">join</Button>
@@ -129,6 +145,37 @@ const WatchVideo = () => {
                 {suggestedVideoLoading && [...Array(15).fill(1)].map((item, i) => (
                     <div key={`suggestedVideoLoading-${i + item}`}>{HorizontalVideo.loading}</div>
                 ))}
+
+                {!!playlistId && (
+                    <div className={` h-full ${togglePlaylist ? "lg:h-[450px]" : "lg:h-32"} w-full border-2 shadow-xl overflow-hidden rounded-lg border-red-5000`}>
+                        <div className="py-2 px-2 bg-[#f2f2f2]">
+                            <div className="flex items-center justify-between">
+                                <Link to={`/playlist?list=${playlistId}`} className="text-xl font-bold line-clamp-2">{playlistDetail?.items[0].snippet.title}</Link>
+                                <button onClick={() => setTogglePlaylist((prev) => !prev)} className="flex-shrink-0 cursor-pointer text-2xl">
+                                    {togglePlaylist ? <RxCross2 /> : <MdKeyboardArrowDown />}
+                                </button>
+                            </div>
+                            <p className="text-sm"><Link to={`/channel/${playlistDetail?.items[0].snippet.channelId}`}>{playlistDetail?.items[0].snippet.channelTitle}</Link> - {playlistDetail?.items[0].contentDetails.itemCount}</p>
+                            <div className="flex items-center justify-between">
+                                <div className="flex items-center gap-2">
+                                    <Button variant="ghost" size="icon">
+                                        <TfiLoop className="text-xl" />
+                                    </Button>
+                                    <Button variant="ghost" size="icon">
+                                        <IoShuffle className="text-xl" />
+                                    </Button>
+                                </div>
+                                <Button variant="ghost" size="icon">
+                                    <SlOptionsVertical className="text-sm" />
+                                </Button>
+                            </div>
+                        </div>
+                        {togglePlaylist && (<div className="overflow-x-hidden h-96" id="scrollDiv">
+                            <WatchPlaylistItems playlistId={playlistId} />
+                        </div>)}
+                    </div>
+                )}
+
                 <HorizontalVideo data={suggestedVideos} />
             </div>
 

@@ -14,14 +14,14 @@ const VideoGridItem = ({ videoId, categoryId, channelCustomUrl, channelIcon, cha
             </Link>
 
             <div className="flex gap-2">
-                <Link to={`/@${channelId}`} className="flex flex-shrink-0">
+                <Link to={`/channel/${channelId}`} className="flex flex-shrink-0">
                     <img src={channelIcon} className="w-10 h-10 rounded-full" alt="" />
                 </Link>
                 <div className="flex flex-col">
                     <Link to={`/watch?v=${videoId}`} className="font-bold lineClamp2">
                         {videoTitle}
                     </Link>
-                    <Link to={`/@${channelId}`} className="text-secondary-text text-sm">
+                    <Link to={`/channel/${channelId}`} className="text-secondary-text text-sm">
                         {channelTitle}
                     </Link>
 

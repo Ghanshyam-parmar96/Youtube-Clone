@@ -7,15 +7,18 @@ import { VIEW_FORMATTER } from "../../utils/formatTimeAgo";
 import Button from "../../components/Button";
 import { TbBellRinging } from "react-icons/tb";
 import { MdOutlineKeyboardArrowDown, MdOutlineKeyboardArrowRight } from "react-icons/md";
+import { useState } from "react";
 
 const Channel = () => {
     const { channelId } = useParams();
     const navigate = useNavigate();
+    const [isActive, setIsActive] = useState(0);
 
     const { data } = useQuery<ChannelDetails>({
         queryKey: ['channel', channelId],
         queryFn: () => axios.get(`${BASE_URL}/channels?part=snippet%2Cstatistics&id=${channelId}&maxResults=50&key=${API_KEY}`).then((response) => response.data.items[0]),
-        staleTime: Infinity
+        staleTime: 1000 * 30,
+        enabled : !!channelId,
     })
 
     return (
@@ -42,9 +45,9 @@ const Channel = () => {
                 </div>
             </div>
             <div className="flex items-center gap-8 mt-7 py-2 sticky top-0 left-0 z-10 bg-white">
-                <button onClick={() => navigate(`/${channelId}`)} className="relative after:contents-[''] after:w-[125%] after:absolute after:-bottom-2 after:left-0 after:border-[1.4px] after:-translate-x-[10%] after:border-gray-500 after:hidden hover:after:block ">Home</button>
-                <button onClick={() => navigate(`/${channelId}/videos`)} className="relative after:contents-[''] after:w-[125%] after:absolute after:-bottom-2 after:left-0 after:border-[1.4px] after:-translate-x-[10%] after:border-gray-500 after:hidden hover:after:block ">Videos</button>
-                <button onClick={() => navigate(`/${channelId}/playlists`)} className="relative after:contents-[''] after:w-[125%] after:absolute after:-bottom-2 after:left-0 after:border-[1.4px] after:-translate-x-[10%] after:border-gray-500 after:hidden hover:after:block ">PlayLists</button>
+                <button onClick={() => { navigate(`/channel/${channelId}`); setIsActive(0)}} className={`relative after:contents-[''] after:w-[125%] after:absolute after:-bottom-2 after:left-0 after:border-[1.4px] after:-translate-x-[10%] after:border-gray-500 hover:after:block ${isActive === 0 ? "after:block" : "after:hidden"} `}>Home</button>
+                <button onClick={() => { navigate(`/channel/${channelId}/videos`); setIsActive(1)}} className={`relative after:contents-[''] after:w-[125%] after:absolute after:-bottom-2 after:left-0 after:border-[1.4px] after:-translate-x-[10%] after:border-gray-500 hover:after:block ${isActive === 1 ? "after:block" : "after:hidden"} `}>Videos</button>
+                <button onClick={() => { navigate(`/channel/${channelId}/playlists`); setIsActive(2)}} className={`relative after:contents-[''] after:w-[125%] after:absolute after:-bottom-2 after:left-0 after:border-[1.4px] after:-translate-x-[10%] after:border-gray-500 hover:after:block ${isActive === 2 ? "after:block" : "after:hidden"} `}>PlayLists</button>
             </div>
             <hr />
             <div className="w-full h-full">

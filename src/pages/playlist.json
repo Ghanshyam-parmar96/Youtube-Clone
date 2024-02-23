@@ -1,0 +1,1686 @@
+{
+  "kind": "youtube#playlistItemListResponse",
+  "etag": "im4ziB75Pv3ab33rv6vSKsDemMY",
+  "items": [
+    {
+      "kind": "youtube#playlistItem",
+      "etag": "uy87hGcl5ZP-UO15emb7j8sR72Y",
+      "id": "UEx1NzFTS3hOYmZvQnNNdWdURkFMaGRMbFo1Vk9xQ2cycy41NkI0NEY2RDEwNTU3Q0M2",
+      "snippet": {
+        "publishedAt": "2024-01-27T07:43:38Z",
+        "channelId": "UCNQ6FEtztATuaVhZKCY28Yw",
+        "title": "Python series launch | chai aur python for beginners",
+        "description": "Hanji, swagat h aap sabhi ka chai aur python me, 1 new series jo aapko python ke indepth se introduce krwayegi. Agar aap experienced programmer b ho to aapko lagega ki aaj sahi me python samjh aai h. Agr beginner ho to bht achhi shuruwat hogi aapki python me.\nis series me new teaching method h. Question based approach h isme.\n\nCode files:\nhttps://github.com/hiteshchoudhary/chai-aur-python\n\nWelcome to chai aur code, a coding/programming dedicated channel in Hindi language. Now you can learn best of programming concepts with industry standard practical guide in Hindi language.\n\nAll source code is available at my Github account:\nhttps://github.com/hiteshchoudhary\n\nOur Open-Source Project is here: https://freeapi.app\n\nJoin me at whatsapp: https://hitesh.ai/whatsapp\n\nfor community discord: https://hitesh.ai/discord\n\nInstagram pe yaha paaye jaate h:\nhttps://www.instagram.com/hiteshchoudharyofficial/\n\nHTML video series:  https://www.youtube.com/watch?v=XmLOwJHFHf0&list=PLu71SKxNbfoDBNF5s-WH6aLbthSEIMhMI\n\nComplete javascript series: https://www.youtube.com/watch?v=Hr5iLG7sUa0&list=PLu71SKxNbfoBuX3f4EOACle2y-tRC5Q37\n\nComplete Reactjs series: https://www.youtube.com/watch?v=vz1RlUyrc3w&list=PLu71SKxNbfoDqgPchmvIsL4hTnJIrtige\n\nJavascript and react interview series: https://www.youtube.com/watch?v=1wqCyz7XrV4&list=PLu71SKxNbfoCy_MsA98SBfvUKF5eQit6L\n\nBackend development with Javascript: https://www.youtube.com/watch?v=EH3vGeqeIAo&list=PLu71SKxNbfoBGh_8p_NS-ZAh6v7HhYqHW",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/Ca5DLSDfPec/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/Ca5DLSDfPec/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/Ca5DLSDfPec/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/Ca5DLSDfPec/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/Ca5DLSDfPec/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Chai aur Code",
+        "playlistId": "PLu71SKxNbfoBsMugTFALhdLlZ5VOqCg2s",
+        "position": 0,
+        "resourceId": {
+          "kind": "youtube#video",
+          "videoId": "Ca5DLSDfPec"
+        },
+        "videoOwnerChannelTitle": "Chai aur Code",
+        "videoOwnerChannelId": "UCNQ6FEtztATuaVhZKCY28Yw"
+      },
+      "contentDetails": {
+        "videoId": "Ca5DLSDfPec",
+        "videoPublishedAt": "2024-01-27T14:30:08Z"
+      }
+    },
+    {
+      "kind": "youtube#playlistItem",
+      "etag": "fhZKG8cQm36FfJ8T4yKoJOzNzjk",
+      "id": "UEx1NzFTS3hOYmZvQnNNdWdURkFMaGRMbFo1Vk9xQ2cycy4yODlGNEE0NkRGMEEzMEQy",
+      "snippet": {
+        "publishedAt": "2024-01-27T09:18:15Z",
+        "channelId": "UCNQ6FEtztATuaVhZKCY28Yw",
+        "title": "What is the best way to install python",
+        "description": "Hanji, swagat h aap sabhi ka chai aur python ke 1 aur video me. Is video me hum python ke installation pe baat krenge n jaanenge ki installation kaise hota h and basic code kaise likhte h. Saaath hi me jaanenge ki kaise PYC files bnti h.\n\nWelcome to chai aur code, a coding/programming dedicated channel in Hindi language. Now you can learn best of programming concepts with industry standard practical guide in Hindi language.\n\nAll source code is available at my Github account:\nhttps://github.com/hiteshchoudhary\n\nOur Open-Source Project is here: https://freeapi.app\n\nJoin me at whatsapp: https://hitesh.ai/whatsapp\n\nfor community discord: https://hitesh.ai/discord\n\nInstagram pe yaha paaye jaate h:\nhttps://www.instagram.com/hiteshchoudharyofficial/\n\nHTML video series:  https://www.youtube.com/watch?v=XmLOwJHFHf0&list=PLu71SKxNbfoDBNF5s-WH6aLbthSEIMhMI\n\nComplete javascript series: https://www.youtube.com/watch?v=Hr5iLG7sUa0&list=PLu71SKxNbfoBuX3f4EOACle2y-tRC5Q37\n\nComplete Reactjs series: https://www.youtube.com/watch?v=vz1RlUyrc3w&list=PLu71SKxNbfoDqgPchmvIsL4hTnJIrtige\n\nJavascript and react interview series: https://www.youtube.com/watch?v=1wqCyz7XrV4&list=PLu71SKxNbfoCy_MsA98SBfvUKF5eQit6L\n\nBackend development with Javascript: https://www.youtube.com/watch?v=EH3vGeqeIAo&list=PLu71SKxNbfoBGh_8p_NS-ZAh6v7HhYqHW",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/0e2e2KcoQm4/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/0e2e2KcoQm4/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/0e2e2KcoQm4/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/0e2e2KcoQm4/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/0e2e2KcoQm4/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Chai aur Code",
+        "playlistId": "PLu71SKxNbfoBsMugTFALhdLlZ5VOqCg2s",
+        "position": 1,
+        "resourceId": {
+          "kind": "youtube#video",
+          "videoId": "0e2e2KcoQm4"
+        },
+        "videoOwnerChannelTitle": "Chai aur Code",
+        "videoOwnerChannelId": "UCNQ6FEtztATuaVhZKCY28Yw"
+      },
+      "contentDetails": {
+        "videoId": "0e2e2KcoQm4",
+        "videoPublishedAt": "2024-01-28T14:30:07Z"
+      }
+    },
+    {
+      "kind": "youtube#playlistItem",
+      "etag": "Gq-qInWojKiVyU1y_tFaUkk8TbQ",
+      "id": "UEx1NzFTS3hOYmZvQnNNdWdURkFMaGRMbFo1Vk9xQ2cycy4wMTcyMDhGQUE4NTIzM0Y5",
+      "snippet": {
+        "publishedAt": "2024-01-28T07:26:18Z",
+        "channelId": "UCNQ6FEtztATuaVhZKCY28Yw",
+        "title": "Python inner working",
+        "description": "In this video we will learn about inner working of python. It is very important to know about behind the scene working of python to fully understand the python language. This video will help you to understand python complied byte code and python virtual machine.\n\nWelcome to chai aur code, a coding/programming dedicated channel in Hindi language. Now you can learn best of programming concepts with industry standard practical guide in Hindi language.\n\nAll source code is available at my Github account:\nhttps://github.com/hiteshchoudhary\n\nOur Open-Source Project is here: https://freeapi.app\n\nJoin me at whatsapp: https://hitesh.ai/whatsapp\n\nfor community discord: https://hitesh.ai/discord\n\nInstagram pe yaha paaye jaate h:\nhttps://www.instagram.com/hiteshchoudharyofficial/\n\nHTML video series:  https://www.youtube.com/watch?v=XmLOwJHFHf0&list=PLu71SKxNbfoDBNF5s-WH6aLbthSEIMhMI\n\nComplete javascript series: https://www.youtube.com/watch?v=Hr5iLG7sUa0&list=PLu71SKxNbfoBuX3f4EOACle2y-tRC5Q37\n\nComplete Reactjs series: https://www.youtube.com/watch?v=vz1RlUyrc3w&list=PLu71SKxNbfoDqgPchmvIsL4hTnJIrtige\n\nJavascript and react interview series: https://www.youtube.com/watch?v=1wqCyz7XrV4&list=PLu71SKxNbfoCy_MsA98SBfvUKF5eQit6L\n\nBackend development with Javascript: https://www.youtube.com/watch?v=EH3vGeqeIAo&list=PLu71SKxNbfoBGh_8p_NS-ZAh6v7HhYqHW",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/3HTKc-ZgZbg/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/3HTKc-ZgZbg/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/3HTKc-ZgZbg/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/3HTKc-ZgZbg/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/3HTKc-ZgZbg/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Chai aur Code",
+        "playlistId": "PLu71SKxNbfoBsMugTFALhdLlZ5VOqCg2s",
+        "position": 2,
+        "resourceId": {
+          "kind": "youtube#video",
+          "videoId": "3HTKc-ZgZbg"
+        },
+        "videoOwnerChannelTitle": "Chai aur Code",
+        "videoOwnerChannelId": "UCNQ6FEtztATuaVhZKCY28Yw"
+      },
+      "contentDetails": {
+        "videoId": "3HTKc-ZgZbg",
+        "videoPublishedAt": "2024-01-29T14:30:10Z"
+      }
+    },
+    {
+      "kind": "youtube#playlistItem",
+      "etag": "jAxpj3mJvgJqtQCWAkoFd5OsUkI",
+      "id": "UEx1NzFTS3hOYmZvQnNNdWdURkFMaGRMbFo1Vk9xQ2cycy41MjE1MkI0OTQ2QzJGNzNG",
+      "snippet": {
+        "publishedAt": "2024-01-29T13:56:24Z",
+        "channelId": "UCNQ6FEtztATuaVhZKCY28Yw",
+        "title": "Python in shell",
+        "description": "Let's learn about python in shell. This video focus on using python in shell and getting friendly with errors like namespace error or Indentation error\n\nWelcome to chai aur code, a coding/programming dedicated channel in Hindi language. Now you can learn best of programming concepts with industry standard practical guide in Hindi language.\n\nAll source code is available at my Github account:\nhttps://github.com/hiteshchoudhary\n\nOur Open-Source Project is here: https://freeapi.app\n\nJoin me at whatsapp: https://hitesh.ai/whatsapp\n\nfor community discord: https://hitesh.ai/discord\n\nInstagram pe yaha paaye jaate h:\nhttps://www.instagram.com/hiteshchoudharyofficial/\n\nHTML video series:  https://www.youtube.com/watch?v=XmLOwJHFHf0&list=PLu71SKxNbfoDBNF5s-WH6aLbthSEIMhMI\n\nComplete javascript series: https://www.youtube.com/watch?v=Hr5iLG7sUa0&list=PLu71SKxNbfoBuX3f4EOACle2y-tRC5Q37\n\nComplete Reactjs series: https://www.youtube.com/watch?v=vz1RlUyrc3w&list=PLu71SKxNbfoDqgPchmvIsL4hTnJIrtige\n\nJavascript and react interview series: https://www.youtube.com/watch?v=1wqCyz7XrV4&list=PLu71SKxNbfoCy_MsA98SBfvUKF5eQit6L\n\nBackend development with Javascript: https://www.youtube.com/watch?v=EH3vGeqeIAo&list=PLu71SKxNbfoBGh_8p_NS-ZAh6v7HhYqHW",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/OEKrDogH5ew/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/OEKrDogH5ew/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/OEKrDogH5ew/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/OEKrDogH5ew/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/OEKrDogH5ew/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Chai aur Code",
+        "playlistId": "PLu71SKxNbfoBsMugTFALhdLlZ5VOqCg2s",
+        "position": 3,
+        "resourceId": {
+          "kind": "youtube#video",
+          "videoId": "OEKrDogH5ew"
+        },
+        "videoOwnerChannelTitle": "Chai aur Code",
+        "videoOwnerChannelId": "UCNQ6FEtztATuaVhZKCY28Yw"
+      },
+      "contentDetails": {
+        "videoId": "OEKrDogH5ew",
+        "videoPublishedAt": "2024-01-30T14:30:11Z"
+      }
+    },
+    {
+      "kind": "youtube#playlistItem",
+      "etag": "kg0oqR4H0kNKBeYIr4cNlklF7-Y",
+      "id": "UEx1NzFTS3hOYmZvQnNNdWdURkFMaGRMbFo1Vk9xQ2cycy4wOTA3OTZBNzVEMTUzOTMy",
+      "snippet": {
+        "publishedAt": "2024-01-29T13:59:29Z",
+        "channelId": "UCNQ6FEtztATuaVhZKCY28Yw",
+        "title": "Immutable and mutable in python",
+        "description": "Welcome to chai aur code, a coding/programming dedicated channel in Hindi language. Now you can learn best of programming concepts with industry standard practical guide in Hindi language.\n\nAll source code is available at my Github account:\nhttps://github.com/hiteshchoudhary\n\nOur Open-Source Project is here: https://freeapi.app\n\nJoin me at whatsapp: https://hitesh.ai/whatsapp\n\nfor community discord: https://hitesh/ai/discord\n\nInstagram pe yaha paaye jaate h:\nhttps://www.instagram.com/hiteshchoudharyofficial/\n\nHTML video series:  https://www.youtube.com/watch?v=XmLOwJHFHf0&list=PLu71SKxNbfoDBNF5s-WH6aLbthSEIMhMI\n\nComplete javascript series: https://www.youtube.com/watch?v=Hr5iLG7sUa0&list=PLu71SKxNbfoBuX3f4EOACle2y-tRC5Q37\n\nComplete Reactjs series: https://www.youtube.com/watch?v=vz1RlUyrc3w&list=PLu71SKxNbfoDqgPchmvIsL4hTnJIrtige\n\nJavascript and react interview series: https://www.youtube.com/watch?v=1wqCyz7XrV4&list=PLu71SKxNbfoCy_MsA98SBfvUKF5eQit6L\n\nBackend development with Javascript: https://www.youtube.com/watch?v=EH3vGeqeIAo&list=PLu71SKxNbfoBGh_8p_NS-ZAh6v7HhYqHW",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/MDZ4y-GgZ8k/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/MDZ4y-GgZ8k/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/MDZ4y-GgZ8k/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/MDZ4y-GgZ8k/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/MDZ4y-GgZ8k/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Chai aur Code",
+        "playlistId": "PLu71SKxNbfoBsMugTFALhdLlZ5VOqCg2s",
+        "position": 4,
+        "resourceId": {
+          "kind": "youtube#video",
+          "videoId": "MDZ4y-GgZ8k"
+        },
+        "videoOwnerChannelTitle": "Chai aur Code",
+        "videoOwnerChannelId": "UCNQ6FEtztATuaVhZKCY28Yw"
+      },
+      "contentDetails": {
+        "videoId": "MDZ4y-GgZ8k",
+        "videoPublishedAt": "2024-01-31T14:30:11Z"
+      }
+    },
+    {
+      "kind": "youtube#playlistItem",
+      "etag": "5j7Zk_tzSnsQu6ZqeuBmF1L4bmY",
+      "id": "UEx1NzFTS3hOYmZvQnNNdWdURkFMaGRMbFo1Vk9xQ2cycy4xMkVGQjNCMUM1N0RFNEUx",
+      "snippet": {
+        "publishedAt": "2024-01-31T07:38:10Z",
+        "channelId": "UCNQ6FEtztATuaVhZKCY28Yw",
+        "title": "Python Data Types - Big Picture | #chaiaurpython",
+        "description": "This video in python series will teach you about python data types. Python support all standard data types and allows you to interact with them with many in built methods.\n\nWelcome to chai aur code, a coding/programming dedicated channel in Hindi language. Now you can learn best of programming concepts with industry standard practical guide in Hindi language.\n\nAll source code is available at my Github account:\nhttps://github.com/hiteshchoudhary\n\nOur Open-Source Project is here: https://freeapi.app\n\nJoin me at whatsapp: https://hitesh.ai/whatsapp\n\nfor community discord: https://hitesh.ai/discord\n\nInstagram pe yaha paaye jaate h:\nhttps://www.instagram.com/hiteshchoudharyofficial/\n\nHTML video series:  https://www.youtube.com/watch?v=XmLOwJHFHf0&list=PLu71SKxNbfoDBNF5s-WH6aLbthSEIMhMI\n\nComplete javascript series: https://www.youtube.com/watch?v=Hr5iLG7sUa0&list=PLu71SKxNbfoBuX3f4EOACle2y-tRC5Q37\n\nComplete Reactjs series: https://www.youtube.com/watch?v=vz1RlUyrc3w&list=PLu71SKxNbfoDqgPchmvIsL4hTnJIrtige\n\nJavascript and react interview series: https://www.youtube.com/watch?v=1wqCyz7XrV4&list=PLu71SKxNbfoCy_MsA98SBfvUKF5eQit6L\n\nBackend development with Javascript: https://www.youtube.com/watch?v=EH3vGeqeIAo&list=PLu71SKxNbfoBGh_8p_NS-ZAh6v7HhYqHW",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/v8veitfmmDo/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/v8veitfmmDo/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/v8veitfmmDo/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/v8veitfmmDo/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/v8veitfmmDo/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Chai aur Code",
+        "playlistId": "PLu71SKxNbfoBsMugTFALhdLlZ5VOqCg2s",
+        "position": 5,
+        "resourceId": {
+          "kind": "youtube#video",
+          "videoId": "v8veitfmmDo"
+        },
+        "videoOwnerChannelTitle": "Chai aur Code",
+        "videoOwnerChannelId": "UCNQ6FEtztATuaVhZKCY28Yw"
+      },
+      "contentDetails": {
+        "videoId": "v8veitfmmDo",
+        "videoPublishedAt": "2024-02-01T14:30:09Z"
+      }
+    },
+    {
+      "kind": "youtube#playlistItem",
+      "etag": "LVHvmQrvT2O3qco7sR1bYvsgRyw",
+      "id": "UEx1NzFTS3hOYmZvQnNNdWdURkFMaGRMbFo1Vk9xQ2cycy41MzJCQjBCNDIyRkJDN0VD",
+      "snippet": {
+        "publishedAt": "2024-02-02T06:21:05Z",
+        "channelId": "UCNQ6FEtztATuaVhZKCY28Yw",
+        "title": "Internal working of python | Copy, reference counts, slice",
+        "description": "This video will give you internal working of python with number, strings and list. We will also discuss about reference count of variable and where object data types are really stored.\n\nWelcome to chai aur code, a coding/programming dedicated channel in Hindi language. Now you can learn best of programming concepts with industry standard practical guide in Hindi language.\n\nAll source code is available at my Github account:\nhttps://github.com/hiteshchoudhary\n\nOur Open-Source Project is here: https://freeapi.app\n\nJoin me at whatsapp: https://hitesh.ai/whatsapp\n\nfor community discord: https://hitesh.ai/discord\n\nInstagram pe yaha paaye jaate h:\nhttps://www.instagram.com/hiteshchoudharyofficial/\n\nHTML video series:  https://www.youtube.com/watch?v=XmLOwJHFHf0&list=PLu71SKxNbfoDBNF5s-WH6aLbthSEIMhMI\n\nComplete javascript series: https://www.youtube.com/watch?v=Hr5iLG7sUa0&list=PLu71SKxNbfoBuX3f4EOACle2y-tRC5Q37\n\nComplete Reactjs series: https://www.youtube.com/watch?v=vz1RlUyrc3w&list=PLu71SKxNbfoDqgPchmvIsL4hTnJIrtige\n\nJavascript and react interview series: https://www.youtube.com/watch?v=1wqCyz7XrV4&list=PLu71SKxNbfoCy_MsA98SBfvUKF5eQit6L\n\nBackend development with Javascript: https://www.youtube.com/watch?v=EH3vGeqeIAo&list=PLu71SKxNbfoBGh_8p_NS-ZAh6v7HhYqHW\n\nPython Series: https://www.youtube.com/watch?v=Ca5DLSDfPec&list=PLu71SKxNbfoBsMugTFALhdLlZ5VOqCg2s",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/brp5aiuWfso/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/brp5aiuWfso/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/brp5aiuWfso/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/brp5aiuWfso/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/brp5aiuWfso/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Chai aur Code",
+        "playlistId": "PLu71SKxNbfoBsMugTFALhdLlZ5VOqCg2s",
+        "position": 6,
+        "resourceId": {
+          "kind": "youtube#video",
+          "videoId": "brp5aiuWfso"
+        },
+        "videoOwnerChannelTitle": "Chai aur Code",
+        "videoOwnerChannelId": "UCNQ6FEtztATuaVhZKCY28Yw"
+      },
+      "contentDetails": {
+        "videoId": "brp5aiuWfso",
+        "videoPublishedAt": "2024-02-02T14:30:11Z"
+      }
+    },
+    {
+      "kind": "youtube#playlistItem",
+      "etag": "w0hnDIyRsQcYagYRAx0Q7bbRISA",
+      "id": "UEx1NzFTS3hOYmZvQnNNdWdURkFMaGRMbFo1Vk9xQ2cycy5DQUNERDQ2NkIzRUQxNTY1",
+      "snippet": {
+        "publishedAt": "2024-02-02T06:25:30Z",
+        "channelId": "UCNQ6FEtztATuaVhZKCY28Yw",
+        "title": "Numbers in depth in python",
+        "description": "This video will talk about numbers in python. We will explore numbers in depth without any third party help. Third party packages are very popular in python such as numpy and pandas but they are not core python subjects so will will maybe discuss them in some future playlist, if there is enough demand on the channel.\n\nWelcome to chai aur code, a coding/programming dedicated channel in Hindi language. Now you can learn best of programming concepts with industry standard practical guide in Hindi language.\n\nAll source code is available at my Github account:\nhttps://github.com/hiteshchoudhary\n\nOur Open-Source Project is here: https://freeapi.app\n\nJoin me at whatsapp: https://hitesh.ai/whatsapp\n\nfor community discord: https://hitesh.ai/discord\n\nInstagram pe yaha paaye jaate h:\nhttps://www.instagram.com/hiteshchoudharyofficial/\n\nHTML video series:  https://www.youtube.com/watch?v=XmLOwJHFHf0&list=PLu71SKxNbfoDBNF5s-WH6aLbthSEIMhMI\n\nComplete javascript series: https://www.youtube.com/watch?v=Hr5iLG7sUa0&list=PLu71SKxNbfoBuX3f4EOACle2y-tRC5Q37\n\nComplete Reactjs series: https://www.youtube.com/watch?v=vz1RlUyrc3w&list=PLu71SKxNbfoDqgPchmvIsL4hTnJIrtige\n\nJavascript and react interview series: https://www.youtube.com/watch?v=1wqCyz7XrV4&list=PLu71SKxNbfoCy_MsA98SBfvUKF5eQit6L\n\nBackend development with Javascript: https://www.youtube.com/watch?v=EH3vGeqeIAo&list=PLu71SKxNbfoBGh_8p_NS-ZAh6v7HhYqHW\n\nPython Series: https://www.youtube.com/watch?v=Ca5DLSDfPec&list=PLu71SKxNbfoBsMugTFALhdLlZ5VOqCg2s",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/E4GNbP4SbKM/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/E4GNbP4SbKM/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/E4GNbP4SbKM/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/E4GNbP4SbKM/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/E4GNbP4SbKM/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Chai aur Code",
+        "playlistId": "PLu71SKxNbfoBsMugTFALhdLlZ5VOqCg2s",
+        "position": 7,
+        "resourceId": {
+          "kind": "youtube#video",
+          "videoId": "E4GNbP4SbKM"
+        },
+        "videoOwnerChannelTitle": "Chai aur Code",
+        "videoOwnerChannelId": "UCNQ6FEtztATuaVhZKCY28Yw"
+      },
+      "contentDetails": {
+        "videoId": "E4GNbP4SbKM",
+        "videoPublishedAt": "2024-02-03T14:30:11Z"
+      }
+    },
+    {
+      "kind": "youtube#playlistItem",
+      "etag": "m8lc0LXH1KotYv1MKw-ZmkPfL7k",
+      "id": "UEx1NzFTS3hOYmZvQnNNdWdURkFMaGRMbFo1Vk9xQ2cycy45NDk1REZENzhEMzU5MDQz",
+      "snippet": {
+        "publishedAt": "2024-02-05T16:20:21Z",
+        "channelId": "UCNQ6FEtztATuaVhZKCY28Yw",
+        "title": "Strings in python",
+        "description": "Welcome to chai aur code, a coding/programming dedicated channel in Hindi language. Now you can learn best of programming concepts with industry standard practical guide in Hindi language.\n\nAll source code is available at my Github account:\nhttps://github.com/hiteshchoudhary\n\nOur Open-Source Project is here: https://freeapi.app\n\nJoin me at whatsapp: https://hitesh.ai/whatsapp\n\nfor community discord: https://hitesh.ai/discord\n\nInstagram pe yaha paaye jaate h:\nhttps://www.instagram.com/hiteshchoudharyofficial/\n\nHTML video series:  https://www.youtube.com/watch?v=XmLOwJHFHf0&list=PLu71SKxNbfoDBNF5s-WH6aLbthSEIMhMI\n\nComplete javascript series: https://www.youtube.com/watch?v=Hr5iLG7sUa0&list=PLu71SKxNbfoBuX3f4EOACle2y-tRC5Q37\n\nComplete Reactjs series: https://www.youtube.com/watch?v=vz1RlUyrc3w&list=PLu71SKxNbfoDqgPchmvIsL4hTnJIrtige\n\nJavascript and react interview series: https://www.youtube.com/watch?v=1wqCyz7XrV4&list=PLu71SKxNbfoCy_MsA98SBfvUKF5eQit6L\n\nBackend development with Javascript: https://www.youtube.com/watch?v=EH3vGeqeIAo&list=PLu71SKxNbfoBGh_8p_NS-ZAh6v7HhYqHW\n\nPython Series: https://www.youtube.com/watch?v=Ca5DLSDfPec&list=PLu71SKxNbfoBsMugTFALhdLlZ5VOqCg2s",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/ekrgx893sig/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/ekrgx893sig/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/ekrgx893sig/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/ekrgx893sig/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/ekrgx893sig/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Chai aur Code",
+        "playlistId": "PLu71SKxNbfoBsMugTFALhdLlZ5VOqCg2s",
+        "position": 8,
+        "resourceId": {
+          "kind": "youtube#video",
+          "videoId": "ekrgx893sig"
+        },
+        "videoOwnerChannelTitle": "Chai aur Code",
+        "videoOwnerChannelId": "UCNQ6FEtztATuaVhZKCY28Yw"
+      },
+      "contentDetails": {
+        "videoId": "ekrgx893sig",
+        "videoPublishedAt": "2024-02-06T14:30:08Z"
+      }
+    },
+    {
+      "kind": "youtube#playlistItem",
+      "etag": "_z3bfAWVpd4IIjK3H0D8SMW8ahs",
+      "id": "UEx1NzFTS3hOYmZvQnNNdWdURkFMaGRMbFo1Vk9xQ2cycy5GNjNDRDREMDQxOThCMDQ2",
+      "snippet": {
+        "publishedAt": "2024-02-05T16:24:43Z",
+        "channelId": "UCNQ6FEtztATuaVhZKCY28Yw",
+        "title": "List in python",
+        "description": "Welcome to chai aur code, a coding/programming dedicated channel in Hindi language. Now you can learn best of programming concepts with industry standard practical guide in Hindi language.\n\nAll source code is available at my Github account:\nhttps://github.com/hiteshchoudhary\n\nOur Open-Source Project is here: https://freeapi.app\n\nJoin me at whatsapp: https://hitesh.ai/whatsapp\n\nfor community discord: https://hitesh.ai/discord\n\nInstagram pe yaha paaye jaate h:\nhttps://www.instagram.com/hiteshchoudharyofficial/\n\nHTML video series:  https://www.youtube.com/watch?v=XmLOwJHFHf0&list=PLu71SKxNbfoDBNF5s-WH6aLbthSEIMhMI\n\nComplete javascript series: https://www.youtube.com/watch?v=Hr5iLG7sUa0&list=PLu71SKxNbfoBuX3f4EOACle2y-tRC5Q37\n\nComplete Reactjs series: https://www.youtube.com/watch?v=vz1RlUyrc3w&list=PLu71SKxNbfoDqgPchmvIsL4hTnJIrtige\n\nJavascript and react interview series: https://www.youtube.com/watch?v=1wqCyz7XrV4&list=PLu71SKxNbfoCy_MsA98SBfvUKF5eQit6L\n\nBackend development with Javascript: https://www.youtube.com/watch?v=EH3vGeqeIAo&list=PLu71SKxNbfoBGh_8p_NS-ZAh6v7HhYqHW\n\nPython Series: https://www.youtube.com/watch?v=Ca5DLSDfPec&list=PLu71SKxNbfoBsMugTFALhdLlZ5VOqCg2s",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/AY_3MOo8tHw/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/AY_3MOo8tHw/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/AY_3MOo8tHw/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/AY_3MOo8tHw/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/AY_3MOo8tHw/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Chai aur Code",
+        "playlistId": "PLu71SKxNbfoBsMugTFALhdLlZ5VOqCg2s",
+        "position": 9,
+        "resourceId": {
+          "kind": "youtube#video",
+          "videoId": "AY_3MOo8tHw"
+        },
+        "videoOwnerChannelTitle": "Chai aur Code",
+        "videoOwnerChannelId": "UCNQ6FEtztATuaVhZKCY28Yw"
+      },
+      "contentDetails": {
+        "videoId": "AY_3MOo8tHw",
+        "videoPublishedAt": "2024-02-07T14:30:12Z"
+      }
+    },
+    {
+      "kind": "youtube#playlistItem",
+      "etag": "KfL1IOJYGHj-6MbdMmdxxIG9RdM",
+      "id": "UEx1NzFTS3hOYmZvQnNNdWdURkFMaGRMbFo1Vk9xQ2cycy40NzZCMERDMjVEN0RFRThB",
+      "snippet": {
+        "publishedAt": "2024-02-05T16:27:11Z",
+        "channelId": "UCNQ6FEtztATuaVhZKCY28Yw",
+        "title": "Dictionary in python",
+        "description": "Welcome to chai aur code, a coding/programming dedicated channel in Hindi language. Now you can learn best of programming concepts with industry standard practical guide in Hindi language.\n\nAll source code is available at my Github account:\nhttps://github.com/hiteshchoudhary\n\nOur Open-Source Project is here: https://freeapi.app\n\nJoin me at whatsapp: https://hitesh.ai/whatsapp\n\nfor community discord: https://hitesh.ai/discord\n\nInstagram pe yaha paaye jaate h:\nhttps://www.instagram.com/hiteshchoudharyofficial/\n\nHTML video series:  https://www.youtube.com/watch?v=XmLOwJHFHf0&list=PLu71SKxNbfoDBNF5s-WH6aLbthSEIMhMI\n\nComplete javascript series: https://www.youtube.com/watch?v=Hr5iLG7sUa0&list=PLu71SKxNbfoBuX3f4EOACle2y-tRC5Q37\n\nComplete Reactjs series: https://www.youtube.com/watch?v=vz1RlUyrc3w&list=PLu71SKxNbfoDqgPchmvIsL4hTnJIrtige\n\nJavascript and react interview series: https://www.youtube.com/watch?v=1wqCyz7XrV4&list=PLu71SKxNbfoCy_MsA98SBfvUKF5eQit6L\n\nBackend development with Javascript: https://www.youtube.com/watch?v=EH3vGeqeIAo&list=PLu71SKxNbfoBGh_8p_NS-ZAh6v7HhYqHW\n\nPython Series: https://www.youtube.com/watch?v=Ca5DLSDfPec&list=PLu71SKxNbfoBsMugTFALhdLlZ5VOqCg2s",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/DHQWUXeEvow/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/DHQWUXeEvow/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/DHQWUXeEvow/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/DHQWUXeEvow/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/DHQWUXeEvow/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Chai aur Code",
+        "playlistId": "PLu71SKxNbfoBsMugTFALhdLlZ5VOqCg2s",
+        "position": 10,
+        "resourceId": {
+          "kind": "youtube#video",
+          "videoId": "DHQWUXeEvow"
+        },
+        "videoOwnerChannelTitle": "Chai aur Code",
+        "videoOwnerChannelId": "UCNQ6FEtztATuaVhZKCY28Yw"
+      },
+      "contentDetails": {
+        "videoId": "DHQWUXeEvow",
+        "videoPublishedAt": "2024-02-08T14:30:12Z"
+      }
+    },
+    {
+      "kind": "youtube#playlistItem",
+      "etag": "xBtuJ4ORUxUmKtCk-AEzHpzY6Tc",
+      "id": "UEx1NzFTS3hOYmZvQnNNdWdURkFMaGRMbFo1Vk9xQ2cycy5EMEEwRUY5M0RDRTU3NDJC",
+      "snippet": {
+        "publishedAt": "2024-02-10T14:07:56Z",
+        "channelId": "UCNQ6FEtztATuaVhZKCY28Yw",
+        "title": "Tuples in python",
+        "description": "Welcome to chai aur code, a coding/programming dedicated channel in Hindi language. Now you can learn best of programming concepts with industry standard practical guide in Hindi language.\n\nAll source code is available at my Github account:\nhttps://github.com/hiteshchoudhary\n\nOur Open-Source Project is here: https://freeapi.app\n\nJoin me at whatsapp: https://hitesh.ai/whatsapp\n\nfor community discord: https://hitesh.ai/discord\n\nInstagram pe yaha paaye jaate h:\nhttps://www.instagram.com/hiteshchoudharyofficial/\n\nHTML video series:  https://www.youtube.com/watch?v=XmLOwJHFHf0&list=PLu71SKxNbfoDBNF5s-WH6aLbthSEIMhMI\n\nComplete javascript series: https://www.youtube.com/watch?v=Hr5iLG7sUa0&list=PLu71SKxNbfoBuX3f4EOACle2y-tRC5Q37\n\nComplete Reactjs series: https://www.youtube.com/watch?v=vz1RlUyrc3w&list=PLu71SKxNbfoDqgPchmvIsL4hTnJIrtige\n\nJavascript and react interview series: https://www.youtube.com/watch?v=1wqCyz7XrV4&list=PLu71SKxNbfoCy_MsA98SBfvUKF5eQit6L\n\nBackend development with Javascript: https://www.youtube.com/watch?v=EH3vGeqeIAo&list=PLu71SKxNbfoBGh_8p_NS-ZAh6v7HhYqHW\n\nPython Series: https://www.youtube.com/watch?v=Ca5DLSDfPec&list=PLu71SKxNbfoBsMugTFALhdLlZ5VOqCg2s",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/ALGOl8pJc44/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/ALGOl8pJc44/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/ALGOl8pJc44/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/ALGOl8pJc44/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/ALGOl8pJc44/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Chai aur Code",
+        "playlistId": "PLu71SKxNbfoBsMugTFALhdLlZ5VOqCg2s",
+        "position": 11,
+        "resourceId": {
+          "kind": "youtube#video",
+          "videoId": "ALGOl8pJc44"
+        },
+        "videoOwnerChannelTitle": "Chai aur Code",
+        "videoOwnerChannelId": "UCNQ6FEtztATuaVhZKCY28Yw"
+      },
+      "contentDetails": {
+        "videoId": "ALGOl8pJc44",
+        "videoPublishedAt": "2024-02-10T14:08:32Z"
+      }
+    },
+    {
+      "kind": "youtube#playlistItem",
+      "etag": "97Q1hSZ7M1E6dgSaNXbR22PRiCQ",
+      "id": "UEx1NzFTS3hOYmZvQnNNdWdURkFMaGRMbFo1Vk9xQ2cycy45ODRDNTg0QjA4NkFBNkQy",
+      "snippet": {
+        "publishedAt": "2024-02-10T14:09:32Z",
+        "channelId": "UCNQ6FEtztATuaVhZKCY28Yw",
+        "title": "Solve 10 conditional problem in python",
+        "description": "Welcome to chai aur code, a coding/programming dedicated channel in Hindi language. Now you can learn best of programming concepts with industry standard practical guide in Hindi language.\n\nAll source code is available at my Github account:\nhttps://github.com/hiteshchoudhary\n\nOur Open-Source Project is here: https://freeapi.app\n\nJoin me at whatsapp: https://hitesh.ai/whatsapp\n\nfor community discord: https://hitesh.ai/discord\n\nInstagram pe yaha paaye jaate h:\nhttps://www.instagram.com/hiteshchoudharyofficial/\n\nHTML video series:  https://www.youtube.com/watch?v=XmLOwJHFHf0&list=PLu71SKxNbfoDBNF5s-WH6aLbthSEIMhMI\n\nComplete javascript series: https://www.youtube.com/watch?v=Hr5iLG7sUa0&list=PLu71SKxNbfoBuX3f4EOACle2y-tRC5Q37\n\nComplete Reactjs series: https://www.youtube.com/watch?v=vz1RlUyrc3w&list=PLu71SKxNbfoDqgPchmvIsL4hTnJIrtige\n\nJavascript and react interview series: https://www.youtube.com/watch?v=1wqCyz7XrV4&list=PLu71SKxNbfoCy_MsA98SBfvUKF5eQit6L\n\nBackend development with Javascript: https://www.youtube.com/watch?v=EH3vGeqeIAo&list=PLu71SKxNbfoBGh_8p_NS-ZAh6v7HhYqHW\n\nPython Series: https://www.youtube.com/watch?v=Ca5DLSDfPec&list=PLu71SKxNbfoBsMugTFALhdLlZ5VOqCg2s",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/Nx-43wgs_Bo/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/Nx-43wgs_Bo/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/Nx-43wgs_Bo/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/Nx-43wgs_Bo/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/Nx-43wgs_Bo/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Chai aur Code",
+        "playlistId": "PLu71SKxNbfoBsMugTFALhdLlZ5VOqCg2s",
+        "position": 12,
+        "resourceId": {
+          "kind": "youtube#video",
+          "videoId": "Nx-43wgs_Bo"
+        },
+        "videoOwnerChannelTitle": "Chai aur Code",
+        "videoOwnerChannelId": "UCNQ6FEtztATuaVhZKCY28Yw"
+      },
+      "contentDetails": {
+        "videoId": "Nx-43wgs_Bo",
+        "videoPublishedAt": "2024-02-10T14:30:11Z"
+      }
+    },
+    {
+      "kind": "youtube#playlistItem",
+      "etag": "gyoBvjYxwBSi3o85fn4N_kDaXos",
+      "id": "UEx1NzFTS3hOYmZvQnNNdWdURkFMaGRMbFo1Vk9xQ2cycy4zMDg5MkQ5MEVDMEM1NTg2",
+      "snippet": {
+        "publishedAt": "2024-02-10T14:10:29Z",
+        "channelId": "UCNQ6FEtztATuaVhZKCY28Yw",
+        "title": "Solve 10 loops problem in python",
+        "description": "Welcome to chai aur code, a coding/programming dedicated channel in Hindi language. Now you can learn best of programming concepts with industry standard practical guide in Hindi language.\n\nAll source code is available at my Github account:\nhttps://github.com/hiteshchoudhary\n\nOur Open-Source Project is here: https://freeapi.app\n\nJoin me at whatsapp: https://hitesh.ai/whatsapp\n\nfor community discord: https://hitesh.ai/discord\n\nInstagram pe yaha paaye jaate h:\nhttps://www.instagram.com/hiteshchoudharyofficial/\n\nHTML video series:  https://www.youtube.com/watch?v=XmLOwJHFHf0&list=PLu71SKxNbfoDBNF5s-WH6aLbthSEIMhMI\n\nComplete javascript series: https://www.youtube.com/watch?v=Hr5iLG7sUa0&list=PLu71SKxNbfoBuX3f4EOACle2y-tRC5Q37\n\nComplete Reactjs series: https://www.youtube.com/watch?v=vz1RlUyrc3w&list=PLu71SKxNbfoDqgPchmvIsL4hTnJIrtige\n\nJavascript and react interview series: https://www.youtube.com/watch?v=1wqCyz7XrV4&list=PLu71SKxNbfoCy_MsA98SBfvUKF5eQit6L\n\nBackend development with Javascript: https://www.youtube.com/watch?v=EH3vGeqeIAo&list=PLu71SKxNbfoBGh_8p_NS-ZAh6v7HhYqHW\n\nPython Series: https://www.youtube.com/watch?v=Ca5DLSDfPec&list=PLu71SKxNbfoBsMugTFALhdLlZ5VOqCg2s",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/AuRbiiB6x4I/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/AuRbiiB6x4I/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/AuRbiiB6x4I/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/AuRbiiB6x4I/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/AuRbiiB6x4I/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Chai aur Code",
+        "playlistId": "PLu71SKxNbfoBsMugTFALhdLlZ5VOqCg2s",
+        "position": 13,
+        "resourceId": {
+          "kind": "youtube#video",
+          "videoId": "AuRbiiB6x4I"
+        },
+        "videoOwnerChannelTitle": "Chai aur Code",
+        "videoOwnerChannelId": "UCNQ6FEtztATuaVhZKCY28Yw"
+      },
+      "contentDetails": {
+        "videoId": "AuRbiiB6x4I",
+        "videoPublishedAt": "2024-02-11T14:30:13Z"
+      }
+    },
+    {
+      "kind": "youtube#playlistItem",
+      "etag": "acqgV2mLHHTMwVBygy9LH5C5wO0",
+      "id": "UEx1NzFTS3hOYmZvQnNNdWdURkFMaGRMbFo1Vk9xQ2cycy41Mzk2QTAxMTkzNDk4MDhF",
+      "snippet": {
+        "publishedAt": "2024-02-10T14:11:32Z",
+        "channelId": "UCNQ6FEtztATuaVhZKCY28Yw",
+        "title": "Behind the scene of loops in python",
+        "description": "Welcome to chai aur code, a coding/programming dedicated channel in Hindi language. Now you can learn best of programming concepts with industry standard practical guide in Hindi language.\n\nAll source code is available at my Github account:\nhttps://github.com/hiteshchoudhary\n\nOur Open-Source Project is here: https://freeapi.app\n\nJoin me at whatsapp: https://hitesh.ai/whatsapp\n\nfor community discord: https://hitesh.ai/discord\n\nInstagram pe yaha paaye jaate h:\nhttps://www.instagram.com/hiteshchoudharyofficial/\n\nHTML video series:  https://www.youtube.com/watch?v=XmLOwJHFHf0&list=PLu71SKxNbfoDBNF5s-WH6aLbthSEIMhMI\n\nComplete javascript series: https://www.youtube.com/watch?v=Hr5iLG7sUa0&list=PLu71SKxNbfoBuX3f4EOACle2y-tRC5Q37\n\nComplete Reactjs series: https://www.youtube.com/watch?v=vz1RlUyrc3w&list=PLu71SKxNbfoDqgPchmvIsL4hTnJIrtige\n\nJavascript and react interview series: https://www.youtube.com/watch?v=1wqCyz7XrV4&list=PLu71SKxNbfoCy_MsA98SBfvUKF5eQit6L\n\nBackend development with Javascript: https://www.youtube.com/watch?v=EH3vGeqeIAo&list=PLu71SKxNbfoBGh_8p_NS-ZAh6v7HhYqHW\n\nPython Series: https://www.youtube.com/watch?v=Ca5DLSDfPec&list=PLu71SKxNbfoBsMugTFALhdLlZ5VOqCg2s",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/_VxQ5jzo37o/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/_VxQ5jzo37o/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/_VxQ5jzo37o/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/_VxQ5jzo37o/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/_VxQ5jzo37o/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Chai aur Code",
+        "playlistId": "PLu71SKxNbfoBsMugTFALhdLlZ5VOqCg2s",
+        "position": 14,
+        "resourceId": {
+          "kind": "youtube#video",
+          "videoId": "_VxQ5jzo37o"
+        },
+        "videoOwnerChannelTitle": "Chai aur Code",
+        "videoOwnerChannelId": "UCNQ6FEtztATuaVhZKCY28Yw"
+      },
+      "contentDetails": {
+        "videoId": "_VxQ5jzo37o",
+        "videoPublishedAt": "2024-02-12T14:30:10Z"
+      }
+    },
+    {
+      "kind": "youtube#playlistItem",
+      "etag": "4Tf6WN7RtUhq0VE0dVYcWlYBwcE",
+      "id": "UEx1NzFTS3hOYmZvQnNNdWdURkFMaGRMbFo1Vk9xQ2cycy5EQUE1NTFDRjcwMDg0NEMz",
+      "snippet": {
+        "publishedAt": "2024-02-10T14:12:55Z",
+        "channelId": "UCNQ6FEtztATuaVhZKCY28Yw",
+        "title": "Solve 10 problems on functions in python",
+        "description": "Welcome to chai aur code, a coding/programming dedicated channel in Hindi language. Now you can learn best of programming concepts with industry standard practical guide in Hindi language.\n\nAll source code is available at my Github account:\nhttps://github.com/hiteshchoudhary\n\nOur Open-Source Project is here: https://freeapi.app\n\nJoin me at whatsapp: https://hitesh.ai/whatsapp\n\nfor community discord: https://hitesh.ai/discord\n\nInstagram pe yaha paaye jaate h:\nhttps://www.instagram.com/hiteshchoudharyofficial/\n\nHTML video series:  https://www.youtube.com/watch?v=XmLOwJHFHf0&list=PLu71SKxNbfoDBNF5s-WH6aLbthSEIMhMI\n\nComplete javascript series: https://www.youtube.com/watch?v=Hr5iLG7sUa0&list=PLu71SKxNbfoBuX3f4EOACle2y-tRC5Q37\n\nComplete Reactjs series: https://www.youtube.com/watch?v=vz1RlUyrc3w&list=PLu71SKxNbfoDqgPchmvIsL4hTnJIrtige\n\nJavascript and react interview series: https://www.youtube.com/watch?v=1wqCyz7XrV4&list=PLu71SKxNbfoCy_MsA98SBfvUKF5eQit6L\n\nBackend development with Javascript: https://www.youtube.com/watch?v=EH3vGeqeIAo&list=PLu71SKxNbfoBGh_8p_NS-ZAh6v7HhYqHW\n\nPython Series: https://www.youtube.com/watch?v=Ca5DLSDfPec&list=PLu71SKxNbfoBsMugTFALhdLlZ5VOqCg2s",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/JptOj-D6gtw/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/JptOj-D6gtw/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/JptOj-D6gtw/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/JptOj-D6gtw/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/JptOj-D6gtw/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Chai aur Code",
+        "playlistId": "PLu71SKxNbfoBsMugTFALhdLlZ5VOqCg2s",
+        "position": 15,
+        "resourceId": {
+          "kind": "youtube#video",
+          "videoId": "JptOj-D6gtw"
+        },
+        "videoOwnerChannelTitle": "Chai aur Code",
+        "videoOwnerChannelId": "UCNQ6FEtztATuaVhZKCY28Yw"
+      },
+      "contentDetails": {
+        "videoId": "JptOj-D6gtw",
+        "videoPublishedAt": "2024-02-13T14:30:06Z"
+      }
+    },
+    {
+      "kind": "youtube#playlistItem",
+      "etag": "_btCjR2qLbUSTBfcwsMq_BvF7bg",
+      "id": "UEx1NzFTS3hOYmZvQnNNdWdURkFMaGRMbFo1Vk9xQ2cycy41QTY1Q0UxMTVCODczNThE",
+      "snippet": {
+        "publishedAt": "2024-02-10T14:13:41Z",
+        "channelId": "UCNQ6FEtztATuaVhZKCY28Yw",
+        "title": "Scopes and closure in python",
+        "description": "Welcome to chai aur code, a coding/programming dedicated channel in Hindi language. Now you can learn best of programming concepts with industry standard practical guide in Hindi language.\n\nAll source code is available at my Github account:\nhttps://github.com/hiteshchoudhary\n\nOur Open-Source Project is here: https://freeapi.app\n\nJoin me at whatsapp: https://hitesh.ai/whatsapp\n\nfor community discord: https://hitesh.ai/discord\n\nInstagram pe yaha paaye jaate h:\nhttps://www.instagram.com/hiteshchoudharyofficial/\n\nHTML video series:  https://www.youtube.com/watch?v=XmLOwJHFHf0&list=PLu71SKxNbfoDBNF5s-WH6aLbthSEIMhMI\n\nComplete javascript series: https://www.youtube.com/watch?v=Hr5iLG7sUa0&list=PLu71SKxNbfoBuX3f4EOACle2y-tRC5Q37\n\nComplete Reactjs series: https://www.youtube.com/watch?v=vz1RlUyrc3w&list=PLu71SKxNbfoDqgPchmvIsL4hTnJIrtige\n\nJavascript and react interview series: https://www.youtube.com/watch?v=1wqCyz7XrV4&list=PLu71SKxNbfoCy_MsA98SBfvUKF5eQit6L\n\nBackend development with Javascript: https://www.youtube.com/watch?v=EH3vGeqeIAo&list=PLu71SKxNbfoBGh_8p_NS-ZAh6v7HhYqHW\n\nPython Series: https://www.youtube.com/watch?v=Ca5DLSDfPec&list=PLu71SKxNbfoBsMugTFALhdLlZ5VOqCg2s",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/UPf0o6xKARY/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/UPf0o6xKARY/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/UPf0o6xKARY/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/UPf0o6xKARY/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/UPf0o6xKARY/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Chai aur Code",
+        "playlistId": "PLu71SKxNbfoBsMugTFALhdLlZ5VOqCg2s",
+        "position": 16,
+        "resourceId": {
+          "kind": "youtube#video",
+          "videoId": "UPf0o6xKARY"
+        },
+        "videoOwnerChannelTitle": "Chai aur Code",
+        "videoOwnerChannelId": "UCNQ6FEtztATuaVhZKCY28Yw"
+      },
+      "contentDetails": {
+        "videoId": "UPf0o6xKARY",
+        "videoPublishedAt": "2024-02-14T14:30:11Z"
+      }
+    },
+    {
+      "kind": "youtube#playlistItem",
+      "etag": "kYjZQVYf32T_FHyjEcYN1F17Ua8",
+      "id": "UEx1NzFTS3hOYmZvQnNNdWdURkFMaGRMbFo1Vk9xQ2cycy4yMUQyQTQzMjRDNzMyQTMy",
+      "snippet": {
+        "publishedAt": "2024-02-10T14:15:16Z",
+        "channelId": "UCNQ6FEtztATuaVhZKCY28Yw",
+        "title": "Object Oriented Programming in python",
+        "description": "Welcome to chai aur code, a coding/programming dedicated channel in Hindi language. Now you can learn best of programming concepts with industry standard practical guide in Hindi language.\n\nAll source code is available at my Github account:\nhttps://github.com/hiteshchoudhary\n\nOur Open-Source Project is here: https://freeapi.app\n\nJoin me at whatsapp: https://hitesh.ai/whatsapp\n\nfor community discord: https://hitesh.ai/discord\n\nInstagram pe yaha paaye jaate h:\nhttps://www.instagram.com/hiteshchoudharyofficial/\n\nHTML video series:  https://www.youtube.com/watch?v=XmLOwJHFHf0&list=PLu71SKxNbfoDBNF5s-WH6aLbthSEIMhMI\n\nComplete javascript series: https://www.youtube.com/watch?v=Hr5iLG7sUa0&list=PLu71SKxNbfoBuX3f4EOACle2y-tRC5Q37\n\nComplete Reactjs series: https://www.youtube.com/watch?v=vz1RlUyrc3w&list=PLu71SKxNbfoDqgPchmvIsL4hTnJIrtige\n\nJavascript and react interview series: https://www.youtube.com/watch?v=1wqCyz7XrV4&list=PLu71SKxNbfoCy_MsA98SBfvUKF5eQit6L\n\nBackend development with Javascript: https://www.youtube.com/watch?v=EH3vGeqeIAo&list=PLu71SKxNbfoBGh_8p_NS-ZAh6v7HhYqHW\n\nPython Series: https://www.youtube.com/watch?v=Ca5DLSDfPec&list=PLu71SKxNbfoBsMugTFALhdLlZ5VOqCg2s",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/6soT3DMBJGQ/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/6soT3DMBJGQ/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/6soT3DMBJGQ/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/6soT3DMBJGQ/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/6soT3DMBJGQ/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Chai aur Code",
+        "playlistId": "PLu71SKxNbfoBsMugTFALhdLlZ5VOqCg2s",
+        "position": 17,
+        "resourceId": {
+          "kind": "youtube#video",
+          "videoId": "6soT3DMBJGQ"
+        },
+        "videoOwnerChannelTitle": "Chai aur Code",
+        "videoOwnerChannelId": "UCNQ6FEtztATuaVhZKCY28Yw"
+      },
+      "contentDetails": {
+        "videoId": "6soT3DMBJGQ",
+        "videoPublishedAt": "2024-02-15T14:30:02Z"
+      }
+    },
+    {
+      "kind": "youtube#playlistItem",
+      "etag": "DzMP-RFCI7xqXCVJIHY5nSJ59vQ",
+      "id": "UEx1NzFTS3hOYmZvQnNNdWdURkFMaGRMbFo1Vk9xQ2cycy45RTgxNDRBMzUwRjQ0MDhC",
+      "snippet": {
+        "publishedAt": "2024-02-10T14:16:25Z",
+        "channelId": "UCNQ6FEtztATuaVhZKCY28Yw",
+        "title": "What are decorators in python",
+        "description": "Welcome to chai aur code, a coding/programming dedicated channel in Hindi language. Now you can learn best of programming concepts with industry standard practical guide in Hindi language.\n\nAll source code is available at my Github account:\nhttps://github.com/hiteshchoudhary\n\nOur Open-Source Project is here: https://freeapi.app\n\nJoin me at whatsapp: https://hitesh.ai/whatsapp\n\nfor community discord: https://hitesh.ai/discord\n\nInstagram pe yaha paaye jaate h:\nhttps://www.instagram.com/hiteshchoudharyofficial/\n\nHTML video series:  https://www.youtube.com/watch?v=XmLOwJHFHf0&list=PLu71SKxNbfoDBNF5s-WH6aLbthSEIMhMI\n\nComplete javascript series: https://www.youtube.com/watch?v=Hr5iLG7sUa0&list=PLu71SKxNbfoBuX3f4EOACle2y-tRC5Q37\n\nComplete Reactjs series: https://www.youtube.com/watch?v=vz1RlUyrc3w&list=PLu71SKxNbfoDqgPchmvIsL4hTnJIrtige\n\nJavascript and react interview series: https://www.youtube.com/watch?v=1wqCyz7XrV4&list=PLu71SKxNbfoCy_MsA98SBfvUKF5eQit6L\n\nBackend development with Javascript: https://www.youtube.com/watch?v=EH3vGeqeIAo&list=PLu71SKxNbfoBGh_8p_NS-ZAh6v7HhYqHW\n\nPython Series: https://www.youtube.com/watch?v=Ca5DLSDfPec&list=PLu71SKxNbfoBsMugTFALhdLlZ5VOqCg2s",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/ZEKiIwWv9nM/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/ZEKiIwWv9nM/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/ZEKiIwWv9nM/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/ZEKiIwWv9nM/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/ZEKiIwWv9nM/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Chai aur Code",
+        "playlistId": "PLu71SKxNbfoBsMugTFALhdLlZ5VOqCg2s",
+        "position": 18,
+        "resourceId": {
+          "kind": "youtube#video",
+          "videoId": "ZEKiIwWv9nM"
+        },
+        "videoOwnerChannelTitle": "Chai aur Code",
+        "videoOwnerChannelId": "UCNQ6FEtztATuaVhZKCY28Yw"
+      },
+      "contentDetails": {
+        "videoId": "ZEKiIwWv9nM",
+        "videoPublishedAt": "2024-02-16T14:30:15Z"
+      }
+    },
+    {
+      "kind": "youtube#playlistItem",
+      "etag": "VURXHodsZj7NmGxGILrP0ygMSt0",
+      "id": "UEx1NzFTS3hOYmZvQnNNdWdURkFMaGRMbFo1Vk9xQ2cycy5ENDU4Q0M4RDExNzM1Mjcy",
+      "snippet": {
+        "publishedAt": "2024-02-11T07:29:35Z",
+        "channelId": "UCNQ6FEtztATuaVhZKCY28Yw",
+        "title": "Farewell to python series",
+        "description": "Welcome to chai aur code, a coding/programming dedicated channel in Hindi language. Now you can learn best of programming concepts with industry standard practical guide in Hindi language.\n\nAll source code is available at my Github account:\nhttps://github.com/hiteshchoudhary\n\nOur Open-Source Project is here: https://freeapi.app\n\nJoin me at whatsapp: https://hitesh.ai/whatsapp\n\nfor community discord: https://hitesh.ai/discord\n\nInstagram pe yaha paaye jaate h:\nhttps://www.instagram.com/hiteshchoudharyofficial/\n\nHTML video series:  https://www.youtube.com/watch?v=XmLOwJHFHf0&list=PLu71SKxNbfoDBNF5s-WH6aLbthSEIMhMI\n\nComplete javascript series: https://www.youtube.com/watch?v=Hr5iLG7sUa0&list=PLu71SKxNbfoBuX3f4EOACle2y-tRC5Q37\n\nComplete Reactjs series: https://www.youtube.com/watch?v=vz1RlUyrc3w&list=PLu71SKxNbfoDqgPchmvIsL4hTnJIrtige\n\nJavascript and react interview series: https://www.youtube.com/watch?v=1wqCyz7XrV4&list=PLu71SKxNbfoCy_MsA98SBfvUKF5eQit6L\n\nBackend development with Javascript: https://www.youtube.com/watch?v=EH3vGeqeIAo&list=PLu71SKxNbfoBGh_8p_NS-ZAh6v7HhYqHW\n\nPython Series: https://www.youtube.com/watch?v=Ca5DLSDfPec&list=PLu71SKxNbfoBsMugTFALhdLlZ5VOqCg2s",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/ADjFcApMoIs/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/ADjFcApMoIs/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/ADjFcApMoIs/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/ADjFcApMoIs/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/ADjFcApMoIs/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Chai aur Code",
+        "playlistId": "PLu71SKxNbfoBsMugTFALhdLlZ5VOqCg2s",
+        "position": 19,
+        "resourceId": {
+          "kind": "youtube#video",
+          "videoId": "ADjFcApMoIs"
+        },
+        "videoOwnerChannelTitle": "Chai aur Code",
+        "videoOwnerChannelId": "UCNQ6FEtztATuaVhZKCY28Yw"
+      },
+      "contentDetails": {
+        "videoId": "ADjFcApMoIs",
+        "videoPublishedAt": "2024-02-11T07:29:05Z"
+      }
+    },
+    {
+      "kind": "youtube#playlistItem",
+      "etag": "nUFKxqK2nGwSP8ymfvm45vEIB2s",
+      "id": "UEx1NzFTS3hOYmZvQnNNdWdURkFMaGRMbFo1Vk9xQ2cycy4yMDhBMkNBNjRDMjQxQTg1",
+      "snippet": {
+        "publishedAt": "2024-02-11T07:30:38Z",
+        "channelId": "UCNQ6FEtztATuaVhZKCY28Yw",
+        "title": "Python Project  - Youtube manager app",
+        "description": "Welcome to chai aur code, a coding/programming dedicated channel in Hindi language. Now you can learn best of programming concepts with industry standard practical guide in Hindi language.\n\nAll source code is available at my Github account:\nhttps://github.com/hiteshchoudhary\n\nOur Open-Source Project is here: https://freeapi.app\n\nJoin me at whatsapp: https://hitesh.ai/whatsapp\n\nfor community discord: https://hitesh.ai/discord\n\nInstagram pe yaha paaye jaate h:\nhttps://www.instagram.com/hiteshchoudharyofficial/\n\nHTML video series:  https://www.youtube.com/watch?v=XmLOwJHFHf0&list=PLu71SKxNbfoDBNF5s-WH6aLbthSEIMhMI\n\nComplete javascript series: https://www.youtube.com/watch?v=Hr5iLG7sUa0&list=PLu71SKxNbfoBuX3f4EOACle2y-tRC5Q37\n\nComplete Reactjs series: https://www.youtube.com/watch?v=vz1RlUyrc3w&list=PLu71SKxNbfoDqgPchmvIsL4hTnJIrtige\n\nJavascript and react interview series: https://www.youtube.com/watch?v=1wqCyz7XrV4&list=PLu71SKxNbfoCy_MsA98SBfvUKF5eQit6L\n\nBackend development with Javascript: https://www.youtube.com/watch?v=EH3vGeqeIAo&list=PLu71SKxNbfoBGh_8p_NS-ZAh6v7HhYqHW\n\nPython Series: https://www.youtube.com/watch?v=Ca5DLSDfPec&list=PLu71SKxNbfoBsMugTFALhdLlZ5VOqCg2s",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/nqE4HOtZt1Y/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/nqE4HOtZt1Y/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/nqE4HOtZt1Y/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/nqE4HOtZt1Y/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/nqE4HOtZt1Y/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Chai aur Code",
+        "playlistId": "PLu71SKxNbfoBsMugTFALhdLlZ5VOqCg2s",
+        "position": 20,
+        "resourceId": {
+          "kind": "youtube#video",
+          "videoId": "nqE4HOtZt1Y"
+        },
+        "videoOwnerChannelTitle": "Chai aur Code",
+        "videoOwnerChannelId": "UCNQ6FEtztATuaVhZKCY28Yw"
+      },
+      "contentDetails": {
+        "videoId": "nqE4HOtZt1Y",
+        "videoPublishedAt": "2024-02-17T14:30:11Z"
+      }
+    },
+    {
+      "kind": "youtube#playlistItem",
+      "etag": "qR2Z9ganiWn0PxU3dMXpbxPmLPw",
+      "id": "UEx1NzFTS3hOYmZvQnNNdWdURkFMaGRMbFo1Vk9xQ2cycy5GM0Q3M0MzMzY5NTJFNTdE",
+      "snippet": {
+        "publishedAt": "2024-02-11T07:32:38Z",
+        "channelId": "UCNQ6FEtztATuaVhZKCY28Yw",
+        "title": "Python project   Youtube manager with sqlite3",
+        "description": "Welcome to chai aur code, a coding/programming dedicated channel in Hindi language. Now you can learn best of programming concepts with industry standard practical guide in Hindi language.\n\nAll source code is available at my Github account:\nhttps://github.com/hiteshchoudhary\n\nOur Open-Source Project is here: https://freeapi.app\n\nJoin me at whatsapp: https://hitesh.ai/whatsapp\n\nfor community discord: https://hitesh.ai/discord\n\nInstagram pe yaha paaye jaate h:\nhttps://www.instagram.com/hiteshchoudharyofficial/\n\nHTML video series:  https://www.youtube.com/watch?v=XmLOwJHFHf0&list=PLu71SKxNbfoDBNF5s-WH6aLbthSEIMhMI\n\nComplete javascript series: https://www.youtube.com/watch?v=Hr5iLG7sUa0&list=PLu71SKxNbfoBuX3f4EOACle2y-tRC5Q37\n\nComplete Reactjs series: https://www.youtube.com/watch?v=vz1RlUyrc3w&list=PLu71SKxNbfoDqgPchmvIsL4hTnJIrtige\n\nJavascript and react interview series: https://www.youtube.com/watch?v=1wqCyz7XrV4&list=PLu71SKxNbfoCy_MsA98SBfvUKF5eQit6L\n\nBackend development with Javascript: https://www.youtube.com/watch?v=EH3vGeqeIAo&list=PLu71SKxNbfoBGh_8p_NS-ZAh6v7HhYqHW\n\nPython Series: https://www.youtube.com/watch?v=Ca5DLSDfPec&list=PLu71SKxNbfoBsMugTFALhdLlZ5VOqCg2s",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/rq5mUupP-Tg/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/rq5mUupP-Tg/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/rq5mUupP-Tg/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/rq5mUupP-Tg/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/rq5mUupP-Tg/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Chai aur Code",
+        "playlistId": "PLu71SKxNbfoBsMugTFALhdLlZ5VOqCg2s",
+        "position": 21,
+        "resourceId": {
+          "kind": "youtube#video",
+          "videoId": "rq5mUupP-Tg"
+        },
+        "videoOwnerChannelTitle": "Chai aur Code",
+        "videoOwnerChannelId": "UCNQ6FEtztATuaVhZKCY28Yw"
+      },
+      "contentDetails": {
+        "videoId": "rq5mUupP-Tg",
+        "videoPublishedAt": "2024-02-18T14:30:30Z"
+      }
+    },
+    {
+      "kind": "youtube#playlistItem",
+      "etag": "TybmEK-9y_SSvgHPl9KMG4qJ4fU",
+      "id": "UEx1NzFTS3hOYmZvQnNNdWdURkFMaGRMbFo1Vk9xQ2cycy4zRjM0MkVCRTg0MkYyQTM0",
+      "snippet": {
+        "publishedAt": "2024-02-11T07:39:48Z",
+        "channelId": "UCNQ6FEtztATuaVhZKCY28Yw",
+        "title": "Handling API in python",
+        "description": "Welcome to chai aur code, a coding/programming dedicated channel in Hindi language. Now you can learn best of programming concepts with industry standard practical guide in Hindi language.\n\nAll source code is available at my Github account:\nhttps://github.com/hiteshchoudhary\n\nOur Open-Source Project is here: https://freeapi.app\n\nJoin me at whatsapp: https://hitesh.ai/whatsapp\n\nfor community discord: https://hitesh.ai/discord\n\nInstagram pe yaha paaye jaate h:\nhttps://www.instagram.com/hiteshchoudharyofficial/\n\nHTML video series:  https://www.youtube.com/watch?v=XmLOwJHFHf0&list=PLu71SKxNbfoDBNF5s-WH6aLbthSEIMhMI\n\nComplete javascript series: https://www.youtube.com/watch?v=Hr5iLG7sUa0&list=PLu71SKxNbfoBuX3f4EOACle2y-tRC5Q37\n\nComplete Reactjs series: https://www.youtube.com/watch?v=vz1RlUyrc3w&list=PLu71SKxNbfoDqgPchmvIsL4hTnJIrtige\n\nJavascript and react interview series: https://www.youtube.com/watch?v=1wqCyz7XrV4&list=PLu71SKxNbfoCy_MsA98SBfvUKF5eQit6L\n\nBackend development with Javascript: https://www.youtube.com/watch?v=EH3vGeqeIAo&list=PLu71SKxNbfoBGh_8p_NS-ZAh6v7HhYqHW\n\nPython Series: https://www.youtube.com/watch?v=Ca5DLSDfPec&list=PLu71SKxNbfoBsMugTFALhdLlZ5VOqCg2s",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/g33-tYIs7zU/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/g33-tYIs7zU/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/g33-tYIs7zU/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/g33-tYIs7zU/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/g33-tYIs7zU/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Chai aur Code",
+        "playlistId": "PLu71SKxNbfoBsMugTFALhdLlZ5VOqCg2s",
+        "position": 22,
+        "resourceId": {
+          "kind": "youtube#video",
+          "videoId": "g33-tYIs7zU"
+        },
+        "videoOwnerChannelTitle": "Chai aur Code",
+        "videoOwnerChannelId": "UCNQ6FEtztATuaVhZKCY28Yw"
+      },
+      "contentDetails": {
+        "videoId": "g33-tYIs7zU",
+        "videoPublishedAt": "2024-02-19T14:30:12Z"
+      }
+    },
+    {
+      "kind": "youtube#playlistItem",
+      "etag": "P6xifn_LfIHLhCh_a19eOAxedc8",
+      "id": "UEx1NzFTS3hOYmZvQnNNdWdURkFMaGRMbFo1Vk9xQ2cycy45NzUwQkI1M0UxNThBMkU0",
+      "snippet": {
+        "publishedAt": "2024-02-11T07:40:50Z",
+        "channelId": "UCNQ6FEtztATuaVhZKCY28Yw",
+        "title": "Python Project   Youtube manager with mongoDB",
+        "description": "Welcome to chai aur code, a coding/programming dedicated channel in Hindi language. Now you can learn best of programming concepts with industry standard practical guide in Hindi language.\n\nAll source code is available at my Github account:\nhttps://github.com/hiteshchoudhary\n\nOur Open-Source Project is here: https://freeapi.app\n\nJoin me at whatsapp: https://hitesh.ai/whatsapp\n\nfor community discord: https://hitesh.ai/discord\n\nInstagram pe yaha paaye jaate h:\nhttps://www.instagram.com/hiteshchoudharyofficial/\n\nHTML video series:  https://www.youtube.com/watch?v=XmLOwJHFHf0&list=PLu71SKxNbfoDBNF5s-WH6aLbthSEIMhMI\n\nComplete javascript series: https://www.youtube.com/watch?v=Hr5iLG7sUa0&list=PLu71SKxNbfoBuX3f4EOACle2y-tRC5Q37\n\nComplete Reactjs series: https://www.youtube.com/watch?v=vz1RlUyrc3w&list=PLu71SKxNbfoDqgPchmvIsL4hTnJIrtige\n\nJavascript and react interview series: https://www.youtube.com/watch?v=1wqCyz7XrV4&list=PLu71SKxNbfoCy_MsA98SBfvUKF5eQit6L\n\nBackend development with Javascript: https://www.youtube.com/watch?v=EH3vGeqeIAo&list=PLu71SKxNbfoBGh_8p_NS-ZAh6v7HhYqHW\n\nPython Series: https://www.youtube.com/watch?v=Ca5DLSDfPec&list=PLu71SKxNbfoBsMugTFALhdLlZ5VOqCg2s",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/SWPJwE0TVXw/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/SWPJwE0TVXw/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/SWPJwE0TVXw/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/SWPJwE0TVXw/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/SWPJwE0TVXw/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Chai aur Code",
+        "playlistId": "PLu71SKxNbfoBsMugTFALhdLlZ5VOqCg2s",
+        "position": 23,
+        "resourceId": {
+          "kind": "youtube#video",
+          "videoId": "SWPJwE0TVXw"
+        },
+        "videoOwnerChannelTitle": "Chai aur Code",
+        "videoOwnerChannelId": "UCNQ6FEtztATuaVhZKCY28Yw"
+      },
+      "contentDetails": {
+        "videoId": "SWPJwE0TVXw",
+        "videoPublishedAt": "2024-02-20T14:30:11Z"
+      }
+    },
+    {
+      "kind": "youtube#playlistItem",
+      "etag": "4rz5lXMioS3YG0ML1DQS6_OHtz8",
+      "id": "UEx1NzFTS3hOYmZvQnNNdWdURkFMaGRMbFo1Vk9xQ2cycy5DNzE1RjZEMUZCMjA0RDBB",
+      "snippet": {
+        "publishedAt": "2024-02-11T07:46:11Z",
+        "channelId": "UCNQ6FEtztATuaVhZKCY28Yw",
+        "title": "Python Virtual environment guide",
+        "description": "Welcome to chai aur code, a coding/programming dedicated channel in Hindi language. Now you can learn best of programming concepts with industry standard practical guide in Hindi language.\n\nAll source code is available at my Github account:\nhttps://github.com/hiteshchoudhary\n\nOur Open-Source Project is here: https://freeapi.app\n\nJoin me at whatsapp: https://hitesh.ai/whatsapp\n\nfor community discord: https://hitesh.ai/discord\n\nInstagram pe yaha paaye jaate h:\nhttps://www.instagram.com/hiteshchoudharyofficial/\n\nHTML video series:  https://www.youtube.com/watch?v=XmLOwJHFHf0&list=PLu71SKxNbfoDBNF5s-WH6aLbthSEIMhMI\n\nComplete javascript series: https://www.youtube.com/watch?v=Hr5iLG7sUa0&list=PLu71SKxNbfoBuX3f4EOACle2y-tRC5Q37\n\nComplete Reactjs series: https://www.youtube.com/watch?v=vz1RlUyrc3w&list=PLu71SKxNbfoDqgPchmvIsL4hTnJIrtige\n\nJavascript and react interview series: https://www.youtube.com/watch?v=1wqCyz7XrV4&list=PLu71SKxNbfoCy_MsA98SBfvUKF5eQit6L\n\nBackend development with Javascript: https://www.youtube.com/watch?v=EH3vGeqeIAo&list=PLu71SKxNbfoBGh_8p_NS-ZAh6v7HhYqHW\n\nPython Series: https://www.youtube.com/watch?v=Ca5DLSDfPec&list=PLu71SKxNbfoBsMugTFALhdLlZ5VOqCg2s",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/nwN27ORTUXg/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/nwN27ORTUXg/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/nwN27ORTUXg/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/nwN27ORTUXg/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/nwN27ORTUXg/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Chai aur Code",
+        "playlistId": "PLu71SKxNbfoBsMugTFALhdLlZ5VOqCg2s",
+        "position": 24,
+        "resourceId": {
+          "kind": "youtube#video",
+          "videoId": "nwN27ORTUXg"
+        },
+        "videoOwnerChannelTitle": "Chai aur Code",
+        "videoOwnerChannelId": "UCNQ6FEtztATuaVhZKCY28Yw"
+      },
+      "contentDetails": {
+        "videoId": "nwN27ORTUXg",
+        "videoPublishedAt": "2024-02-10T16:02:07Z"
+      }
+    },
+    {
+      "kind": "youtube#playlistItem",
+      "etag": "3reyx54O24lOrXE8XqOinBwsxwc",
+      "id": "UEx1NzFTS3hOYmZvQnNNdWdURkFMaGRMbFo1Vk9xQ2cycy43MTI1NDIwOTMwQjIxMzNG",
+      "snippet": {
+        "publishedAt": "2024-02-11T07:52:42Z",
+        "channelId": "UCNQ6FEtztATuaVhZKCY28Yw",
+        "title": "Explore Open source code of python",
+        "description": "Welcome to chai aur code, a coding/programming dedicated channel in Hindi language. Now you can learn best of programming concepts with industry standard practical guide in Hindi language.\n\nAll source code is available at my Github account:\nhttps://github.com/hiteshchoudhary\n\nOur Open-Source Project is here: https://freeapi.app\n\nJoin me at whatsapp: https://hitesh.ai/whatsapp\n\nfor community discord: https://hitesh.ai/discord\n\nInstagram pe yaha paaye jaate h:\nhttps://www.instagram.com/hiteshchoudharyofficial/\n\nHTML video series:  https://www.youtube.com/watch?v=XmLOwJHFHf0&list=PLu71SKxNbfoDBNF5s-WH6aLbthSEIMhMI\n\nComplete javascript series: https://www.youtube.com/watch?v=Hr5iLG7sUa0&list=PLu71SKxNbfoBuX3f4EOACle2y-tRC5Q37\n\nComplete Reactjs series: https://www.youtube.com/watch?v=vz1RlUyrc3w&list=PLu71SKxNbfoDqgPchmvIsL4hTnJIrtige\n\nJavascript and react interview series: https://www.youtube.com/watch?v=1wqCyz7XrV4&list=PLu71SKxNbfoCy_MsA98SBfvUKF5eQit6L\n\nBackend development with Javascript: https://www.youtube.com/watch?v=EH3vGeqeIAo&list=PLu71SKxNbfoBGh_8p_NS-ZAh6v7HhYqHW\n\nPython Series: https://www.youtube.com/watch?v=Ca5DLSDfPec&list=PLu71SKxNbfoBsMugTFALhdLlZ5VOqCg2s",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/iKG6qg9ksJ0/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/iKG6qg9ksJ0/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/iKG6qg9ksJ0/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/iKG6qg9ksJ0/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/iKG6qg9ksJ0/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Chai aur Code",
+        "playlistId": "PLu71SKxNbfoBsMugTFALhdLlZ5VOqCg2s",
+        "position": 25,
+        "resourceId": {
+          "kind": "youtube#video",
+          "videoId": "iKG6qg9ksJ0"
+        },
+        "videoOwnerChannelTitle": "Chai aur Code",
+        "videoOwnerChannelId": "UCNQ6FEtztATuaVhZKCY28Yw"
+      },
+      "contentDetails": {
+        "videoId": "iKG6qg9ksJ0",
+        "videoPublishedAt": "2024-02-10T16:02:19Z"
+      }
+    },
+    {
+      "kind": "youtube#playlistItem",
+      "etag": "cnSP_4T6TCLfgI46S3JMcPgp5MI",
+      "id": "UEx1NzFTS3hOYmZvQnNNdWdURkFMaGRMbFo1Vk9xQ2cycy5DQ0MyQ0Y4Mzg0M0VGOEYw",
+      "snippet": {
+        "publishedAt": "2024-02-11T07:57:33Z",
+        "channelId": "UCNQ6FEtztATuaVhZKCY28Yw",
+        "title": "Private video",
+        "description": "This video is private.",
+        "thumbnails": {},
+        "channelTitle": "Chai aur Code",
+        "playlistId": "PLu71SKxNbfoBsMugTFALhdLlZ5VOqCg2s",
+        "position": 26,
+        "resourceId": {
+          "kind": "youtube#video",
+          "videoId": "glllhcr-LXY"
+        }
+      },
+      "contentDetails": {
+        "videoId": "glllhcr-LXY"
+      }
+    },
+    {
+      "kind": "youtube#playlistItem",
+      "etag": "5jXGKOCRzxMdFIgZyAOHm4X1-aY",
+      "id": "UEx1NzFTS3hOYmZvQnNNdWdURkFMaGRMbFo1Vk9xQ2cycy4yQUE2Q0JEMTk4NTM3RTZC",
+      "snippet": {
+        "publishedAt": "2024-02-20T07:18:31Z",
+        "channelId": "UCNQ6FEtztATuaVhZKCY28Yw",
+        "title": "Python for javascript developers",
+        "description": "Purpose of this video is to introduce Python to javascript fans. By no means, this video says that javascript is bad or python is bad. Keep an open perspective about programming languages.\n\nWelcome to chai aur code, a coding/programming dedicated channel in Hindi language. Now you can learn best of programming concepts with industry standard practical guide in Hindi language.\n\nAll source code is available at my Github account:\nhttps://github.com/hiteshchoudhary\n\nOur Open-Source Project is here: https://freeapi.app\n\nJoin me at whatsapp: https://hitesh.ai/whatsapp\n\nfor community discord: https://hitesh.ai/discord\n\nInstagram pe yaha paaye jaate h:\nhttps://www.instagram.com/hiteshchoudharyofficial/\n\nHTML video series:  https://www.youtube.com/watch?v=XmLOwJHFHf0&list=PLu71SKxNbfoDBNF5s-WH6aLbthSEIMhMI\n\nComplete javascript series: https://www.youtube.com/watch?v=Hr5iLG7sUa0&list=PLu71SKxNbfoBuX3f4EOACle2y-tRC5Q37\n\nComplete Reactjs series: https://www.youtube.com/watch?v=vz1RlUyrc3w&list=PLu71SKxNbfoDqgPchmvIsL4hTnJIrtige\n\nJavascript and react interview series: https://www.youtube.com/watch?v=1wqCyz7XrV4&list=PLu71SKxNbfoCy_MsA98SBfvUKF5eQit6L\n\nBackend development with Javascript: https://www.youtube.com/watch?v=EH3vGeqeIAo&list=PLu71SKxNbfoBGh_8p_NS-ZAh6v7HhYqHW\n\nPython Series: https://www.youtube.com/watch?v=Ca5DLSDfPec&list=PLu71SKxNbfoBsMugTFALhdLlZ5VOqCg2s",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/mIw7HppKRys/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/mIw7HppKRys/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/mIw7HppKRys/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/mIw7HppKRys/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/mIw7HppKRys/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Chai aur Code",
+        "playlistId": "PLu71SKxNbfoBsMugTFALhdLlZ5VOqCg2s",
+        "position": 27,
+        "resourceId": {
+          "kind": "youtube#video",
+          "videoId": "mIw7HppKRys"
+        },
+        "videoOwnerChannelTitle": "Chai aur Code",
+        "videoOwnerChannelId": "UCNQ6FEtztATuaVhZKCY28Yw"
+      },
+      "contentDetails": {
+        "videoId": "mIw7HppKRys",
+        "videoPublishedAt": "2024-02-20T07:19:42Z"
+      }
+    },
+    {
+      "kind": "youtube#playlistItem",
+      "etag": "9GNlVvLL6C-Wuyrrx-j6C5VkvJo",
+      "id": "UEx1NzFTS3hOYmZvRFdHSXdhRXdoVFVSNDBBYkg4cXNUby41NkI0NEY2RDEwNTU3Q0M2",
+      "snippet": {
+        "publishedAt": "2024-02-16T07:32:16Z",
+        "channelId": "UCNQ6FEtztATuaVhZKCY28Yw",
+        "title": "Lets build this project in Nextjs",
+        "description": "https://github.com/hiteshchoudhary/fun-with-tailwind\n\nWelcome to chai aur code, a coding/programming dedicated channel in Hindi language. Now you can learn best of programming concepts with industry standard practical guide in Hindi language.\n\nAll source code is available at my Github account:\nhttps://github.com/hiteshchoudhary\n\nOur Open-Source Project is here: https://freeapi.app\n\nJoin me at whatsapp: https://hitesh.ai/whatsapp\n\nfor community discord: https://hitesh.ai/discord\n\nInstagram pe yaha paaye jaate h:\nhttps://www.instagram.com/hiteshchoudharyofficial/\n\nHTML video series:  https://www.youtube.com/watch?v=XmLOwJHFHf0&list=PLu71SKxNbfoDBNF5s-WH6aLbthSEIMhMI\n\nComplete javascript series: https://www.youtube.com/watch?v=Hr5iLG7sUa0&list=PLu71SKxNbfoBuX3f4EOACle2y-tRC5Q37\n\nComplete Reactjs series: https://www.youtube.com/watch?v=vz1RlUyrc3w&list=PLu71SKxNbfoDqgPchmvIsL4hTnJIrtige\n\nJavascript and react interview series: https://www.youtube.com/watch?v=1wqCyz7XrV4&list=PLu71SKxNbfoCy_MsA98SBfvUKF5eQit6L\n\nBackend development with Javascript: https://www.youtube.com/watch?v=EH3vGeqeIAo&list=PLu71SKxNbfoBGh_8p_NS-ZAh6v7HhYqHW\n\nPython Series: https://www.youtube.com/watch?v=Ca5DLSDfPec&list=PLu71SKxNbfoBsMugTFALhdLlZ5VOqCg2s",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/AR6eQCi_Me4/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/AR6eQCi_Me4/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/AR6eQCi_Me4/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/AR6eQCi_Me4/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/AR6eQCi_Me4/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Chai aur Code",
+        "playlistId": "PLu71SKxNbfoDWGIwaEwhTUR40AbH8qsTo",
+        "position": 0,
+        "resourceId": {
+          "kind": "youtube#video",
+          "videoId": "AR6eQCi_Me4"
+        },
+        "videoOwnerChannelTitle": "Chai aur Code",
+        "videoOwnerChannelId": "UCNQ6FEtztATuaVhZKCY28Yw"
+      },
+      "contentDetails": {
+        "videoId": "AR6eQCi_Me4",
+        "videoPublishedAt": "2024-02-16T15:30:09Z"
+      }
+    },
+    {
+      "kind": "youtube#playlistItem",
+      "etag": "VKDtWpWJIXpeaBSNFgLVBGX-Vtc",
+      "id": "UEx1NzFTS3hOYmZvRFdHSXdhRXdoVFVSNDBBYkg4cXNUby4yODlGNEE0NkRGMEEzMEQy",
+      "snippet": {
+        "publishedAt": "2024-02-17T10:46:11Z",
+        "channelId": "UCNQ6FEtztATuaVhZKCY28Yw",
+        "title": "Deleted video",
+        "description": "This video is unavailable.",
+        "thumbnails": {},
+        "channelTitle": "Chai aur Code",
+        "playlistId": "PLu71SKxNbfoDWGIwaEwhTUR40AbH8qsTo",
+        "position": 1,
+        "resourceId": {
+          "kind": "youtube#video",
+          "videoId": "t2vt-yIM4wM"
+        }
+      },
+      "contentDetails": {
+        "videoId": "t2vt-yIM4wM"
+      }
+    },
+    {
+      "kind": "youtube#playlistItem",
+      "etag": "mKFDHgzwnvAUb-IFG-YceTePWn8",
+      "id": "UEx1NzFTS3hOYmZvRFdHSXdhRXdoVFVSNDBBYkg4cXNUby4wMTcyMDhGQUE4NTIzM0Y5",
+      "snippet": {
+        "publishedAt": "2024-02-17T12:04:28Z",
+        "channelId": "UCNQ6FEtztATuaVhZKCY28Yw",
+        "title": "Solving Navbar challenge",
+        "description": "Welcome to chai aur code, a coding/programming dedicated channel in Hindi language. Now you can learn best of programming concepts with industry standard practical guide in Hindi language.\n\nAll source code is available at my Github account:\nhttps://github.com/hiteshchoudhary\n\nOur Open-Source Project is here: https://freeapi.app\n\nJoin me at whatsapp: https://hitesh.ai/whatsapp\n\nfor community discord: https://hitesh.ai/discord\n\nInstagram pe yaha paaye jaate h:\nhttps://www.instagram.com/hiteshchoudharyofficial/\n\nHTML video series:  https://www.youtube.com/watch?v=XmLOwJHFHf0&list=PLu71SKxNbfoDBNF5s-WH6aLbthSEIMhMI\n\nComplete javascript series: https://www.youtube.com/watch?v=Hr5iLG7sUa0&list=PLu71SKxNbfoBuX3f4EOACle2y-tRC5Q37\n\nComplete Reactjs series: https://www.youtube.com/watch?v=vz1RlUyrc3w&list=PLu71SKxNbfoDqgPchmvIsL4hTnJIrtige\n\nJavascript and react interview series: https://www.youtube.com/watch?v=1wqCyz7XrV4&list=PLu71SKxNbfoCy_MsA98SBfvUKF5eQit6L\n\nBackend development with Javascript: https://www.youtube.com/watch?v=EH3vGeqeIAo&list=PLu71SKxNbfoBGh_8p_NS-ZAh6v7HhYqHW\n\nPython Series: https://www.youtube.com/watch?v=Ca5DLSDfPec&list=PLu71SKxNbfoBsMugTFALhdLlZ5VOqCg2s",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/wRbO-yMWTqM/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/wRbO-yMWTqM/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/wRbO-yMWTqM/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/wRbO-yMWTqM/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/wRbO-yMWTqM/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Chai aur Code",
+        "playlistId": "PLu71SKxNbfoDWGIwaEwhTUR40AbH8qsTo",
+        "position": 2,
+        "resourceId": {
+          "kind": "youtube#video",
+          "videoId": "wRbO-yMWTqM"
+        },
+        "videoOwnerChannelTitle": "Chai aur Code",
+        "videoOwnerChannelId": "UCNQ6FEtztATuaVhZKCY28Yw"
+      },
+      "contentDetails": {
+        "videoId": "wRbO-yMWTqM",
+        "videoPublishedAt": "2024-02-17T16:45:12Z"
+      }
+    },
+    {
+      "kind": "youtube#playlistItem",
+      "etag": "scMesLjQhUBr9Yj6GngmVMTFrrg",
+      "id": "UEx1NzFTS3hOYmZvRFdHSXdhRXdoVFVSNDBBYkg4cXNUby41MjE1MkI0OTQ2QzJGNzNG",
+      "snippet": {
+        "publishedAt": "2024-02-21T07:06:10Z",
+        "channelId": "UCNQ6FEtztATuaVhZKCY28Yw",
+        "title": "Solving Hero Section challenges",
+        "description": "Welcome to chai aur code, a coding/programming dedicated channel in Hindi language. Now you can learn best of programming concepts with industry standard practical guide in Hindi language.\n\nAll source code is available at my Github account:\nhttps://github.com/hiteshchoudhary\n\nOur Open-Source Project is here: https://freeapi.app\n\nJoin me at whatsapp: https://hitesh.ai/whatsapp\n\nfor community discord: https://hitesh.ai/discord\n\nInstagram pe yaha paaye jaate h:\nhttps://www.instagram.com/hiteshchoudharyofficial/\n\nHTML video series:  https://www.youtube.com/watch?v=XmLOwJHFHf0&list=PLu71SKxNbfoDBNF5s-WH6aLbthSEIMhMI\n\nComplete javascript series: https://www.youtube.com/watch?v=Hr5iLG7sUa0&list=PLu71SKxNbfoBuX3f4EOACle2y-tRC5Q37\n\nComplete Reactjs series: https://www.youtube.com/watch?v=vz1RlUyrc3w&list=PLu71SKxNbfoDqgPchmvIsL4hTnJIrtige\n\nJavascript and react interview series: https://www.youtube.com/watch?v=1wqCyz7XrV4&list=PLu71SKxNbfoCy_MsA98SBfvUKF5eQit6L\n\nBackend development with Javascript: https://www.youtube.com/watch?v=EH3vGeqeIAo&list=PLu71SKxNbfoBGh_8p_NS-ZAh6v7HhYqHW\n\nPython Series: https://www.youtube.com/watch?v=Ca5DLSDfPec&list=PLu71SKxNbfoBsMugTFALhdLlZ5VOqCg2s",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/omALIaLnidM/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/omALIaLnidM/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/omALIaLnidM/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/omALIaLnidM/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/omALIaLnidM/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Chai aur Code",
+        "playlistId": "PLu71SKxNbfoDWGIwaEwhTUR40AbH8qsTo",
+        "position": 3,
+        "resourceId": {
+          "kind": "youtube#video",
+          "videoId": "omALIaLnidM"
+        },
+        "videoOwnerChannelTitle": "Chai aur Code",
+        "videoOwnerChannelId": "UCNQ6FEtztATuaVhZKCY28Yw"
+      },
+      "contentDetails": {
+        "videoId": "omALIaLnidM",
+        "videoPublishedAt": "2024-02-21T07:05:37Z"
+      }
+    },
+    {
+      "kind": "youtube#playlistItem",
+      "etag": "Kn_10i_LU_srOdwQUTfy1rrRscI",
+      "id": "UEx1NzFTS3hOYmZvRFdHSXdhRXdoVFVSNDBBYkg4cXNUby4wOTA3OTZBNzVEMTUzOTMy",
+      "snippet": {
+        "publishedAt": "2024-02-21T07:50:53Z",
+        "channelId": "UCNQ6FEtztATuaVhZKCY28Yw",
+        "title": "Building featured Card section",
+        "description": "Welcome to chai aur code, a coding/programming dedicated channel in Hindi language. Now you can learn best of programming concepts with industry standard practical guide in Hindi language.\n\nAll source code is available at my Github account:\nhttps://github.com/hiteshchoudhary\n\nOur Open-Source Project is here: https://freeapi.app\n\nJoin me at whatsapp: https://hitesh.ai/whatsapp\n\nfor community discord: https://hitesh.ai/discord\n\nInstagram pe yaha paaye jaate h:\nhttps://www.instagram.com/hiteshchoudharyofficial/\n\nHTML video series:  https://www.youtube.com/watch?v=XmLOwJHFHf0&list=PLu71SKxNbfoDBNF5s-WH6aLbthSEIMhMI\n\nComplete javascript series: https://www.youtube.com/watch?v=Hr5iLG7sUa0&list=PLu71SKxNbfoBuX3f4EOACle2y-tRC5Q37\n\nComplete Reactjs series: https://www.youtube.com/watch?v=vz1RlUyrc3w&list=PLu71SKxNbfoDqgPchmvIsL4hTnJIrtige\n\nJavascript and react interview series: https://www.youtube.com/watch?v=1wqCyz7XrV4&list=PLu71SKxNbfoCy_MsA98SBfvUKF5eQit6L\n\nBackend development with Javascript: https://www.youtube.com/watch?v=EH3vGeqeIAo&list=PLu71SKxNbfoBGh_8p_NS-ZAh6v7HhYqHW\n\nPython Series: https://www.youtube.com/watch?v=Ca5DLSDfPec&list=PLu71SKxNbfoBsMugTFALhdLlZ5VOqCg2s",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/qG9EvNQbPio/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/qG9EvNQbPio/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/qG9EvNQbPio/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/qG9EvNQbPio/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/qG9EvNQbPio/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Chai aur Code",
+        "playlistId": "PLu71SKxNbfoDWGIwaEwhTUR40AbH8qsTo",
+        "position": 4,
+        "resourceId": {
+          "kind": "youtube#video",
+          "videoId": "qG9EvNQbPio"
+        },
+        "videoOwnerChannelTitle": "Chai aur Code",
+        "videoOwnerChannelId": "UCNQ6FEtztATuaVhZKCY28Yw"
+      },
+      "contentDetails": {
+        "videoId": "qG9EvNQbPio",
+        "videoPublishedAt": "2024-02-21T07:45:52Z"
+      }
+    },
+    {
+      "kind": "youtube#playlistItem",
+      "etag": "W0-0jm99YHCuXLX0gpB96qsoHYk",
+      "id": "UEx1NzFTS3hOYmZvRFdHSXdhRXdoVFVSNDBBYkg4cXNUby4xMkVGQjNCMUM1N0RFNEUx",
+      "snippet": {
+        "publishedAt": "2024-02-21T07:52:35Z",
+        "channelId": "UCNQ6FEtztATuaVhZKCY28Yw",
+        "title": "Designing Sticky Scroll",
+        "description": "Welcome to chai aur code, a coding/programming dedicated channel in Hindi language. Now you can learn best of programming concepts with industry standard practical guide in Hindi language.\n\nAll source code is available at my Github account:\nhttps://github.com/hiteshchoudhary\n\nOur Open-Source Project is here: https://freeapi.app\n\nJoin me at whatsapp: https://hitesh.ai/whatsapp\n\nfor community discord: https://hitesh.ai/discord\n\nInstagram pe yaha paaye jaate h:\nhttps://www.instagram.com/hiteshchoudharyofficial/\n\nHTML video series:  https://www.youtube.com/watch?v=XmLOwJHFHf0&list=PLu71SKxNbfoDBNF5s-WH6aLbthSEIMhMI\n\nComplete javascript series: https://www.youtube.com/watch?v=Hr5iLG7sUa0&list=PLu71SKxNbfoBuX3f4EOACle2y-tRC5Q37\n\nComplete Reactjs series: https://www.youtube.com/watch?v=vz1RlUyrc3w&list=PLu71SKxNbfoDqgPchmvIsL4hTnJIrtige\n\nJavascript and react interview series: https://www.youtube.com/watch?v=1wqCyz7XrV4&list=PLu71SKxNbfoCy_MsA98SBfvUKF5eQit6L\n\nBackend development with Javascript: https://www.youtube.com/watch?v=EH3vGeqeIAo&list=PLu71SKxNbfoBGh_8p_NS-ZAh6v7HhYqHW\n\nPython Series: https://www.youtube.com/watch?v=Ca5DLSDfPec&list=PLu71SKxNbfoBsMugTFALhdLlZ5VOqCg2s",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/_wRmv9YtL0U/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/_wRmv9YtL0U/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/_wRmv9YtL0U/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/_wRmv9YtL0U/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/_wRmv9YtL0U/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Chai aur Code",
+        "playlistId": "PLu71SKxNbfoDWGIwaEwhTUR40AbH8qsTo",
+        "position": 5,
+        "resourceId": {
+          "kind": "youtube#video",
+          "videoId": "_wRmv9YtL0U"
+        },
+        "videoOwnerChannelTitle": "Chai aur Code",
+        "videoOwnerChannelId": "UCNQ6FEtztATuaVhZKCY28Yw"
+      },
+      "contentDetails": {
+        "videoId": "_wRmv9YtL0U",
+        "videoPublishedAt": "2024-02-21T07:46:13Z"
+      }
+    }
+  ],
+  "pageInfo": {
+    "totalResults": 28,
+    "resultsPerPage": 50
+  }
+}

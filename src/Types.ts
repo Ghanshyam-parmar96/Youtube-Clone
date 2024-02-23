@@ -274,10 +274,10 @@ export interface ChannelPostData {
 
 export interface ChannelDetails extends ChannelPostData {
   statistics: {
-    hiddenSubscriberCount : boolean;
-    subscriberCount : string;
-    videoCount : string;
-    viewCount : string;
+    hiddenSubscriberCount: boolean;
+    subscriberCount: string;
+    videoCount: string;
+    viewCount: string;
   }
 };
 
@@ -310,7 +310,63 @@ export interface ChannelPlayListData extends Omit<ParsedAllData, "items"> {
       };
     };
     contentDetails: {
-      itemCount : number;  
+      itemCount: number;
     },
+  }[];
+}
+
+
+
+export interface PlaylistDetails extends Omit<ParsedAllData, "items"> {
+  items: {
+    kind: string;
+    etag: string;
+    id: string;
+    snippet: {
+      publishedAt: string;
+      channelId: string;
+      title: string;
+      description: string;
+      thumbnails: {
+        default: {
+          url: string;
+          width: number;
+          height: number;
+        };
+        medium: {
+          url: string;
+          width: number;
+          height: number;
+        };
+        high: {
+          url: string;
+          width: number;
+          height: number;
+        };
+        standard: {
+          url: string;
+          width: number;
+          height: number;
+        };
+        maxres: {
+          url: string;
+          width: number;
+          height: number;
+        };
+      };
+      channelTitle: string;
+      playlistId: string;
+      position: number;
+      resourceId: {
+        kind: string;
+        videoId: string;
+      };
+      videoOwnerChannelTitle?: string;
+      videoOwnerChannelId?: string;
+    };
+    contentDetails: {
+      videoId: string;
+      videoPublishedAt: string;
+    };
   }[];
 }

@@ -2,37 +2,41 @@
 @tailwind components;
 @tailwind utilities;
 
-
-*::-webkit-scrollbar{
-    @apply bg-transparent w-2;
+*::-webkit-scrollbar {
+  @apply bg-transparent w-2;
 }
 
-*::-webkit-scrollbar-thumb{
-    @apply bg-secondary-dark rounded-full
+*::-webkit-scrollbar-thumb {
+  @apply bg-secondary-dark rounded-full;
 }
 
-.scrollbarHide::-webkit-scrollbar-thumb{
-    @apply bg-transparent;
+.scrollbarHide::-webkit-scrollbar-thumb {
+  @apply bg-transparent;
 }
 
-.scrollbar-hidden::-webkit-scrollbar-thumb{
-    @apply bg-transparent;
+.scrollbar-hidden::-webkit-scrollbar-thumb {
+  @apply bg-transparent;
 }
 
-.scrollbar-hidden:hover::-webkit-scrollbar-thumb{
-    @apply bg-secondary-border;
+.scrollbar-hidden:hover::-webkit-scrollbar-thumb {
+  @apply bg-secondary-border;
 }
 
 .lineClamp2 {
-    overflow: hidden;
-    display: -webkit-box;
-    -webkit-line-clamp: 2; /* Adjust this to the number of lines you want to display */
-    -webkit-box-orient: vertical;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2; /* Adjust this to the number of lines you want to display */
+  -webkit-box-orient: vertical;
 }
 
 .lineClamp4 {
-    overflow: hidden;
-    display: -webkit-box;
-    -webkit-line-clamp: 4; /* Adjust this to the number of lines you want to display */
-    -webkit-box-orient: vertical;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 4; /* Adjust this to the number of lines you want to display */
+  -webkit-box-orient: vertical;
 }
+
+.circle_patten {
+    background-image: linear-gradient(-20deg, #616161 0%, #9bc5c3 100%);
+}
+

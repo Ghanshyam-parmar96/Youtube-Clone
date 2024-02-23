@@ -39,7 +39,8 @@ const ChannelPlayLists = () => {
         getNextPageParam: (lastPage) => {
             return lastPage?.nextPageToken;
         },
-        staleTime: Infinity,
+      enabled: !!channelId,
+      staleTime: 1000 * 30,
     })
 
     if (isLoading) {
