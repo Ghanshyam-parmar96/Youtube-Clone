@@ -1,50 +1,24 @@
-import axios from "axios";
-import { ChannelPlayListData, ParseVideoList, PlaylistDetails } from "../../Types";
-import { API_KEY, BASE_URL } from "../../utils/constants";
-import { Link, useSearchParams } from "react-router-dom";
-import convertDurationToTime from "../../utils/convertDurationToTime";
-import { VIEW_FORMATTER, formatTimeAgo } from "../../utils/formatTimeAgo";
-import { useInfiniteQuery, useQuery } from "@tanstack/react-query";
-import { TbPlaylistAdd } from "react-icons/tb";
-import Button from "../../components/Button";
-import { IoIosShareAlt } from "react-icons/io";
 import { LiaDownloadSolid } from "react-icons/lia";
 import { SlOptionsVertical } from "react-icons/sl";
-import { FaPlay } from "react-icons/fa6";
+import { TbPlaylistAdd } from "react-icons/tb";
+import { IoIosShareAlt } from "react-icons/io";
 import { IoShuffle } from "react-icons/io5";
+import { FaPlay } from "react-icons/fa6";
+
+import { useInfiniteQuery, useQuery } from "@tanstack/react-query";
+import playlistDataParser from "../../utils/playlistDataParser";
 import InfiniteScroll from "react-infinite-scroll-component";
+import { API_KEY, BASE_URL, fetchStaleTime } from "../../utils/constants";
+import { Link, useSearchParams } from "react-router-dom";
+import { ChannelPlayListData } from "../../Types";
+import Button from "../../components/Button";
+import axios from "axios";
+import LazyImage from "../../components/LazyLoadImage";
 
 
 const Playlist = () => {
   const [searchParams] = useSearchParams();
-  const playlistId = searchParams.get('list');
-
-  const playlistFilterFn = async (pageParam: string) => {
-    let url = `${BASE_URL}/playlistItems?part=snippet%2CcontentDetails&maxResults=50&playlistId=${playlistId}&pageToken=${pageParam}&key=${API_KEY}`
-
-    if (!pageParam) {
-      url = `${BASE_URL}/playlistItems?part=snippet%2CcontentDetails&maxResults=50&playlistId=${playlistId}&key=${API_KEY}`
-    }
-
-    const playlistItems: PlaylistDetails = await axios.get(url).then((response) => response.data);
-
-    const videoIdList: string = playlistItems.items.filter(item => !(item.snippet.title === "Deleted video" || item.snippet.title === "Private video")).map(item => item.contentDetails.videoId).join("%2C");
-
-    const youtubeVideos: ParseVideoList[] = await axios.get(`${BASE_URL}/videos?part=snippet%2CcontentDetails%2Cstatistics&id=${videoIdList}&key=${API_KEY}`).then((response) => response.data.items)
-
-    const videosList = youtubeVideos.map((video) => ({
-      videoId: video.id || "",
-      videoTitle: video.snippet.title || "",
-      thumbnailUrl: video.snippet.thumbnails.medium.url || "",
-      views: VIEW_FORMATTER.format(Number(video.statistics.viewCount)) || "",
-      postedAt: formatTimeAgo(video.snippet.publishedAt) || "",
-      durations: convertDurationToTime(video.contentDetails.duration) || "",
-      channelTitle: video.snippet.channelTitle || "",
-      channelId : video.snippet.channelId || "",
-    }))
-
-    return { ...playlistItems, items: videosList };
-  }
+  const playlistId = searchParams.get('list') || "";
 
   const dateFormat = (date: string) => {
     const newDate: Date = new Date(date);
@@ -56,41 +30,39 @@ const Playlist = () => {
     queryKey: ['playlist', playlistId],
     queryFn: () => axios.get(`${BASE_URL}/playlists?part=snippet%2CcontentDetails&id=${playlistId}&maxResults=25&key=${API_KEY}`).then(response => response.data),
     enabled: !!playlistId,
-    staleTime: 1000* 20,
+    staleTime: fetchStaleTime,
   })
 
-  const { data: playListItems, hasNextPage, isLoading, fetchNextPage } = useInfiniteQuery({
+  const { data: playListItems, hasNextPage, fetchNextPage } = useInfiniteQuery({
     queryKey: ["playlistItems", playlistId],
-    queryFn: ({ pageParam }) => playlistFilterFn(pageParam),
+    queryFn: ({ pageParam }) => playlistDataParser(pageParam, playlistId),
     initialPageParam: "",
     getNextPageParam: (lastPage) => {
       return lastPage?.nextPageToken
     },
-    staleTime: Infinity,
+    staleTime: fetchStaleTime,
     enabled: !!playlistId,
   })
 
-  // console.log(data);
 
   return (
-    <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 mb-20 sm:mb-0 w-screen sm:w-full sm:overflow-x-hidden" id="playlistItemsList1">
-      <div className="w-full h-full sm:h-96 lg:h-full overflow-hidden sm:py-7 relative after:contents-[''] after:absolute after:bottom-0 
-      after:sm:bottom-7 after:rounded-b-full after:left-0 after:w-full after:h-4 after:bg-green-700 before:contents-[''] before:absolute before:top-0 before:sm:top-7 before:rounded-t-full before:left-0 before:w-full before:h-4 before:bg-green-700">
-        <div className="flex flex-col sm:flex-row lg:flex-col gap-1 sm:gap-3 0circle_patten py-4 sm:py-5 px-3 rounded-2xl border border-green-700 h-full w-full overflow-x-hidden scrollbarHide">
-          <div className="aspect-video sm:w-2/5 lg:w-full">
-            <img src={data?.items[0].snippet.thumbnails.medium.url} className="h-full w-full object-cover object-center rounded-md" alt="" />
+    <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 pb-20 sm:pb-0 w-screen sm:w-full h-full lg:h-[calc(100vh_-_65px)] overflow-x-hidden" id="playlistItemsList1">
+      <div className="w-full bg-gradient-to-b from-indigo-900 to-black/50 p-4 lg:overflow-y-scroll lg:h-[calc(100vh_-_130px)] lg:my-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 gap-3 scrollbarHide">
+          <div className="aspect-video">
+            <LazyImage src={data?.items[0].snippet.thumbnails.medium.url || ""} className="rounded-lg" alt="" />
           </div>
-          <div className="flex flex-col gap-2 sm:gap-4">
-            <h2 className="text-xl sm:text-2xl font-extrabold">{data?.items[0].snippet.title}</h2>
-            <div className="flex lg:flex-col gap-5">
+          <div className="flex flex-col gap-3 sm:gap-4 md:gap-3 text-white">
+            <h2 className="text-xl sm:text-2xl md:text-lg md:line-clamp-2 font-extrabold">{data?.items[0].snippet.title}</h2>
+            <div className="flex lg:flex-col gap-4">
               <div className="flex flex-col gap-1">
                 <Link to={`/channel/${data?.items[0].snippet.channelId}`} className="font-bold text-xs">{data?.items[0].snippet.channelTitle}</Link>
-                <p className="font-medium text-xs text-gray-500 flex items-center gap-4">
+                <p className="font-medium text-xs text-gray-300 flex items-center gap-4">
                   <span> {data?.items[0].contentDetails.itemCount} videos </span>
-                  <span className="hidden md:block">publishedAt - {dateFormat(data?.items[0].snippet.publishedAt || "")}</span>
+                  <span className="hidden lg:block">publishedAt - {dateFormat(data?.items[0].snippet.publishedAt || "")}</span>
                 </p>
               </div>
-              <div className="flex items-center gap-3">
+              <div className="flex items-center gap-3 text-black">
                 <Button variant="btn" size="icon">
                   <TbPlaylistAdd className='text-3xl' />
                 </Button>
@@ -113,17 +85,17 @@ const Playlist = () => {
                 </Link>
               </Button>
               <Button variant="default" size="btn">
-                <p className="flex items-center gap-2 text-sm px-2">
+                <p className="flex items-center gap-2 text-sm px-2 text-black">
                   <span className="text-xl"><IoShuffle /></span>
                   <span>Shuffle</span>
                 </p>
               </Button>
             </div>
-            <pre className="text-wrap line-clamp-2 sm:line-clamp-5 lg:line-clamp-none">{data?.items[0].snippet.description}</pre>
+            <pre className="text-wrap line-clamp-2 sm:line-clamp-3 md:text-sm lg:line-clamp-none">{data?.items[0].snippet.description}</pre>
           </div>
         </div>
       </div>
-      <div className="col-span-1 lg:col-span-2 lg:pt-7 lg:overflow-x-hidden" id="playlistItemsList2">
+      <div className="col-span-1 lg:col-span-2 lg:pt-7 lg:overflow-y-scroll px-4" id="playlistItemsList2">
         <InfiniteScroll
           dataLength={playListItems?.pageParams.length || 0}
           next={fetchNextPage}
@@ -148,21 +120,24 @@ const Playlist = () => {
         >
           <div className="flex flex-col gap-3">
             {playListItems?.pages.map((page) => page.items.map((item) => (
-              <div key={item.videoId} className="grid grid-cols-2 sm:grid-cols-3 gap-3">
-                <Link to={`/watch?v=${item.videoId}&list=${playlistId}`} className="relative aspect-video w-full" >
-                  <img src={item.thumbnailUrl} className={`block w-full h-full object-cover transition-[border-radius] duration-200 sm:rounded-xl`} alt="" />
+              <div key={item.videoId} className="flex items-center gap-3 ">
+                <span className="text-xs">{Number(item.position) + 1}</span>
+                <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
+                  <Link to={`/watch?v=${item.videoId}&list=${playlistId}`} className="relative aspect-video w-full" >
+                    <LazyImage src={item.thumbnailUrl} className="transition-[border-radius] duration-200 sm:rounded-xl" alt="" />
 
-                  <div className="absolute bottom-1 right-1 bg-secondary-dark text-secondary text-sm px-1 pb-0.5 rounded">
-                    {item.durations}
-                  </div>
-                </Link>
-                <div className="flex flex-col gap-2 sm:col-span-2">
-                  <Link to={`/watch?v=${item.videoId}&list=${playlistId}`} >
-                    <h2 className="text-base line-clamp-2 font-medium">{item.videoTitle}</h2>
+                    <div className="absolute bottom-1 right-1 bg-secondary-dark text-secondary text-sm px-1 pb-0.5 rounded">
+                      {item.durations}
+                    </div>
                   </Link>
-                  <p className="text-sm">
-                   <Link to={`/channel/${item.channelId}`}>{item.channelTitle}</Link> • {item.views} Views • {item.postedAt}
-                  </p>
+                  <div className="flex flex-col gap-2 sm:col-span-2">
+                    <Link to={`/watch?v=${item.videoId}&list=${playlistId}`} >
+                      <h2 className="text-base line-clamp-2 font-medium">{item.videoTitle}</h2>
+                    </Link>
+                    <p className="text-sm  dark:text-gray-400">
+                      <Link to={`/channel/${item.channelId}`}>{item.channelTitle}</Link> • {item.views} Views • {item.postedAt}
+                    </p>
+                  </div>
                 </div>
               </div>
             )))}

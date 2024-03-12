@@ -1,44 +1,55 @@
-import { useInfiniteQuery } from "@tanstack/react-query";
-import { Link, useSearchParams } from "react-router-dom";
-import { API_KEY, BASE_URL, RAPIDAPI_BASE_URL, options } from "../../utils/constants";
-import axios from "axios";
-import { FetchPageData, SearchVideoFnProps } from "../../Types";
-import parseData from "../../utils/parseData";
+import { BsSliders2 } from "react-icons/bs";
+
+import { SearchResultFetchData, searchFilterSliceProps } from "../../Types";  
+import { RAPIDAPI_BASE_URL, fetchStaleTime, options } from "../../utils/constants";
 import InfiniteScroll from "react-infinite-scroll-component";
+import SearchChannelDetails from "./SearchChannelDetails";
+import { useInfiniteQuery } from "@tanstack/react-query";
+import { useSearchParams } from "react-router-dom";
+import SearchPlaylist from "./SearchPlaylist";
+import Button from "../../components/Button";
+import SearchFilter from "./SearchFilter";
+import SearchVideos from "./SearchVideos";
+import { useState } from "react";
+import axios from "axios";
+
 
 
 const Search = () => {
-
+  const [searchFilterBox, setSearchFilterBox] = useState<boolean>(false);
+  const [searchFilteredData, setSearchFilteredData] = useState<searchFilterSliceProps>({uploaded_date : "", duration : "", features : "", sort_by : "relevance", type : ""});
   const [searchParams] = useSearchParams();
   let query = searchParams.get('query');
 
+ 
+  const searchVideoFn = async (pageParam: string):Promise<SearchResultFetchData> => {
+    let allFilters = Object.keys(searchFilteredData).map((item) => searchFilteredData[item] ? `&${item}=${searchFilteredData[item]}` : "").join("");
 
-  const searchVideoFn = async (pageParam: string) => {
-    let url = `${RAPIDAPI_BASE_URL}/search?q=${query}&part=id&regionCode=IN&maxResults=50&type=video&order=relevance&pageToken=${pageParam}`;
+    let url = `${RAPIDAPI_BASE_URL}/search?query=${query}&geo=IN&lang=en${allFilters}&token=${pageParam}`;
 
     if (!pageParam) {
-      url = `${RAPIDAPI_BASE_URL}/search?q=${query}&part=id&regionCode=IN&maxResults=50&type=video&order=relevance`;
+      url = `${RAPIDAPI_BASE_URL}/search?query=${query}&lang=en&geo=IN${allFilters}`;
     }
-    const videoData: SearchVideoFnProps = await axios.get(url, options).then((response) => response.data);
-    delete videoData.regionCode
-
-    const videoId: string = videoData.items.map((item) => item.id.videoId || "").filter(item => item !== "").join("%2C");
-
-    const fetchedVideo: FetchPageData = await axios.get(`${BASE_URL}/videos?part=snippet%2CcontentDetails%2Cstatistics&id=${videoId}&maxResults=50&regionCode=IN&key=${API_KEY}`).then((response) => parseData(response.data));
-
-    return { ...videoData, items: fetchedVideo.items, etag: fetchedVideo.etag }
-
+    
+    return await axios.get(url, options).then((response) => response.data);
   };
 
+  
+  const closeFilter = (arg : searchFilterSliceProps) => {
+    setSearchFilteredData(arg);
+    setSearchFilterBox(false);
+  }
+
+  
   const { data, isLoading, hasNextPage, fetchNextPage } = useInfiniteQuery({
-    queryKey: ['searchVideos', query],
+    queryKey: ['searchVideos', query, searchFilteredData],
     queryFn: ({ pageParam }) => searchVideoFn(pageParam),
     initialPageParam: "",
     getNextPageParam: (lastPage) => {
-      return lastPage?.nextPageToken;
+      return lastPage?.continuation;
     },
     enabled: !!query,
-    staleTime: 1000 * 30,
+    staleTime: fetchStaleTime,
   });
 
 
@@ -52,15 +63,21 @@ const Search = () => {
     )
   }
 
-
   return (
-    <div className="h-full w-screen sm:w-full lg:max-w-6xl mx-auto flex flex-col gap-3 0flex-grow items-center overflow-x-auto" id="searchScrollableDiv">
+    <div className="h-full w-screen sm:w-full lg:max-w-6xl mx-auto sm:px-3 flex flex-col gap-3 items-center overflow-y-scroll" id="searchScrollableDiv">
+
+      { searchFilterBox && <SearchFilter closeFilter={closeFilter} />}
+
+      <Button variant="ghost" size="btn" onClick={() => setSearchFilterBox(true)} className="px-4 font-medium text-sm self-end my-3">
+        Filters <span className="ml-2"> <BsSliders2 className="text-lg inline" /> </span>
+      </Button>
 
       <InfiniteScroll
         className="h-full w-full flex gap-5 flex-col"
-        dataLength={data?.pages.length || 1}
+        dataLength={data?.pageParams.length || 0}
         hasMore={hasNextPage}
         next={fetchNextPage}
+        // scrollableTarget="scrollableDiv"
         scrollableTarget="searchScrollableDiv"
         loader={
           <div className="grid place-content-center my-4 h-7" >
@@ -79,47 +96,57 @@ const Search = () => {
           </p>
         }
       >
-        {data?.pages.map(page => page.items.map(item => (
-          <div key={item.videoId} className="flex sm:flex-row flex-col gap-2 w-full">
-            <Link to={`/watch?v=${item.videoId}`} className="relative aspect-video w-full md:w-3/4" >
-              <img src={item.thumbnailUrl} className={`block w-full h-full object-cover transition-[border-radius] duration-200 sm:rounded-xl`} alt="" />
-
-              <div className="absolute bottom-1 right-1 bg-secondary-dark text-secondary text-sm px-1 pb-0.5 rounded">
-                {item.duration}
-              </div>
-            </Link>
-
-            <div className="flex gap-2 py-1 px-3 w-full">
-              <Link to={`/channel/${item.channelId}`} className="flex flex-shrink-0 sm:hidden">
-                <img src={item.channelIcon} className="w-12 h-12 rounded-full" alt="" />
-              </Link>
-
-              <div className="flex flex-col sm:px-0 gap-1 sm:gap-2 px-4">
-                <Link to={`/watch?v=${item.videoId}`} className="font-bold sm:text-lg md:text-xl lineClamp2 sm:order-1">
-                  {item.videoTitle}
-                </Link>
-                <div className="flex items-center gap-4 sm:order-3">
-                  <Link to={`/channel/${item.channelId}`} className="sm:flex flex-shrink-0 hidden">
-                    <img src={item.channelIcon} className="w-10 h-10 rounded-full" alt="" />
-                  </Link>
-
-                  <Link to={`/channel/${item.channelId}`} className="text-secondary-text text-sm sm:text-base">
-                    {item.channelTitle}
-                  </Link>
-                </div>
-
-                <div className="text-secondary-text text-sm sm:order-2 ">
-                  {item.views} Views • {item.postedAt}
-                </div>
-              </div>
-            </div>
-          </div>
-        )))}
+        
+        { data?.pages.map((result) => result.data.map((item) => {
+          if (item.type === 'video') {
+            return (
+              <SearchVideos 
+                key={item.videoId}
+                videoId={item.videoId || ''}
+                videoTitle={item.title}
+                channelId={item.channelId}
+                views={item.viewCount ||""}
+                duration={item.lengthText || ''}
+                channelTitle={item.channelTitle}
+                postedAt={item.publishedText || ''}
+                description={item.description || ''}
+                thumbnailUrl={item.thumbnail ? item.thumbnail[0].url : ''}
+                channelIcon={item.channelThumbnail ? item.channelThumbnail[0].url : ''}
+              />
+            )
+          } else if (item.type === 'playlist') {
+            return (
+              <SearchPlaylist
+                title={item.title}
+                key={item.playlistId}
+                videoId={item.videoId || ''}
+                videos={item.videos || []}
+                channelId={item.channelId}
+                channelTitle={item.channelTitle}
+                playlistId={item.playlistId || ""}
+                videoCount={item.videoCount || ""}
+                thumbnailUrl={item.thumbnail ? item.thumbnail[3].url : ""}
+              />
+            )
+          } else if (item.type === "channel") {
+            return (
+              <SearchChannelDetails
+                key={item.channelId}
+                channelId={item.channelId}
+                channelTitle={item.channelTitle}
+                thumbnailUrl={ item.thumbnail? item.thumbnail[1].url || item.thumbnail[0].url : ''}
+                subscriberCount={item.subscriberCount || ''}
+                description={item.description || ''}
+              />
+            )
+          }
+        }))}
       </InfiniteScroll>
     </div>
   )
 }
 
+export default Search;
 
 const SearchLoading = () => {
   return (
@@ -137,4 +164,3 @@ const SearchLoading = () => {
   )
 }
 
-export default Search;

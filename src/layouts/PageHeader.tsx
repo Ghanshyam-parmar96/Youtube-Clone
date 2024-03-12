@@ -1,17 +1,21 @@
-import { RxHamburgerMenu } from "react-icons/rx";
-import { Link, useNavigate } from "react-router-dom";
-import youtubeLogo from "../assets/black-youtube-logo.png";
-import { RiVideoAddLine } from "react-icons/ri";
 import { IoMdArrowBack, IoMdMic, IoMdNotificationsOutline } from "react-icons/io";
-import { FaRegCircleUser } from "react-icons/fa6";
 import { IoSearchOutline } from "react-icons/io5";
+import { FaRegCircleUser } from "react-icons/fa6";
+import { RxHamburgerMenu } from "react-icons/rx";
+import { RiVideoAddLine } from "react-icons/ri";
+
+import youtubeLightLogo from "../assets/white-youtube-logo.png";
+import youtubeDarkLogo from "../assets/black-youtube-logo.png";
+import { useAppDispatch, useAppSelector } from "../data/hooks";
+import { toggleSidebar } from "../data/sidebarSlice";
+import { Link, useNavigate } from "react-router-dom";
+import LazyImage from "../components/LazyLoadImage";
 import Button from "../components/Button";
 import { useState } from "react";
-import { useAppDispatch } from "../data/hooks";
-import { toggleSidebar } from "../data/sidebarSlice";
 
 const PageHeader = () => {
     const [showFullWidthSearch, setShowFullWidthSearch] = useState(false);
+    const isChecked = useAppSelector((state) => state.sidebar.isChecked);
     const [search, setSearch] = useState("");
     const dispatch = useAppDispatch();
     const navigate = useNavigate();
@@ -27,11 +31,11 @@ const PageHeader = () => {
 
             {/* Logo Section */}
             <div className={`items-center gap-4 flex-shrink-0 ${showFullWidthSearch ? "hidden" : "flex"}`}>
-                <Button variant="ghost" size="icon" onClick={() => dispatch(toggleSidebar())}>
+                <Button variant="ghost" size="icon" className="mb-2" onClick={() => dispatch(toggleSidebar())}>
                     <RxHamburgerMenu className="text-2xl" />
                 </Button>
-                <Link to="/">
-                    <img src={youtubeLogo} className="w-24" alt="Youtube Logo" />
+                <Link to="/" className="w-24">
+                    <LazyImage src={isChecked ? youtubeLightLogo : youtubeDarkLogo} alt="Youtube Logo" />
                 </Link>
             </div>
 
@@ -51,7 +55,7 @@ const PageHeader = () => {
                         id="search"
                         placeholder="Search"
                         autoComplete="off"
-                        className="w-full border focus:border-sky-600 border-gray-500/50 outline-none py-1 px-5 rounded-l-full"
+                        className="w-full border focus:border-sky-600 border-gray-500/50 outline-none py-1 px-5 rounded-l-full dark:text-black dark:bg-white/90"
                     />
 
                     <button onClick={submitHandler} className="text-2xl rounded-r-full border border-gray-500/50 px-5 py-1 border-l-transparent bg-gray-200/40 ">

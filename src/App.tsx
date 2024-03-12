@@ -1,19 +1,21 @@
 
 import { Route, RouterProvider, createBrowserRouter, createRoutesFromElements } from 'react-router-dom';
-import './App.css'
 import Layout from './Layout';
-import Home from './pages/home/Home';
-import WatchVideo from './pages/watchVideo/WatchVideo';
-import Search from './pages/search/Search';
-import Channel from './pages/channel/Channel';
-import ChannelHome from './pages/channel/ChannelHome';
-import ChannelVideos from './pages/channel/ChannelVideos';
-import ChannelPlayLists from './pages/channel/ChannelPlayLists';
-import Playlist from './pages/playlist/Playlist';
+import { lazy } from 'react';
+import './App.css'
+
+const Home = lazy(() => import('./pages/home/Home'));
+const WatchVideo = lazy(() => import('./pages/watchVideo/WatchVideo'));
+const Search = lazy(() => import('./pages/search/Search'));
+const Channel = lazy(() => import('./pages/channel/Channel'));
+const ChannelHome = lazy(() => import('./pages/channel/ChannelHome'));
+const ChannelVideos = lazy(() => import('./pages/channel/ChannelVideos'));
+const ChannelPlayLists = lazy(() => import('./pages/channel/ChannelPlayLists'));
+const Playlist = lazy(() => import('./pages/playlist/Playlist'));
 
 const router = createBrowserRouter(
   createRoutesFromElements(
-    <Route path="/" element={<Layout />}>
+    <Route path="/" element={<Layout/>}>
       <Route path="/" element={<Home />} />
       <Route path="/watch" element={<WatchVideo />} />
       <Route path="/search" element={<Search />} />

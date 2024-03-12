@@ -1,17 +1,29 @@
-import { useState } from "react";
+import { API_KEY, BASE_URL, RAPIDAPI_BASE_URL, fetchStaleTime, options } from "../../utils/constants";
+import rapidApiDataParser from "../../utils/rapidApiDataParser";
+import InfiniteScroll from 'react-infinite-scroll-component';
 import CategoryPills from "../../components/CategoryPills";
 import VideoGridItem from "../../components/VideoGridItem";
-import { useInfiniteQuery, useQuery } from "@tanstack/react-query";
-import axios from "axios";
-import { API_KEY, BASE_URL } from "../../utils/constants";
-import { HomePageCategoryPills } from "../../Types";
+import { useInfiniteQuery } from "@tanstack/react-query";
+import { useAppSelector } from "../../data/hooks";
 import parseData from "../../utils/parseData";
-import InfiniteScroll from 'react-infinite-scroll-component';
+import { FetchPageData } from "../../Types";
+import axios from "axios";
 
 const Home = () => {
-    const [selectedCategory, setSelectedCategory] = useState("All");
+    const {categories, selectedCategory} = useAppSelector((state) => state.category)
 
-    const fetchData = async (pageParam: string) => {
+    const fetchData = async (pageParam: string): Promise<FetchPageData> => {
+
+        if (selectedCategory !== "All") {
+            let Rapid_url = `${RAPIDAPI_BASE_URL}/search?query=${selectedCategory}&lang=en&geo=IN&sort_by=relevance&token=${pageParam}`;
+
+            if (!pageParam) {
+                Rapid_url = `${RAPIDAPI_BASE_URL}/search?query=${selectedCategory}&lang=en&geo=IN&sort_by=relevance`;
+            }
+
+            return await axios.get(Rapid_url, options).then((response) => rapidApiDataParser(response.data));
+        }
+
         let url = `${BASE_URL}/videos?part=snippet%2CcontentDetails%2Cstatistics&chart=mostPopular&maxResults=50&regionCode=IN&pageToken=${pageParam}&key=${API_KEY}`;
 
         if (!pageParam) {
@@ -22,25 +34,18 @@ const Home = () => {
     };
 
     const { isLoading, data, hasNextPage, fetchNextPage, isError } = useInfiniteQuery({
-        queryKey: ['homePageData'],
+        queryKey: ['homePageData', selectedCategory],
         queryFn: ({ pageParam }) => fetchData(pageParam),
         initialPageParam: "",
         getNextPageParam: (lastPage) => {
             return lastPage?.nextPageToken
         },
-        staleTime: Infinity,
-    });
-
-    const { data: categoryData = [] } = useQuery<{ categoryId: string, categoryName: string }[]>({
-        queryKey: ['homePageCategory'],
-        queryFn: () => axios.get(`${BASE_URL}/videoCategories?part=snippet&hl=en&regionCode=IN&key=${API_KEY}`)
-            .then((response) => response.data.items.map((item: HomePageCategoryPills) => ({ categoryId: item.id, categoryName: item.snippet.title }))),
-        staleTime: Infinity,
+        staleTime: selectedCategory === "All" ? Infinity : fetchStaleTime,
     });
 
     if (isLoading) {
         return (
-            <div className="overflow-x-hidden sm:px-6">
+            <div className="sm:px-6">
                 <div className="grid gap-4 mt-4 grid-cols-[repeat(auto-fill,minmax(300px,1fr))]">
                     {[...Array(15).fill(1)].map((item, i) => (<div key={`loadingSkeletonHomePage-${item + i}`}>{VideoGridItem.isLoading}</div>))}
                 </div>
@@ -51,13 +56,11 @@ const Home = () => {
     if (isError) return 'An error has occurred: '
 
     return (
-        <div className="overflow-x-hidden sm:px-6" id="scrollableDiv">
-
-            <div className="sticky top-0 bg-white z-10 pb-3 pt-3 px-3 sm:px-0">
+        <div className="sm:px-3">
+            <div className="sticky top-0 bg-white dark:bg-[#1f1f1f] z-10 p-3 sm:px-0">
                 <CategoryPills
-                    categories={[{ categoryId: "xx", categoryName: "All" }, ...categoryData]}
+                    categories={categories}
                     selectedCategory={selectedCategory}
-                    onSelect={setSelectedCategory}
                 />
             </div>
 
@@ -84,9 +87,9 @@ const Home = () => {
                     </p>
                 }
             >
-                <div className="grid gap-4 mt-4 grid-cols-[repeat(auto-fill,minmax(300px,1fr))]">
+                <div className="grid gap-4 grid-cols-[repeat(auto-fill,minmax(300px,1fr))]">
                     {data?.pages.map((element) => element.items.map((video) => (
-                        <VideoGridItem {...video} key={video.videoId} />
+                        <VideoGridItem {...video} key={video.videoId} showChannelDetails />
                     )))}
                 </div>
 

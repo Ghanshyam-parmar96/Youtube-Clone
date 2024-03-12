@@ -1,16 +1,20 @@
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io"
-import { CategoryPillProps } from "../Types"
-import Button from "./Button"
+import { setSelectedCategory } from "../data/categorySlice";
 import { useEffect, useRef, useState } from "react";
+import { useAppDispatch } from "../data/hooks";
+import { CategoryPillProps } from "../Types";
+import Button from "./Button"
 
 const TRANSLATE_AMOUNT = 200;
 
-const CategoryPills = ({ categories, onSelect, selectedCategory }: CategoryPillProps) => {
+const CategoryPills = ({categories, selectedCategory} : CategoryPillProps) => {
     const [translate, setTranslate] = useState(0);
     const [isLeftVisible, setIsLeftVisible] = useState(true);
     const [isRightVisible, setIsRightVisible] = useState(true);
     const containerRef = useRef<HTMLDivElement>(null);
 
+    const dispatch = useAppDispatch();
+    
     const moveToLeft = () => {
         setTranslate((trans) => {
             const newTranslate = trans - TRANSLATE_AMOUNT;
@@ -55,7 +59,7 @@ const CategoryPills = ({ categories, onSelect, selectedCategory }: CategoryPillP
                 {categories?.map((category) => (
                     <Button
                         key={category.categoryId}
-                        onClick={() => onSelect(category.categoryName)}
+                        onClick={() =>dispatch(setSelectedCategory(category.categoryName))}
                         variant={selectedCategory === category.categoryName ? "dark" : "default"}
                         className="py-1 text-xs px-3 rounded-lg whitespace-nowrap">
                         {category.categoryName}
@@ -63,13 +67,13 @@ const CategoryPills = ({ categories, onSelect, selectedCategory }: CategoryPillP
                 ))}
             </div>
 
-            {isLeftVisible && (<div className="absolute left-0 top-1/2 -translate-y-1/2 bg-gradient-to-r from-white from-50% to-transparent w-24 h-full">
+            {isLeftVisible && (<div className="absolute left-0 top-1/2 -translate-y-1/2 bg-gradient-to-r from-white from-50% to-transparent dark:from-[#1f1f1f] w-24 h-full">
                 <Button variant="ghost" size="icon" className="h-full text-base aspect-square w-auto p-1.5" onClick={moveToLeft} >
                     <IoIosArrowBack />
                 </Button>
             </div>)}
 
-            {isRightVisible && (<div className="absolute right-0 top-1/2 -translate-y-1/2 bg-gradient-to-l from-white from-50% to-transparent w-24 h-full flex justify-end flex-shrink-0" onClick={moveToRight} >
+            {isRightVisible && (<div className="absolute right-0 top-1/2 -translate-y-1/2 bg-gradient-to-l from-white from-50% to-transparent dark:from-[#1f1f1f] w-24 h-full flex justify-end flex-shrink-0" onClick={moveToRight} >
                 <Button variant="ghost" size="icon" className="h-full aspect-square w-auto p-1">
                     <IoIosArrowForward />
                 </Button>

@@ -1,3 +1,4 @@
+const fetchStaleTime : number = 1000 * 30; 
 const API_KEY = import.meta.env.VITE_YOUTUBE_DATA_API_KEY;
 const BASE_URL = "https://youtube.googleapis.com/youtube/v3";
 
@@ -15,7 +16,7 @@ const options: Options = {
     }
 };
 
-const RAPIDAPI_BASE_URL = "https://youtube-v31.p.rapidapi.com";
+const RAPIDAPI_BASE_URL = 'https://youtube-v3-alternative.p.rapidapi.com';
 
 interface Rapid_lite_headers {
     headers: {
@@ -34,4 +35,4 @@ const rapid_lite_headers: Rapid_lite_headers = {
 const RAPIDAPI_LITE_BASE_URL = "https://youtube-v3-lite.p.rapidapi.com";
 
 
-export { API_KEY, BASE_URL, options, RAPIDAPI_BASE_URL, rapid_lite_headers, RAPIDAPI_LITE_BASE_URL };
+export { API_KEY, BASE_URL, options, RAPIDAPI_BASE_URL, rapid_lite_headers, RAPIDAPI_LITE_BASE_URL, fetchStaleTime };

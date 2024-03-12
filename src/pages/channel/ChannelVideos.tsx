@@ -1,39 +1,27 @@
-import { useInfiniteQuery } from "@tanstack/react-query"
-import { API_KEY, BASE_URL, RAPIDAPI_BASE_URL, options } from "../../utils/constants";
-import { Link, useParams } from "react-router-dom";
-import axios from "axios";
-import { ParseVideoList, SearchVideoFnProps } from "../../Types";
-import { VIEW_FORMATTER, formatTimeAgo } from "../../utils/formatTimeAgo";
+import { RAPIDAPI_BASE_URL, fetchStaleTime, options } from "../../utils/constants";
 import InfiniteScroll from "react-infinite-scroll-component";
-import convertDurationToTime from "../../utils/convertDurationToTime";
+import { VIEW_FORMATTER } from "../../utils/formatTimeAgo";
+import { useInfiniteQuery } from "@tanstack/react-query"
+import { Link, useParams } from "react-router-dom";
+import { channelVideoProps } from "../../Types";
+import axios from "axios";
+import LazyImage from "../../components/LazyLoadImage";
 
 const ChannelVideos = () => {
 
   const { channelId } = useParams();
 
-  const fetchChannelVideos = async (pageParam: string) => {
-    let url = `${RAPIDAPI_BASE_URL}/search?channelId=${channelId}&part=id&type=video&order=date&maxResults=50&pageToken=${pageParam}`
+  const fetchChannelVideos = async (pageParam: string, sort_by: string = "newest") => {
+
+    let url = `${RAPIDAPI_BASE_URL}/channel?id=${channelId}&sort_by=${sort_by}&token=${pageParam}`
 
     if (!pageParam) {
-      url = `${RAPIDAPI_BASE_URL}/search?channelId=${channelId}&part=id&type=video&order=date&maxResults=50`
+      url = `${RAPIDAPI_BASE_URL}/channel?id=${channelId}&sort_by=${sort_by}`
     }
 
-    const rapidVideos: SearchVideoFnProps = await axios.get(url, options).then((response) => response.data);
+    const rapidVideos: channelVideoProps = await axios.get(url, options).then((response) => response.data);
 
-    const videosList: string = rapidVideos.items.map((item) => item.id.videoId || "").filter((item) => item !== "").join("%2C");
-
-    const youtubeVideos: ParseVideoList[] = await axios.get(`${BASE_URL}/videos?part=snippet%2CcontentDetails%2Cstatistics&id=${videosList}&key=${API_KEY}`).then((response) => response.data.items)
-
-    const response = youtubeVideos.map((item) => ({
-      videoId: item.id || "",
-      videoTitle: item.snippet.title || "",
-      thumbnailUrl: item.snippet.thumbnails.medium.url || "",
-      views: VIEW_FORMATTER.format(Number(item.statistics.viewCount)) || "",
-      postedAt: formatTimeAgo(item.snippet.publishedAt) || "",
-      durations: convertDurationToTime(item.contentDetails.duration) || "",
-    }));
-
-    return { ...rapidVideos, items: response, etag: "" }
+    return rapidVideos
   };
 
   const { data, isLoading, hasNextPage, fetchNextPage } = useInfiniteQuery({
@@ -41,10 +29,10 @@ const ChannelVideos = () => {
     queryFn: ({ pageParam }) => fetchChannelVideos(pageParam),
     initialPageParam: "",
     getNextPageParam: (lastPage) => {
-      return lastPage?.nextPageToken
+      return lastPage?.continuation
     },
-      enabled: !!channelId,
-      staleTime: 1000 * 30,
+    enabled: !!channelId,
+    staleTime: fetchStaleTime,
   })
 
 
@@ -69,10 +57,10 @@ const ChannelVideos = () => {
     <>
       <InfiniteScroll
         className="h-full w-full "
-        dataLength={data?.pageParams.length || 1}
+        dataLength={data?.pageParams.length || 0}
         next={fetchNextPage}
         hasMore={hasNextPage}
-        scrollableTarget="channelVideosScrollableDiv"
+        scrollableTarget="scrollableDiv"
         loader={
           <div className="grid place-content-center my-4 h-7" >
             <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" className="w-8 h-8 animate-spin"
@@ -91,23 +79,23 @@ const ChannelVideos = () => {
         }
       >
         <div className="mb-20 sm:mb-0 grid gap-4 mt-4 grid-cols-[repeat(auto-fill,minmax(250px,1fr))]">
-          {data?.pages.map((item) => item.items.map(list => (
+          {data?.pages.map((item) => item.data.map(list => (
             <div key={list.videoId} className="flex flex-col gap-2">
-              <div className="relative aspect-video" >
-                <img src={list.thumbnailUrl} className={`block w-full h-full object-cover transition-[border-radius] duration-200 sm:rounded-xl`} alt="" />
+              <div className="relative aspect-video imageStretch" >
+                <LazyImage src={list.thumbnail[2].url || list.thumbnail[1].url || list.thumbnail[0].url} className="transition-[border-radius] duration-200 sm:rounded-xl" alt="" />
 
                 <div className="absolute bottom-1 right-1 bg-secondary-dark text-secondary text-sm px-1 pb-0.5 rounded flex items-center gap-1">
-                  {list.durations}
+                  {list.lengthText}
                 </div>
               </div>
 
               <div className="flex flex-col px-3">
                 <Link to={`/watch?v=${list.videoId}`} className="font-bold lineClamp2">
-                  {list.videoTitle}
+                  {list.title}
                 </Link>
 
                 <div className="text-secondary-text text-sm">
-                  {list.views} Views • {list.postedAt}
+                  {VIEW_FORMATTER.format(Number(list.viewCount))} Views • {list.publishedText}
                 </div>
               </div>
             </div>

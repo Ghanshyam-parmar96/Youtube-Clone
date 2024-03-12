@@ -1,6 +1,7 @@
 import { BiDislike, BiLike, BiMenuAltLeft } from 'react-icons/bi'
 import { Comments } from '../../Types'
 import Button from '../../components/Button'
+import LazyImage from '../../components/LazyLoadImage'
 
 const Comment = ({ data }: { data: Comments[] }) => {
   return (
@@ -15,7 +16,9 @@ const Comment = ({ data }: { data: Comments[] }) => {
 
       {data.map((item,i) => (
         <div key={`${item.authorChannelId}-item-${i}`} className='flex gap-3 items-start mx-5 sm:mx-3 my-4'>
-          <img src={item.authorProfileImageUrl} className='rounded-full object-cover object-center h-11 w-11' alt="image" />
+          <span className=' h-11 w-11'>
+            <LazyImage src={item.authorProfileImageUrl} className='rounded-full' alt="image" />
+          </span>
           <div className='flex flex-col'>
             <div className='flex items-center gap-3 mb-0.5'>
               <strong className='text-sm font-bold'>{item.authorDisplayName}</strong>
@@ -39,10 +42,12 @@ const Comment = ({ data }: { data: Comments[] }) => {
 
             {item.totalReplyCount > 0 &&
               (<details>
-                <summary className='cursor-pointer mb-3 text-blue-800 text-sm hover:bg-indigo-100/70 px-4 py-1 inline rounded-full select-none'>{item?.totalReplyCount}{" "}reply</summary>
+                <summary className='cursor-pointer mb-3 text-blue-800 dark:text-blue-400 text-sm dark:hover:bg-indigo-900 hover:bg-indigo-100/70 px-4 py-1 inline rounded-full select-none'>{item?.totalReplyCount}{" "}reply</summary>
                 {item.replies.comments?.map((reply,index) => (
                   <div key={`${reply.authorChannelId}-reply-${index}`} className='flex gap-3 items-start mx-5'>
-                    <img src={reply.authorProfileImageUrl} className='rounded-full object-cover object-center h-8 w-8' alt="image" />
+                    <span className='h-8 w-8'>
+                      <LazyImage src={reply.authorProfileImageUrl} className='rounded-full' alt="image" />
+                    </span>
                     <div className='flex flex-col'>
                       <div className='flex flex-col sm:flex-row gap-0 items-start mb-2 sm:items-center sm:mb-0.5 sm:gap-3'>
                         <strong className='text-sm font-bold'>{reply.authorDisplayName}</strong>

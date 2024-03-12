@@ -20,13 +20,11 @@ const parseData = async (data: ParsedAllData): Promise<FetchPageData> => {
             categoryId: item.snippet.categoryId || "",
             videoTitle: item.snippet.title || "",
             thumbnailUrl: item.snippet.thumbnails.medium.url || "",
-            url: `https://www.youtube.com/watch?v=${item.id}` || "",
             views: VIEW_FORMATTER.format(Number(item.statistics.viewCount)) || "",
             postedAt: formatTimeAgo(item.snippet.publishedAt) || "",
             duration: convertDurationToTime(item.contentDetails.duration) || "",
             channelTitle: channelData?.snippet.title || "",
             channelIcon: channelData?.snippet.thumbnails.default.url || "",
-            channelCustomUrl: channelData?.snippet.customUrl || ""
         }
 
     });

@@ -2,6 +2,7 @@ import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io"
 import Button from "./Button"
 import { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
+import LazyImage from "./LazyLoadImage";
 
 interface VideosSliderProps {
     videoId: string;
@@ -65,7 +66,7 @@ const VideosSlider = ({ videos = [] }: {videos : VideosSliderProps[]}) => {
                 {videos?.map((list) => (
                     <div key={list.videoId} className="flex flex-col gap-2 w-60">
                         <div className="relative aspect-video" >
-                            <img src={list.thumbnailUrl} className={`block w-full h-full object-cover transition-[border-radius] duration-200 sm:rounded-xl`} alt="" />
+                            <LazyImage src={list.thumbnailUrl} className={`transition-[border-radius] duration-200 sm:rounded-xl`} alt="" />
 
                             <div className="absolute bottom-1 right-1 bg-secondary-dark text-secondary text-sm px-1 pb-0.5 rounded flex items-center gap-1">
                                 {list.durations}
@@ -85,14 +86,14 @@ const VideosSlider = ({ videos = [] }: {videos : VideosSliderProps[]}) => {
                 ))}
             </div>
 
-            {isLeftVisible && (<div className="absolute left-0 top-1/3 -translate-y-1/2 bg-white rounded-full shadow-lg w-12 h-12 hidden sm:block">
-                <Button variant="ghost" size="icon" className="h-full text-base aspect-square w-auto p-1.5" onClick={moveToLeft} >
+            {isLeftVisible && (<div className="absolute left-0 top-1/3 -translate-y-1/2 bg-white/40 rounded-full shadow-lg hidden sm:block">
+                <Button variant="ghost" size="icon" className="h-10 grid place-content-center  aspect-square w-auto p-1.5 text-black" onClick={moveToLeft} >
                     <IoIosArrowBack />
                 </Button>
             </div>)}
 
-            {isRightVisible && (<div className="absolute right-0 top-1/3 -translate-y-1/2 bg-white rounded-full shadow-lg w-12 h-12 justify-end flex-shrink-0 hidden sm:flex" onClick={moveToRight} >
-                <Button variant="ghost" size="icon" className="h-full aspect-square w-auto p-1">
+            {isRightVisible && (<div className="absolute right-0 top-1/3 -translate-y-1/2 bg-white/40 rounded-full shadow-lg justify-end flex-shrink-0 hidden sm:flex" onClick={moveToRight} >
+                <Button variant="ghost" size="icon" className="h-10 grid place-content-center  aspect-square w-auto p-1 text-black">
                     <IoIosArrowForward />
                 </Button>
             </div>)}

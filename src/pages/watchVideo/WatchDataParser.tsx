@@ -61,7 +61,6 @@ const WatchDataParser = async (item: ParseVideoList): Promise<WatchPageVideoData
         videoLikeCount: VIEW_FORMATTER.format(Number(item.statistics.likeCount)) || "",
         channelTitle: channelData?.snippet.title || "",
         channelIcon: channelData?.snippet.thumbnails.default.url || "",
-        channelCustomUrl: channelData?.snippet.customUrl || "",
         channelSubscriberCount: VIEW_FORMATTER.format(Number(channelData?.statistics.subscriberCount)) || "",
     }
 };

@@ -1,12 +1,14 @@
 import { BiMenuAltLeft } from "react-icons/bi"
-import { Link, useParams } from "react-router-dom"
 import { TbPlaylistAdd } from "react-icons/tb"
-import { formatTimeAgo } from "../../utils/formatTimeAgo"
-import { useInfiniteQuery } from "@tanstack/react-query"
-import { API_KEY, BASE_URL } from "../../utils/constants"
-import axios from "axios"
-import { ChannelPlayListData } from "../../Types"
+
 import InfiniteScroll from "react-infinite-scroll-component"
+import { useInfiniteQuery } from "@tanstack/react-query"
+import { formatTimeAgo } from "../../utils/formatTimeAgo"
+import { API_KEY, BASE_URL } from "../../utils/constants"
+import { Link, useParams } from "react-router-dom"
+import { ChannelPlayListData } from "../../Types"
+import axios from "axios"
+import LazyImage from "../../components/LazyLoadImage"
 
 const ChannelPlayLists = () => {
 
@@ -95,8 +97,8 @@ const ChannelPlayLists = () => {
                 <div className="mb-20 sm:mb-0 grid gap-4 mt-4 grid-cols-[repeat(auto-fill,minmax(250px,1fr))]">
                     {data?.pages.map((item) => item.items.map(list => (
                         <div key={list.id} className="flex flex-col gap-2">
-                            <div className="relative aspect-video" >
-                                <img src={list.thumbnailUrl} className={`block w-full h-full object-cover transition-[border-radius] duration-200 sm:rounded-xl`} alt="" />
+                            <div className="relative aspect-video imageStretch" >
+                                <LazyImage src={list.thumbnailUrl} className={`transition-[border-radius] duration-200 sm:rounded-xl`} alt="" />
 
                                 <div className="absolute bottom-1 right-1 bg-secondary-dark text-secondary text-sm px-1 pb-0.5 rounded flex items-center gap-1">
                                     <TbPlaylistAdd className="text-xl" /> {list.itemCount} videos

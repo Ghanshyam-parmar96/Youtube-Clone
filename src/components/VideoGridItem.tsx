@@ -1,12 +1,13 @@
 import { Link } from "react-router-dom"
 import { NewVideoDataList } from "../Types"
+import LazyImage from "./LazyLoadImage";
 
-const VideoGridItem = ({ videoId, categoryId, channelCustomUrl, channelIcon, channelId, channelTitle, duration, postedAt, thumbnailUrl, url, videoTitle, views }: NewVideoDataList) => {
+const VideoGridItem = ({ videoId, channelIcon, channelId, channelTitle, duration, postedAt, thumbnailUrl, videoTitle, views, showChannelDetails = false }: NewVideoDataList) => {
 
     return (
         <div className="flex flex-col gap-2">
-            <Link to={`/watch?v=${videoId}`} className="relative aspect-video" >
-                <img src={thumbnailUrl} className={`block w-full h-full object-cover transition-[border-radius] duration-200 sm:rounded-xl`} alt="" />
+            <Link to={`/watch?v=${videoId}`} className="relative aspect-video imageStretch" >
+                <LazyImage src={thumbnailUrl} className=" transition-[border-radius] duration-200 sm:rounded-xl" alt="" />
 
                 <div className="absolute bottom-1 right-1 bg-secondary-dark text-secondary text-sm px-1 pb-0.5 rounded">
                     {duration}
@@ -14,23 +15,26 @@ const VideoGridItem = ({ videoId, categoryId, channelCustomUrl, channelIcon, cha
             </Link>
 
             <div className="flex gap-2">
-                <Link to={`/channel/${channelId}`} className="flex flex-shrink-0">
-                    <img src={channelIcon} className="w-10 h-10 rounded-full" alt="" />
-                </Link>
+                {showChannelDetails && (
+                    <Link to={`/channel/${channelId}`} className="flex flex-shrink-0 w-10 h-10">
+                        <LazyImage src={channelIcon} className=" rounded-full" alt="" />
+                    </Link>
+                )}
                 <div className="flex flex-col">
-                    <Link to={`/watch?v=${videoId}`} className="font-bold lineClamp2">
+                    <Link to={`/watch?v=${videoId}`} className="font-bold line-clamp-2">
                         {videoTitle}
                     </Link>
-                    <Link to={`/channel/${channelId}`} className="text-secondary-text text-sm">
-                        {channelTitle}
-                    </Link>
+                    {showChannelDetails && (
+                        <Link to={`/channel/${channelId}`} className="text-secondary-text dark:text-gray-400 text-sm">
+                            {channelTitle}
+                        </Link>
+                    )}
 
-                    <div className="text-secondary-text text-sm ">
+                    <div className="text-secondary-text dark:text-gray-400 text-sm ">
                         {views} Views • {postedAt}
                     </div>
                 </div>
             </div>
-
         </div>
     )
 }

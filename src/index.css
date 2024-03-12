@@ -40,3 +40,10 @@
     background-image: linear-gradient(-20deg, #616161 0%, #9bc5c3 100%);
 }
 
+.dark {
+  @apply bg-[#1f1f1f];
+}
+
+.imageStretch span {
+  @apply h-full w-full
+}
