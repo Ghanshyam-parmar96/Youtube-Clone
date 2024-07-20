@@ -14,14 +14,14 @@ const SearchChannelDetails = ({ channelId, channelTitle, description, subscriber
     return (
         <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-5 w-full px-3 overflow-hidden">
             <div className="h-full w-full grid place-content-center col-span-1">
-                <Link to={`/channel/${channelId}`} className="w-40 h-40 imageStretch" >
+                <Link to={`/channel/${channelId}/home`} className="w-40 h-40 imageStretch" >
                     <LazyImage src={`https:${thumbnailUrl}`} className=" rounded-full" alt="" />
                 </Link>
             </div>
             <div className="flex flex-col items-center justify-between gap-2 col-span-1 md:col-span-2 lg:flex-row">
                 <div className="flex items-center flex-col gap-1 lg:items-start">
                     <h2 className="text-xl">
-                        <Link to={`/channel/${channelId}`}>
+                        <Link to={`/channel/${channelId}/home`}>
                             {channelTitle}
                         </Link>
                     </h2>

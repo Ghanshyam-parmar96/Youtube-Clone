@@ -17,7 +17,7 @@ import axios from "axios";
 
 const Search = () => {
   const [searchFilterBox, setSearchFilterBox] = useState<boolean>(false);
-  const [searchFilteredData, setSearchFilteredData] = useState<searchFilterSliceProps>({uploaded_date : "", duration : "", features : "", sort_by : "relevance", type : ""});
+  const [searchFilteredData, setSearchFilteredData] = useState<searchFilterSliceProps>({upload_date : "", duration : "", features : "", sort_by : "relevance", type : ""});
   const [searchParams] = useSearchParams();
   let query = searchParams.get('query');
 
@@ -106,7 +106,7 @@ const Search = () => {
                 videoTitle={item.title}
                 channelId={item.channelId}
                 views={item.viewCount ||""}
-                duration={item.lengthText || ''}
+                duration={item.lengthText || '🔴 LIVE'}
                 channelTitle={item.channelTitle}
                 postedAt={item.publishedText || ''}
                 description={item.description || ''}

@@ -35,7 +35,7 @@ const ChannelPlayLists = () => {
     }
 
     const { data, isLoading, hasNextPage, fetchNextPage } = useInfiniteQuery({
-        queryKey: ["channelPlayLists"],
+        queryKey: ["channelPlayLists", channelId],
         queryFn: ({ pageParam }) => fetchChannelPlayListsData(pageParam),
         initialPageParam: "",
         getNextPageParam: (lastPage) => {

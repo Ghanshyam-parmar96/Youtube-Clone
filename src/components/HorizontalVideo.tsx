@@ -5,7 +5,7 @@ import LazyImage from "./LazyLoadImage";
 const HorizontalVideo = ({ videoId, thumbnailUrl, channelId, channelTitle, views, postedAt, duration, videoTitle, isShowView = false }: NewVideoDataList) => {
     return (
         <div className="flex sm:flex-row flex-col gap-2">
-            <Link to={`/watch?v=${videoId}`} className="relative aspect-video lg:w-1/2" >
+            <Link to={`/watch?v=${videoId}`} className="relative aspect-video lg:w-1/2 imageStretch" >
                 <LazyImage src={thumbnailUrl} className={`transition-[border-radius] duration-200 sm:rounded-xl`} alt="" />
 
                 <div className="absolute bottom-1 right-1 bg-secondary-dark text-secondary text-sm px-1 pb-0.5 rounded">
@@ -19,7 +19,7 @@ const HorizontalVideo = ({ videoId, thumbnailUrl, channelId, channelTitle, views
                         {videoTitle} 
                     </Link>
 
-                    <Link to={`/channel/${channelId}`} className="text-secondary-text dark:text-gray-400 text-sm lg:text-xs">
+                    <Link to={`/channel/${channelId}/home`} className="text-secondary-text dark:text-gray-400 text-sm lg:text-xs">
                         {channelTitle}
                     </Link>
 

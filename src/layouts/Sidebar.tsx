@@ -94,24 +94,24 @@ const Sidebar = () => {
 
                 <LargeSidebarSection title="Subscriptions" visibleItemCount={5}>
                     {subscriptions.map((subscription) => (
-                        <LargeSidebarItem IconOrImgUrl={subscription.imgUrl} title={subscription.channelName} onClick={() =>navigate(`/channel/${subscription.id}`)} key={subscription.id} />
+                        <LargeSidebarItem IconOrImgUrl={subscription.imgUrl} title={subscription.channelName} onClick={() =>navigate(`/channel/${subscription.id}/home`)} key={subscription.id} />
                     ))}
                 </LargeSidebarSection>
 
                 <hr />
 
                 <LargeSidebarSection title="Explore">
-                    <LargeSidebarItem IconOrImgUrl={ImFire} title="Trending" onClick={() => dispatch(setSelectedCategory(`Trending`))} />
-                    <LargeSidebarItem IconOrImgUrl={AiOutlineShopping} title="Shopping" onClick={() => dispatch(setSelectedCategory(`Shopping`))} />
-                    <LargeSidebarItem IconOrImgUrl={PiMusicNoteLight} title="Music" onClick={() => dispatch(setSelectedCategory(`Music`))} />
-                    <LargeSidebarItem IconOrImgUrl={PiFilmSlate} title="Film" onClick={() => dispatch(setSelectedCategory(`Film`))} />
-                    <LargeSidebarItem IconOrImgUrl={IoIosRadio} title="Live" onClick={() => dispatch(setSelectedCategory(`Live`))} />
-                    <LargeSidebarItem IconOrImgUrl={PiGameControllerLight} title="Gaming" onClick={() => dispatch(setSelectedCategory(`Gaming`))} />
-                    <LargeSidebarItem IconOrImgUrl={IoNewspaperOutline} title="News" onClick={() => dispatch(setSelectedCategory(`News`))} />
-                    <LargeSidebarItem IconOrImgUrl={GoTrophy} title="Sport" onClick={() => dispatch(setSelectedCategory(`Sport`))} />
-                    <LargeSidebarItem IconOrImgUrl={GoLightBulb} title="Learning" onClick={() => dispatch(setSelectedCategory(`Learning`))} />
-                    <LargeSidebarItem IconOrImgUrl={IoShirtOutline} title="Fashion & Beauty" onClick={() => dispatch(setSelectedCategory(`Fashion & Beauty`))} />
-                    <LargeSidebarItem IconOrImgUrl={MdPodcasts} title="Podcasts" onClick={() => dispatch(setSelectedCategory(`Podcasts`))} />
+                    <LargeSidebarItem IconOrImgUrl={ImFire} title="Trending" onClick={() => { dispatch(setSelectedCategory(`Trending`)); navigate("/")}} />
+                    <LargeSidebarItem IconOrImgUrl={AiOutlineShopping} title="Shopping" onClick={() => { dispatch(setSelectedCategory(`Shopping`)); navigate("/")}} />
+                    <LargeSidebarItem IconOrImgUrl={PiMusicNoteLight} title="Music" onClick={() => { dispatch(setSelectedCategory(`Music`)); navigate("/")}} />
+                    <LargeSidebarItem IconOrImgUrl={PiFilmSlate} title="Film" onClick={() => { dispatch(setSelectedCategory(`Film`)); navigate("/")}} />
+                    <LargeSidebarItem IconOrImgUrl={IoIosRadio} title="Live" onClick={() => { dispatch(setSelectedCategory(`Live`)); navigate("/")}} />
+                    <LargeSidebarItem IconOrImgUrl={PiGameControllerLight} title="Gaming" onClick={() => { dispatch(setSelectedCategory(`Gaming`)); navigate("/")}} />
+                    <LargeSidebarItem IconOrImgUrl={IoNewspaperOutline} title="News" onClick={() => { dispatch(setSelectedCategory(`News`)); navigate("/")}} />
+                    <LargeSidebarItem IconOrImgUrl={GoTrophy} title="Sport" onClick={() => { dispatch(setSelectedCategory(`Sport`)); navigate("/")}} />
+                    <LargeSidebarItem IconOrImgUrl={GoLightBulb} title="Learning" onClick={() => { dispatch(setSelectedCategory(`Learning`)); navigate("/")}} />
+                    <LargeSidebarItem IconOrImgUrl={IoShirtOutline} title="Fashion & Beauty" onClick={() => { dispatch(setSelectedCategory(`Fashion & Beauty`)); navigate("/")}} />
+                    <LargeSidebarItem IconOrImgUrl={MdPodcasts} title="Podcasts" onClick={() => { dispatch(setSelectedCategory(`Podcasts`)); navigate("/")}} />
                 </LargeSidebarSection>
             </aside>
         </>

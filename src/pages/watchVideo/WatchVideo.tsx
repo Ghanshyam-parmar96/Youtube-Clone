@@ -92,7 +92,7 @@ const WatchVideo = () => {
                             <LazyImage className=" rounded-full" src={videoData?.channelIcon || ""} alt="" />
                         </span>
                         <div>
-                            <p className="font-semibold text-base truncate w-32 sm:w-40"><Link to={`/channel/${videoData?.channelId}`}>{videoData?.channelTitle}</Link></p>
+                            <p className="font-semibold text-base truncate w-32 sm:w-40"><Link to={`/channel/${videoData?.channelId}/home`}>{videoData?.channelTitle}</Link></p>
                             <span className="text-sm text-gray-500 dark:text-gray-400 truncate w-32 sm:w-40">{videoData?.channelSubscriberCount} subscriber</span>
                         </div>
                         <Button variant="ghost" size="icon" className="border border-gray-400 h-8 w-14 text-sm rounded-2xl hidden sm:flex">join</Button>
@@ -118,7 +118,7 @@ const WatchVideo = () => {
                     </div>
                 </div>
                 <div className={`px-4 lg:px-2 w-screen relative bg-[#f2f2f2] dark:bg-white/40 rounded-lg py-1 sm:w-auto overflow-hidden ${clampDescription ? "lineClamp4" : "pb-10"}`} >
-                    <span className={`absolute bottom-1 cursor-pointer bg-[#f2f2f2] dark:bg-transparent font-semibold ${clampDescription ? " right-2" : "left-2"}`}
+                    <span className={`absolute bottom-1 cursor-pointer bg-[#f2f2f2] dark:bg-[#797979] font-semibold ${clampDescription ? " right-2" : "left-2"}`}
                         onClick={() => setClampDescription((prev) => !prev)}
                     >
                         {clampDescription ? "...More" : "Show less"}

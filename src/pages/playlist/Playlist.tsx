@@ -5,15 +5,15 @@ import { IoIosShareAlt } from "react-icons/io";
 import { IoShuffle } from "react-icons/io5";
 import { FaPlay } from "react-icons/fa6";
 
+import { API_KEY, BASE_URL, fetchStaleTime } from "../../utils/constants";
 import { useInfiniteQuery, useQuery } from "@tanstack/react-query";
 import playlistDataParser from "../../utils/playlistDataParser";
 import InfiniteScroll from "react-infinite-scroll-component";
-import { API_KEY, BASE_URL, fetchStaleTime } from "../../utils/constants";
 import { Link, useSearchParams } from "react-router-dom";
+import LazyImage from "../../components/LazyLoadImage";
 import { ChannelPlayListData } from "../../Types";
 import Button from "../../components/Button";
 import axios from "axios";
-import LazyImage from "../../components/LazyLoadImage";
 
 
 const Playlist = () => {
@@ -46,10 +46,10 @@ const Playlist = () => {
 
 
   return (
-    <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 pb-20 sm:pb-0 w-screen sm:w-full h-full lg:h-[calc(100vh_-_65px)] overflow-x-hidden" id="playlistItemsList1">
+    <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 pb-20 sm:pb-0 ml-4 w-screen sm:w-full h-full lg:h-[calc(100vh_-_65px)] overflow-x-hidden" id="playlistItemsList1">
       <div className="w-full bg-gradient-to-b from-indigo-900 to-black/50 p-4 lg:overflow-y-scroll lg:h-[calc(100vh_-_130px)] lg:my-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 gap-3 scrollbarHide">
-          <div className="aspect-video">
+          <div className="aspect-video mx-auto">
             <LazyImage src={data?.items[0].snippet.thumbnails.medium.url || ""} className="rounded-lg" alt="" />
           </div>
           <div className="flex flex-col gap-3 sm:gap-4 md:gap-3 text-white">
@@ -135,7 +135,7 @@ const Playlist = () => {
                       <h2 className="text-base line-clamp-2 font-medium">{item.videoTitle}</h2>
                     </Link>
                     <p className="text-sm  dark:text-gray-400">
-                      <Link to={`/channel/${item.channelId}`}>{item.channelTitle}</Link> • {item.views} Views • {item.postedAt}
+                      <Link to={`/channel/${item.channelId}/home`}>{item.channelTitle}</Link> • {item.views} Views • {item.postedAt}
                     </p>
                   </div>
                 </div>

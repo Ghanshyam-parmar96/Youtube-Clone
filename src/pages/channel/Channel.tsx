@@ -1,21 +1,17 @@
 import { MdOutlineKeyboardArrowDown, MdOutlineKeyboardArrowRight } from "react-icons/md";
 import { TbBellRinging } from "react-icons/tb";
 
-import { Outlet, useNavigate, useParams } from "react-router-dom"
-import { VIEW_FORMATTER } from "../../utils/formatTimeAgo";
 import { API_KEY, BASE_URL, fetchStaleTime } from "../../utils/constants";
+import { NavLink, Outlet, useParams } from "react-router-dom"
+import { VIEW_FORMATTER } from "../../utils/formatTimeAgo";
+import LazyImage from "../../components/LazyLoadImage";
 import { useQuery } from "@tanstack/react-query"
 import { ChannelDetails } from "../../Types";
 import Button from "../../components/Button";
-import { useState } from "react";
 import axios from "axios";
-import LazyImage from "../../components/LazyLoadImage";
 
 const Channel = () => {
     const { channelId } = useParams();
-    const navigate = useNavigate();
-    const [isActive, setIsActive] = useState(0);
-
     const { data } = useQuery<ChannelDetails>({
         queryKey: ['channel', channelId],
         queryFn: () => axios.get(`${BASE_URL}/channels?part=snippet%2Cstatistics&id=${channelId}&maxResults=50&key=${API_KEY}`).then((response) => response.data.items[0]),
@@ -47,9 +43,9 @@ const Channel = () => {
                 </div>
             </div>
             <div className="flex items-center gap-8 mt-7 py-2 sticky top-0 left-0 z-10 bg-white dark:bg-white/10 px-4">
-                <button onClick={() => { navigate(`/channel/${channelId}`); setIsActive(0)}} className={`relative after:contents-[''] after:w-[125%] after:absolute after:-bottom-2 after:left-0 after:border-[1.4px] after:-translate-x-[10%] after:border-gray-500 hover:after:block ${isActive === 0 ? "after:block" : "after:hidden"} `}>Home</button>
-                <button onClick={() => { navigate(`/channel/${channelId}/videos`); setIsActive(1)}} className={`relative after:contents-[''] after:w-[125%] after:absolute after:-bottom-2 after:left-0 after:border-[1.4px] after:-translate-x-[10%] after:border-gray-500 hover:after:block ${isActive === 1 ? "after:block" : "after:hidden"} `}>Videos</button>
-                <button onClick={() => { navigate(`/channel/${channelId}/playlists`); setIsActive(2)}} className={`relative after:contents-[''] after:w-[125%] after:absolute after:-bottom-2 after:left-0 after:border-[1.4px] after:-translate-x-[10%] after:border-gray-500 hover:after:block ${isActive === 2 ? "after:block" : "after:hidden"} `}>PlayLists</button>
+                <NavLink to={`/channel/${channelId}/home`} className={ ({isActive}) => `relative after:contents-[''] after:w-[125%] after:absolute after:-bottom-2 after:left-0 after:border-[1.4px] after:-translate-x-[10%] after:border-gray-500 hover:after:block ${isActive ? "after:block" : "after:hidden"} `}>Home</NavLink>
+                <NavLink to={`/channel/${channelId}/videos`} className={ ({isActive}) => `relative after:contents-[''] after:w-[125%] after:absolute after:-bottom-2 after:left-0 after:border-[1.4px] after:-translate-x-[10%] after:border-gray-500 hover:after:block ${isActive ? "after:block" : "after:hidden"} `}>Videos</NavLink>
+                <NavLink to={`/channel/${channelId}/playlists`} className={ ({isActive}) => `relative after:contents-[''] after:w-[125%] after:absolute after:-bottom-2 after:left-0 after:border-[1.4px] after:-translate-x-[10%] after:border-gray-500 hover:after:block ${isActive ? "after:block" : "after:hidden"} `}>PlayLists</NavLink>
             </div>
             <hr />
             <div className="w-full h-full">

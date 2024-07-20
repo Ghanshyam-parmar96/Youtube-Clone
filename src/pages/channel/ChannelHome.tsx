@@ -1,12 +1,12 @@
-import { useQueries } from "@tanstack/react-query";
-import axios from "axios";
-import { useParams } from "react-router-dom";
 import { API_KEY, BASE_URL, RAPIDAPI_LITE_BASE_URL, fetchStaleTime, rapid_lite_headers } from "../../utils/constants";
-import { ParseVideoList, SearchVideoFnProps } from "../../Types";
 import { VIEW_FORMATTER, formatTimeAgo } from "../../utils/formatTimeAgo";
 import convertDurationToTime from "../../utils/convertDurationToTime";
+import { ParseVideoList, SearchVideoFnProps } from "../../Types";
 import VideosSlider from "../../components/VideosSlider";
+import { useQueries } from "@tanstack/react-query";
+import { useParams } from "react-router-dom";
 import { IoPlay } from "react-icons/io5";
+import axios from "axios";
 
 const ChannelHome = () => {
 
@@ -37,7 +37,7 @@ const ChannelHome = () => {
 
   const results = useQueries({
     queries: ids.map((id) => ({
-      queryKey: ['channelHome', id],
+      queryKey: ['channelHome', channelId, id],
       queryFn: () => fetchChannelVideos(id),
       staleTime: fetchStaleTime,
       enabled: !!channelId,

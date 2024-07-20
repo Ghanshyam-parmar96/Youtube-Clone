@@ -25,7 +25,7 @@ const ChannelVideos = () => {
   };
 
   const { data, isLoading, hasNextPage, fetchNextPage } = useInfiniteQuery({
-    queryKey: ['channelVideos'],
+    queryKey: ['channelVideos', channelId],
     queryFn: ({ pageParam }) => fetchChannelVideos(pageParam),
     initialPageParam: "",
     getNextPageParam: (lastPage) => {

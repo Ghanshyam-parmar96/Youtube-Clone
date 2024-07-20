@@ -21,7 +21,7 @@ const router = createBrowserRouter(
       <Route path="/search" element={<Search />} />
       <Route path="/playlist" element={<Playlist />} />
       <Route path="/channel/:channelId" element={<Channel />}>
-        <Route path='/channel/:channelId' element={<ChannelHome />} />
+        <Route path='/channel/:channelId/home' element={<ChannelHome />} />
         <Route path='/channel/:channelId/videos' element={<ChannelVideos />} />
         <Route path='/channel/:channelId/playlists' element={<ChannelPlayLists />} />
       </Route>

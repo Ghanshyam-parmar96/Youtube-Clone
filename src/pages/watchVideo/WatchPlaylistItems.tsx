@@ -101,7 +101,7 @@ const WatchPlaylistItems = ({ playlistId }: WatchPlaylistItemsProps) => {
                                                         <h2 className="text-base lg:text-sm line-clamp-2 font-medium">{item.videoTitle}</h2>
                                                     </Link>
                                                     <p className="text-sm lg:text-[11px] text-gray-600 dark:text-gray-400">
-                                                        <Link to={`/channel/${item.channelId}`}>{item.channelTitle}</Link>
+                                                        <Link to={`/channel/${item.channelId}/home`}>{item.channelTitle}</Link>
                                                     </p>
                                                 </div>
                                             </div>

@@ -5,14 +5,14 @@ import { searchFilterSliceProps } from "../../Types";
 
 const SearchFilter = ({closeFilter}: { closeFilter : (arg : searchFilterSliceProps) => void} ) => {
     const dispatch = useAppDispatch();
-    const {uploaded_date, duration, features, sort_by, type} = useAppSelector((state) => state.searchFilter);
+    const {upload_date, duration, features, sort_by, type} = useAppSelector((state) => state.searchFilter);
     
   return (
     <div className="absolute inset-0 bg-black/60 z-30 -mt-2 grid place-content-center">
         <div className="w-full sm:h-full bg-white dark:text-black rounded-lg p-4 shadow-lg mt-32 sm:mt-0 select-none">
             <div className="flex items-center justify-between font-semibold">
                 <p>Search Filters</p>
-                <span onClick={() => closeFilter({uploaded_date, duration, features, sort_by, type})} className="cursor-pointer" >
+                <span onClick={() => closeFilter({upload_date, duration, features, sort_by, type})} className="cursor-pointer" >
                     <HiOutlineXMark className="text-2xl" />
                 </span>
             </div>
@@ -20,11 +20,11 @@ const SearchFilter = ({closeFilter}: { closeFilter : (arg : searchFilterSlicePro
                <ul className="flex flex-col gap-3">
                     <li className="text-black font-medium">UPLOAD DATE</li> 
                     <hr />
-                    <li className={`cursor-pointer relative ${uploaded_date === "hour" && "text-black after:content-['X'] after:right-0 after:-mt-0.5 after:absolute after:text-lg "}`} onClick={() => dispatch(setUploadDate("hour"))} >Last hour</li>
-                    <li className={`cursor-pointer relative ${uploaded_date === "today" && "text-black after:content-['X'] after:right-0 after:-mt-0.5 after:absolute after:text-lg "}`} onClick={() => dispatch(setUploadDate("today"))} >Today</li>
-                    <li className={`cursor-pointer relative ${uploaded_date === "week" && "text-black after:content-['X'] after:right-0 after:-mt-0.5 after:absolute after:text-lg "}`} onClick={() => dispatch(setUploadDate("week"))} >This week</li>
-                    <li className={`cursor-pointer relative ${uploaded_date === "month" && "text-black after:content-['X'] after:right-0 after:-mt-0.5 after:absolute after:text-lg "}`} onClick={() => dispatch(setUploadDate("month"))} >This month</li>
-                    <li className={`cursor-pointer relative ${uploaded_date === "year" && "text-black after:content-['X'] after:right-0 after:-mt-0.5 after:absolute after:text-lg "}`} onClick={() => dispatch(setUploadDate("year"))} >This year</li>
+                    <li className={`cursor-pointer relative ${upload_date === "hour" && "text-black after:content-['X'] after:right-0 after:-mt-0.5 after:absolute after:text-lg "}`} onClick={() => dispatch(setUploadDate("hour"))} >Last hour</li>
+                    <li className={`cursor-pointer relative ${upload_date === "today" && "text-black after:content-['X'] after:right-0 after:-mt-0.5 after:absolute after:text-lg "}`} onClick={() => dispatch(setUploadDate("today"))} >Today</li>
+                    <li className={`cursor-pointer relative ${upload_date === "week" && "text-black after:content-['X'] after:right-0 after:-mt-0.5 after:absolute after:text-lg "}`} onClick={() => dispatch(setUploadDate("week"))} >This week</li>
+                    <li className={`cursor-pointer relative ${upload_date === "month" && "text-black after:content-['X'] after:right-0 after:-mt-0.5 after:absolute after:text-lg "}`} onClick={() => dispatch(setUploadDate("month"))} >This month</li>
+                    <li className={`cursor-pointer relative ${upload_date === "year" && "text-black after:content-['X'] after:right-0 after:-mt-0.5 after:absolute after:text-lg "}`} onClick={() => dispatch(setUploadDate("year"))} >This year</li>
                </ul>
                <ul className="flex flex-col gap-3">
                     <li className="text-black font-medium">TYPE</li>

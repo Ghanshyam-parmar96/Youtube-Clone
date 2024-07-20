@@ -448,7 +448,7 @@ export interface SearchResultFetchData {
 
 
 export interface searchFilterSliceProps {
-  uploaded_date : string;
+  upload_date : string;
   type : string;
   duration : string;
   features : string;

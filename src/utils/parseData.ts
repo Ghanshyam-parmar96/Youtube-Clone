@@ -22,7 +22,7 @@ const parseData = async (data: ParsedAllData): Promise<FetchPageData> => {
             thumbnailUrl: item.snippet.thumbnails.medium.url || "",
             views: VIEW_FORMATTER.format(Number(item.statistics.viewCount)) || "",
             postedAt: formatTimeAgo(item.snippet.publishedAt) || "",
-            duration: convertDurationToTime(item.contentDetails.duration) || "",
+            duration: item.contentDetails.duration !== "P0D" ? convertDurationToTime(item.contentDetails.duration) : "🔴 LIVE",
             channelTitle: channelData?.snippet.title || "",
             channelIcon: channelData?.snippet.thumbnails.default.url || "",
         }

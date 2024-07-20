@@ -29,7 +29,7 @@ const SearchVideos = ({ videoId, videoTitle, thumbnailUrl, duration, channelId, 
             </Link>
 
             <div className="flex gap-2 py-1 px-3 col-span-1 md:col-span-2">
-                <Link to={`/channel/${channelId}`} className="flex flex-shrink-0 sm:hidden w-12 h-12">
+                <Link to={`/channel/${channelId}/home`} className="flex flex-shrink-0 sm:hidden w-12 h-12">
                     <LazyImage src={channelIcon} className=" rounded-full" alt="" />
                 </Link>
 
@@ -38,11 +38,11 @@ const SearchVideos = ({ videoId, videoTitle, thumbnailUrl, duration, channelId, 
                         {videoTitle}
                     </Link>
                     <div className="flex items-center gap-3 sm:order-3">
-                        <Link to={`/channel/${channelId}`} className="sm:flex flex-shrink-0 hidden w-8 h-8">
+                        <Link to={`/channel/${channelId}/home`} className="sm:flex flex-shrink-0 hidden w-8 h-8">
                             <LazyImage src={channelIcon} className="rounded-full" alt="" />
                         </Link>
 
-                        <Link to={`/channel/${channelId}`} className="text-secondary-text dark:text-gray-300 text-sm">
+                        <Link to={`/channel/${channelId}/home`} className="text-secondary-text dark:text-gray-300 text-sm">
                             {channelTitle}
                         </Link>
                     </div>

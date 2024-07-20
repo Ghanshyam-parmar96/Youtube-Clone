@@ -35,7 +35,7 @@ const SearchPlaylist = ({ channelTitle, channelId, playlistId, thumbnailUrl, tit
                     </Link>
                 </h2>
                 <p className="text-sm text-secondary-text dark:text-gray-300 -mt-2">
-                    <Link to={`/channel/${channelId}`}>{channelTitle}</Link> • playlist
+                    <Link to={`/channel/${channelId}/home`}>{channelTitle}</Link> • playlist
                 </p>
                 {
                     videos.map((item) => (

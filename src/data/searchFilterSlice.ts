@@ -3,7 +3,7 @@ import { searchFilterSliceProps } from '../Types';
 
 // Define the initial state using that type
 const initialState: searchFilterSliceProps = {  
-    uploaded_date : "",
+    upload_date : "",
     type : "",
     duration : "",
     features : "",
@@ -15,7 +15,7 @@ export const searchFilterSlice = createSlice({
   initialState,
   reducers: {
     setUploadDate: (state, action: PayloadAction<string>) => {
-        state.uploaded_date = state.uploaded_date !== action.payload ? action.payload : "";
+        state.upload_date = state.upload_date !== action.payload ? action.payload : "";
     },
     setType: (state, action: PayloadAction<string>) => {
         state.type = state.type !== action.payload ? action.payload : "";

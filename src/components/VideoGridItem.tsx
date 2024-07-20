@@ -16,7 +16,7 @@ const VideoGridItem = ({ videoId, channelIcon, channelId, channelTitle, duration
 
             <div className="flex gap-2">
                 {showChannelDetails && (
-                    <Link to={`/channel/${channelId}`} className="flex flex-shrink-0 w-10 h-10">
+                    <Link to={`/channel/${channelId}/home`} className="flex flex-shrink-0 w-10 h-10">
                         <LazyImage src={channelIcon} className=" rounded-full" alt="" />
                     </Link>
                 )}
@@ -25,7 +25,7 @@ const VideoGridItem = ({ videoId, channelIcon, channelId, channelTitle, duration
                         {videoTitle}
                     </Link>
                     {showChannelDetails && (
-                        <Link to={`/channel/${channelId}`} className="text-secondary-text dark:text-gray-400 text-sm">
+                        <Link to={`/channel/${channelId}/home`} className="text-secondary-text dark:text-gray-400 text-sm">
                             {channelTitle}
                         </Link>
                     )}
